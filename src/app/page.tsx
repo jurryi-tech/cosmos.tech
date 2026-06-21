@@ -8,7 +8,7 @@ const Preloader = dynamic(() => import("@/components/sections/Preloader"), { ssr
 const Header = dynamic(() => import("@/components/sections/Header"), { ssr: false });
 const Hero = dynamic(() => import("@/components/sections/Hero"), { ssr: false });
 const JurisdictionTriptych = dynamic(() => import("@/components/sections/JurisdictionTriptych"), { ssr: false });
-const DataFlow = dynamic(() => import("@/components/sections/DataFlow"), { ssr: false });
+const EligibilityTools = dynamic(() => import("@/components/sections/EligibilityTools"), { ssr: false });
 const ClaimsEngine = dynamic(() => import("@/components/sections/ClaimsEngine"), { ssr: false });
 const OfficeActionTheater = dynamic(() => import("@/components/sections/OfficeActionTheater"), { ssr: false });
 const SecurityVault = dynamic(() => import("@/components/sections/SecurityVault"), { ssr: false });
@@ -68,7 +68,7 @@ export default function Home() {
         <Header />
         <Hero />
         <JurisdictionTriptych />
-        <DataFlow />
+        <EligibilityTools />
         <ClaimsEngine />
         <OfficeActionTheater />
         <SecurityVault />

@@ -205,7 +205,7 @@ export default function ProductCards() {
           trigger: section,
           pin: true,
           scrub: 1,
-          start: "top 80px",
+          start: "top top",
           end: () => `+=${totalScroll}`,
           invalidateOnRefresh: true,
         },
@@ -219,10 +219,10 @@ export default function ProductCards() {
     <section
       ref={sectionRef}
       id="product-cards"
-      className="bg-[#FDFBF7] overflow-hidden"
+      className={`bg-[#FDFBF7] overflow-hidden ${isMobile ? "" : "h-screen flex flex-col"}`}
     >
       {/* Section header */}
-      <div className="pt-24 pb-14 px-8 md:px-16">
+      <div className={`px-8 md:px-16 ${isMobile ? "pt-24 pb-14" : "pt-24 pb-8 shrink-0"}`}>
         <motion.div
           className="flex items-center gap-4 mb-6"
           initial={{ opacity: 0, y: 16 }}
@@ -266,7 +266,7 @@ export default function ProductCards() {
           ))}
         </div>
       ) : (
-        <div className="h-screen flex items-center">
+        <div className="flex-1 flex items-center overflow-hidden">
           <div
             ref={trackRef}
             className="flex gap-10 pl-16 pr-[calc(100vw-400px)]"
