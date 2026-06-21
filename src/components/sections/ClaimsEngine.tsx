@@ -397,7 +397,7 @@ export default function ClaimsEngine() {
         {/* ── RIGHT COLUMN: Scrollable content ── */}
         <div className="w-full lg:w-[55%] space-y-16 pb-32">
           {/* Block 1: Claim Text */}
-          <div ref={claimTextRef} className="bg-[#FDFBF7] border border-[#E8E4DD] rounded-sm p-7 md:p-9 shadow-[0_1px_2px_rgba(26,26,26,0.04)]">
+          <div ref={claimTextRef} className="bg-white border border-[#E8E4DD] rounded-sm p-7 md:p-9 shadow-[0_1px_2px_rgba(26,26,26,0.04)]">
             <div className="mb-5 flex items-center justify-between border-b border-[#E8E4DD] pb-3">
               <p className="text-[10px] tracking-[0.35em] uppercase text-[#8B7355] font-mono">
                 Claim Text

@@ -87,8 +87,8 @@ export default function OfficeActionTheater() {
       /* ── PHASE 1: Document descends into center (0-25%) ── */
       tl.fromTo(
         doc,
-        { y: -300, rotation: -5, opacity: 0, scale: 0.9 },
-        { y: 0, rotation: 0, opacity: 1, scale: 1, duration: 0.2, ease: "power2.out" }
+        { y: -300, rotation: -5, opacity: 0, scale: 0.8 },
+        { y: 0, rotation: 0, opacity: 1, scale: 1.06, duration: 0.2, ease: "power2.out" }
       );
 
       // Red stamp slams down
@@ -138,8 +138,8 @@ export default function OfficeActionTheater() {
       // Response slides up
       tl.fromTo(
         response,
-        { y: 80, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.12, ease: "power2.out" }
+        { y: 80, opacity: 0, scale: 0.85 },
+        { y: 0, opacity: 1, scale: 1.06, duration: 0.12, ease: "power2.out" }
       );
 
       // Metrics fade in
@@ -207,7 +207,7 @@ export default function OfficeActionTheater() {
         {/* ── PHASE 1: Office Action Document ── */}
         <div
           ref={documentRef}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[640px] bg-[#FDFBF7] shadow-2xl border border-[#E8E4DD] p-6 md:p-10 font-mono text-[11px] md:text-[13px] leading-relaxed text-[#2C2C2C] z-10"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[640px] bg-white shadow-2xl border border-[#E8E4DD] p-6 md:p-10 font-mono text-[11px] md:text-[13px] leading-relaxed text-[#2C2C2C] z-10"
           style={{ transformOrigin: "center center", opacity: 0 }}
         >
           <div className="text-center font-serif font-bold text-[13px] md:text-[15px] tracking-wider mb-4 text-[#1A1A1A]">
@@ -308,7 +308,7 @@ export default function OfficeActionTheater() {
         {/* ── PHASE 3: Response Document ── */}
         <div
           ref={responseRef}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[640px] bg-[#FDFBF7] shadow-2xl border border-[#E8E4DD] p-6 md:p-10 font-mono text-[11px] md:text-[13px] leading-relaxed text-[#2C2C2C] opacity-0 z-20"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[640px] bg-white shadow-2xl border border-[#E8E4DD] p-6 md:p-10 font-mono text-[11px] md:text-[13px] leading-relaxed text-[#2C2C2C] opacity-0 z-20"
         >
           <div className="text-center font-serif font-bold text-[13px] md:text-[15px] tracking-wider mb-6 text-[#1A1A1A]">
             RESPONSE TO OFFICE ACTION

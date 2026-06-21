@@ -4,6 +4,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import ReactFlow, {
   Background,
   Controls,
+  Handle,
+  Position,
   MarkerType,
   useNodesState,
   useEdgesState,
@@ -18,6 +20,15 @@ const CREAM = "#FDFBF7";
 const CHARCOAL = "#1A1A1A";
 const CHARCOAL_SOFT = "#5A5A5A";
 const MONO_GOLD = "#8B7355";
+
+/* subtle connection handles — anchor the edges to each node's sides */
+const HANDLE_STYLE = {
+  width: 7,
+  height: 7,
+  background: CHARCOAL,
+  opacity: 0.18,
+  border: "none",
+} as const;
 
 type Status = "pass" | "caution" | "fail";
 
@@ -92,6 +103,11 @@ function FlowCard({ data }: NodeProps<FlowNodeData>) {
         borderWidth: data.active ? 2 : 1,
       }}
     >
+      <Handle id="tt" type="target" position={Position.Top} style={HANDLE_STYLE} />
+      <Handle id="tl" type="target" position={Position.Left} style={HANDLE_STYLE} />
+      <Handle id="sb" type="source" position={Position.Bottom} style={HANDLE_STYLE} />
+      <Handle id="sr" type="source" position={Position.Right} style={HANDLE_STYLE} />
+
       {/* status badge */}
       <div
         style={{
@@ -145,7 +161,7 @@ const initialNodes: Node<FlowNodeData>[] = [
   {
     id: "step1",
     type: "flowCard",
-    position: { x: 520, y: 0 },
+    position: { x: 320, y: 0 },
     data: {
       title: "Step 1: Statutory Category",
       text: "Is the claim directed to a process, machine, manufacture, or composition of matter? (35 U.S.C. § 101)",
@@ -155,7 +171,7 @@ const initialNodes: Node<FlowNodeData>[] = [
   {
     id: "step2a1",
     type: "flowCard",
-    position: { x: 520, y: 180 },
+    position: { x: 320, y: 190 },
     data: {
       title: "Step 2A — Prong 1",
       text: "Does the claim recite a judicial exception? (Abstract idea, law of nature, natural phenomenon)",
@@ -165,7 +181,7 @@ const initialNodes: Node<FlowNodeData>[] = [
   {
     id: "step2a2",
     type: "flowCard",
-    position: { x: 200, y: 370 },
+    position: { x: 320, y: 380 },
     data: {
       title: "Step 2A — Prong 2",
       text: "Is the judicial exception integrated into a practical application?",
@@ -175,7 +191,7 @@ const initialNodes: Node<FlowNodeData>[] = [
   {
     id: "step2b",
     type: "flowCard",
-    position: { x: 60, y: 560 },
+    position: { x: 110, y: 580 },
     data: {
       title: "Step 2B: Inventive Concept",
       text: "Does the claim recite additional elements that amount to significantly more than the judicial exception?",
@@ -185,7 +201,7 @@ const initialNodes: Node<FlowNodeData>[] = [
   {
     id: "eligible",
     type: "flowCard",
-    position: { x: 700, y: 560 },
+    position: { x: 780, y: 380 },
     data: {
       title: "Eligible",
       text: "Claim satisfies 35 U.S.C. § 101 subject-matter requirements",
@@ -195,7 +211,7 @@ const initialNodes: Node<FlowNodeData>[] = [
   {
     id: "ineligible",
     type: "flowCard",
-    position: { x: 340, y: 730 },
+    position: { x: 110, y: 770 },
     data: {
       title: "Ineligible",
       text: "Claim does not satisfy 35 U.S.C. § 101",
@@ -214,12 +230,14 @@ function makeEdge(
   source: string,
   target: string,
   color: string,
-  opts: { label?: string; dashed?: boolean } = {}
+  opts: { label?: string; dashed?: boolean; sourceHandle?: string; targetHandle?: string } = {}
 ): Edge {
   return {
     id,
     source,
     target,
+    sourceHandle: opts.sourceHandle ?? "sb",
+    targetHandle: opts.targetHandle ?? "tt",
     type: "smoothstep",
     animated: true,
     label: opts.label,
@@ -235,7 +253,7 @@ function makeEdge(
     labelBgBorderRadius: 4,
     style: {
       stroke: color,
-      strokeWidth: 1.8,
+      strokeWidth: 2,
       strokeDasharray: opts.dashed ? "6 4" : undefined,
     },
     markerEnd: {
@@ -250,10 +268,22 @@ function makeEdge(
 const initialEdges: Edge[] = [
   makeEdge("e-1-2a1", "step1", "step2a1", CHARCOAL_SOFT, { dashed: true }),
   makeEdge("e-2a1-2a2", "step2a1", "step2a2", AMBER, { label: "YES", dashed: true }),
-  makeEdge("e-2a1-eligible", "step2a1", "eligible", GREEN, { label: "NO" }),
+  makeEdge("e-2a1-eligible", "step2a1", "eligible", GREEN, {
+    label: "NO",
+    sourceHandle: "sr",
+    targetHandle: "tl",
+  }),
   makeEdge("e-2a2-2b", "step2a2", "step2b", RED, { label: "NO", dashed: true }),
-  makeEdge("e-2a2-eligible", "step2a2", "eligible", GREEN, { label: "YES" }),
-  makeEdge("e-2b-eligible", "step2b", "eligible", GREEN, { label: "YES" }),
+  makeEdge("e-2a2-eligible", "step2a2", "eligible", GREEN, {
+    label: "YES",
+    sourceHandle: "sr",
+    targetHandle: "tl",
+  }),
+  makeEdge("e-2b-eligible", "step2b", "eligible", GREEN, {
+    label: "YES",
+    sourceHandle: "sr",
+    targetHandle: "tl",
+  }),
   makeEdge("e-2b-ineligible", "step2b", "ineligible", RED, { label: "NO" }),
 ];
 
