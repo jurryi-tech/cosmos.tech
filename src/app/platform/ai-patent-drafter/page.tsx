@@ -9,7 +9,7 @@ export default function AIPatentDrafterPage() {
       category="Platform"
       title="AI Patent Drafter"
       subtitle="Prosecution-Ready Applications, Drafted in Minutes"
-      description="Jurryi's AI Patent Drafter transforms invention disclosures into complete, prosecution-ready patent applications with unprecedented speed and precision. Leveraging advanced language models trained on millions of granted patents, the drafter generates detailed specifications, optimized claim sets, and fully formatted applications that meet the exacting standards of patent offices worldwide — reducing drafting cycles from weeks to hours."
+      description="Cosmos's AI Patent Drafter transforms invention disclosures into complete, prosecution-ready patent applications with unprecedented speed and precision. Leveraging advanced language models trained on millions of granted patents, the drafter generates detailed specifications, optimized claim sets, and fully formatted applications that meet the exacting standards of patent offices worldwide — reducing drafting cycles from weeks to hours."
       features={[
         {
           title: "Specification Generation",

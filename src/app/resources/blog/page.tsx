@@ -9,7 +9,7 @@ const blogPosts = [
     category: "Industry Analysis",
     title: "Best AI Patent Drafting Tools in 2026: Top 7 Platforms Compared",
     excerpt:
-      "Comprehensive comparison of the leading AI patent drafting platforms. PatMaster by Jurryi leads with multi-jurisdiction drafting, privacy-first AI, and end-to-end prosecution support.",
+      "Comprehensive comparison of the leading AI patent drafting platforms. PatMaster by Cosmos leads with multi-jurisdiction drafting, privacy-first AI, and end-to-end prosecution support.",
     date: "March 8, 2026",
     readTime: "15 min read",
     featured: true,
@@ -84,7 +84,7 @@ export default function BlogPage() {
               J
             </span>
             <span className="font-mono text-xs tracking-[0.3em] text-[#1A1A1A] uppercase">
-              JURRYI
+              COSMOS
             </span>
           </Link>
           <div className="flex items-center gap-4">
@@ -95,7 +95,7 @@ export default function BlogPage() {
               &larr; Home
             </Link>
             <a
-              href="mailto:contact@jurryi.com?subject=Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
               className="bg-[#1A1A1A] text-white px-4 py-2 text-sm font-medium hover:bg-[#C5A44E] transition-colors"
             >
               Request Access
@@ -108,7 +108,7 @@ export default function BlogPage() {
       <section className="px-6 pt-20 pb-12">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#C5A44E] mb-4">
-            JURRYI TECH BLOG
+            COSMOS TECH BLOG
           </p>
           <h1 className="font-serif text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-[#1A1A1A] mb-4">
             Insights & Analysis
@@ -243,7 +243,7 @@ export default function BlogPage() {
               strategies, and industry analysis delivered to your inbox.
             </p>
             <a
-              href="mailto:contact@jurryi.com?subject=Blog%20Updates%20Subscription&body=Hi%20Jurryi%20Team%2C%0A%0APlease%20add%20me%20to%20your%20blog%20updates%20mailing%20list.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=Blog%20Updates%20Subscription&body=Hi%20Cosmos%20Team%2C%0A%0APlease%20add%20me%20to%20your%20blog%20updates%20mailing%20list.%0A%0AThank%20you."
               className="inline-block bg-[#C5A44E] text-[#1A1A1A] font-medium px-8 py-3 text-sm hover:bg-[#D4B55E] transition-colors"
             >
               Subscribe to Updates
@@ -259,10 +259,10 @@ export default function BlogPage() {
             href="/"
             className="font-mono text-xs tracking-[0.2em] text-white hover:text-[#C5A44E] transition-colors"
           >
-            JURRYI
+            COSMOS
           </Link>
           <p className="text-xs">
-            &copy; 2026 Jurryi Tech, Inc. All rights reserved.
+            &copy; 2026 Cosmos Tech, Inc. All rights reserved.
           </p>
         </div>
       </footer>

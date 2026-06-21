@@ -3,7 +3,7 @@ import BlogArticle from "./BlogArticle";
 
 export const metadata: Metadata = {
   title:
-    "Multi-Jurisdiction Patent Filing: How AI Handles USPTO, EPO, India & PCT (2026 Guide) | Jurryi Tech",
+    "Multi-Jurisdiction Patent Filing: How AI Handles USPTO, EPO, India & PCT (2026 Guide) | Cosmos Tech",
   description:
     "Complete 2026 guide to multi-jurisdiction patent filing with AI. Learn how PatMaster handles USPTO, EPO, Indian Patent Office (Section 3k), and PCT applications in a single platform. Save 60%+ time and cost on international patent filings.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "AI patent filing tool",
     "global patent strategy AI",
     "PatMaster multi-jurisdiction",
-    "Jurryi patent drafting",
+    "Cosmos patent drafting",
     "international patent strategy",
     "patent office requirements AI",
     "European patent application AI",
@@ -39,19 +39,19 @@ export const metadata: Metadata = {
       "Multi-Jurisdiction Patent Filing: How AI Handles USPTO, EPO, India & PCT",
     description:
       "Complete 2026 guide to filing patents across USPTO, EPO, India, and PCT with AI. Learn how PatMaster automates jurisdiction-specific compliance, claim adaptation, and international filing strategy.",
-    url: "https://jurryi.com/resources/blog/multi-jurisdiction-patent-filing-ai",
-    siteName: "Jurryi Tech",
+    url: "https://cosmos.com/resources/blog/multi-jurisdiction-patent-filing-ai",
+    siteName: "Cosmos Tech",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Multi-Jurisdiction Patent Filing with AI - Jurryi Tech",
+        alt: "Multi-Jurisdiction Patent Filing with AI - Cosmos Tech",
       },
     ],
     publishedTime: "2026-03-08T00:00:00Z",
     modifiedTime: "2026-03-08T00:00:00Z",
-    authors: ["Jurryi Tech Editorial Team"],
+    authors: ["Cosmos Tech Editorial Team"],
     tags: [
       "multi-jurisdiction patent filing",
       "patent filing AI",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://jurryi.com/resources/blog/multi-jurisdiction-patent-filing-ai",
+      "https://cosmos.com/resources/blog/multi-jurisdiction-patent-filing-ai",
   },
 };
 
@@ -89,32 +89,32 @@ export default function Page() {
               "Multi-Jurisdiction Patent Filing: How AI Handles USPTO, EPO, India & PCT (2026 Guide)",
             description:
               "Complete 2026 guide to multi-jurisdiction patent filing with AI. Learn how PatMaster handles USPTO, EPO, Indian Patent Office, and PCT applications with jurisdiction-specific compliance and claim adaptation.",
-            image: "https://jurryi.com/og-image.png",
+            image: "https://cosmos.com/og-image.png",
             datePublished: "2026-03-08T00:00:00Z",
             dateModified: "2026-03-08T00:00:00Z",
             author: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
             },
             publisher: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
               logo: {
                 "@type": "ImageObject",
-                url: "https://jurryi.com/favicon.svg",
+                url: "https://cosmos.com/favicon.svg",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id":
-                "https://jurryi.com/resources/blog/multi-jurisdiction-patent-filing-ai",
+                "https://cosmos.com/resources/blog/multi-jurisdiction-patent-filing-ai",
             },
             about: [
               {
                 "@type": "SoftwareApplication",
-                name: "PatMaster by Jurryi Tech",
+                name: "PatMaster by Cosmos Tech",
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web",
               },
@@ -166,7 +166,7 @@ export default function Page() {
                 name: "What is the best AI tool for multi-jurisdiction patent filing in 2026?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "PatMaster by Jurryi Tech is the leading AI platform for multi-jurisdiction patent filing in 2026. It supports USPTO, EPO, Indian Patent Office, and PCT filings from a single interface, with jurisdiction-specific claim adaptation, automated compliance checking, and a privacy-first architecture where client data is never used for model training.",
+                  text: "PatMaster by Cosmos Tech is the leading AI platform for multi-jurisdiction patent filing in 2026. It supports USPTO, EPO, Indian Patent Office, and PCT filings from a single interface, with jurisdiction-specific claim adaptation, automated compliance checking, and a privacy-first architecture where client data is never used for model training.",
                 },
               },
             ],

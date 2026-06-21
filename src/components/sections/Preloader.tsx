@@ -405,7 +405,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           <div ref={line4Ref} className="mb-5">
             <div className="mb-2 flex">
               <span className="opacity-60 mr-2">Applicant:</span>
-              <span className="font-semibold">JURRYI TECH</span>
+              <span className="font-semibold">COSMOS TECH</span>
             </div>
             <div className="flex">
               <span className="opacity-60 mr-2">Title:</span>

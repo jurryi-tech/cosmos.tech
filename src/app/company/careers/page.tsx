@@ -9,7 +9,7 @@ export default function CareersPage() {
       category="Company"
       title="Careers"
       subtitle="Join the Team Redefining Patent Prosecution"
-      description="At Jurryi, we are assembling a world-class team of engineers, IP professionals, and product builders who share our passion for transforming how patents are prosecuted. We believe the intersection of artificial intelligence and intellectual property law represents one of the most impactful frontiers in legal technology. If you thrive on solving hard problems, care deeply about craftsmanship, and want your work to empower patent professionals across the globe, we would love to hear from you."
+      description="At Cosmos, we are assembling a world-class team of engineers, IP professionals, and product builders who share our passion for transforming how patents are prosecuted. We believe the intersection of artificial intelligence and intellectual property law represents one of the most impactful frontiers in legal technology. If you thrive on solving hard problems, care deeply about craftsmanship, and want your work to empower patent professionals across the globe, we would love to hear from you."
       features={[
         {
           title: "Engineering Roles",

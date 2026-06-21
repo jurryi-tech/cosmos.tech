@@ -8,8 +8,8 @@ export default function DocumentationPage() {
     <PageTemplate
       category="Resources"
       title="Documentation"
-      subtitle="Comprehensive guides and references for the Jurryi platform"
-      description="Access detailed documentation covering every aspect of the Jurryi patent prosecution platform. From initial setup and configuration to advanced workflow automation, our documentation library provides the guidance you need to maximize productivity and deliver higher-quality patent applications with confidence."
+      subtitle="Comprehensive guides and references for the Cosmos platform"
+      description="Access detailed documentation covering every aspect of the Cosmos patent prosecution platform. From initial setup and configuration to advanced workflow automation, our documentation library provides the guidance you need to maximize productivity and deliver higher-quality patent applications with confidence."
       features={[
         {
           title: "Getting Started Guides",
@@ -38,7 +38,7 @@ export default function DocumentationPage() {
         {
           title: "Integration Guides",
           description:
-            "Detailed guides for connecting Jurryi with popular patent management tools, document management systems, and enterprise platforms to create a unified prosecution workflow.",
+            "Detailed guides for connecting Cosmos with popular patent management tools, document management systems, and enterprise platforms to create a unified prosecution workflow.",
           icon: <HiOutlineLink size={20} />,
           cardType: "list",
           cardData: { items: ["REST API", "Python SDK", "Node.js SDK", "Webhooks"] },
@@ -46,7 +46,7 @@ export default function DocumentationPage() {
         {
           title: "Best Practices",
           description:
-            "Curated recommendations from patent prosecution experts on how to leverage Jurryi's AI capabilities for optimal claim construction, prior art coverage, and prosecution efficiency.",
+            "Curated recommendations from patent prosecution experts on how to leverage Cosmos's AI capabilities for optimal claim construction, prior art coverage, and prosecution efficiency.",
           icon: <HiOutlineStar size={20} />,
           cardType: "stat",
           cardData: { value: "50+", label: "best practices", change: "Updated weekly" },
@@ -66,7 +66,7 @@ export default function DocumentationPage() {
         drafters:
           "Follow step-by-step workflow guides tailored to patent drafting, ensuring consistent quality and adherence to firm standards across every application you prepare.",
         engineers:
-          "Leverage comprehensive API documentation and integration guides to build custom automations and connect Jurryi with your organization's existing technical infrastructure.",
+          "Leverage comprehensive API documentation and integration guides to build custom automations and connect Cosmos with your organization's existing technical infrastructure.",
       }}
       accentColor="#2D7D46"
     />

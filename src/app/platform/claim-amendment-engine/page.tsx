@@ -9,7 +9,7 @@ export default function ClaimAmendmentEnginePage() {
       category="Platform"
       title="Claim Amendment Engine"
       subtitle="Intelligent Amendments That Maximize Patent Value"
-      description="Jurryi's Claim Amendment Engine delivers precise, strategically optimized claim amendments that navigate the delicate balance between overcoming rejections and preserving maximum protection scope. Powered by deep analysis of claim dependencies, prosecution histories, and prior art boundaries, the engine suggests amendments that strengthen your patent position while maintaining alignment with your broader portfolio strategy."
+      description="Cosmos's Claim Amendment Engine delivers precise, strategically optimized claim amendments that navigate the delicate balance between overcoming rejections and preserving maximum protection scope. Powered by deep analysis of claim dependencies, prosecution histories, and prior art boundaries, the engine suggests amendments that strengthen your patent position while maintaining alignment with your broader portfolio strategy."
       features={[
         {
           title: "Claim Dependency Analysis",

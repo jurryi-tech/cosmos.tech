@@ -22,7 +22,7 @@ export default function MotivationPage() {
             transition={{ duration: 0.5 }}
             className="font-mono text-xs tracking-[0.3em] text-[#C5A44E] uppercase mb-6"
           >
-            Why Jurryi Exists
+            Why Cosmos Exists
           </motion.p>
 
           {/* Main headline */}
@@ -96,11 +96,11 @@ export default function MotivationPage() {
 
             {/* The mission */}
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#1A1A1A]">
-              Why I started Jurryi.
+              Why I started Cosmos.
             </h2>
 
             <p className="font-sans text-lg leading-[1.9] text-[#3A3A3A]">
-              I started Jurryi because I believe AI, when built carefully and responsibly, can become the{" "}
+              I started Cosmos because I believe AI, when built carefully and responsibly, can become the{" "}
               <strong className="text-[#1A1A1A]">strategic, honest partner that inventors have never had.</strong>{" "}
               One that drafts faithfully, reviews without bias, protects their data completely, and makes high-quality patent prosecution accessible to everyone &mdash; not just those who can afford $15,000 per application.
             </p>

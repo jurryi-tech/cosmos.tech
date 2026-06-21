@@ -264,7 +264,7 @@ export default function OfficeActionTheater() {
             <div className="bg-[#1B2A4A] px-5 py-3 flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
               <span className="text-[11px] font-mono text-blue-200 tracking-wider uppercase">
-                Jurryi AI Analysis Engine
+                Cosmos AI Analysis Engine
               </span>
             </div>
             {/* Steps */}

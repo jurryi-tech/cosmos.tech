@@ -28,7 +28,7 @@ export default function BlogArticle() {
               J
             </span>
             <span className="font-mono text-xs tracking-[0.3em] text-[#1A1A1A] uppercase">
-              JURRYI
+              COSMOS
             </span>
           </Link>
           <div className="flex items-center gap-4">
@@ -39,7 +39,7 @@ export default function BlogArticle() {
               &larr; All Articles
             </Link>
             <a
-              href="mailto:contact@jurryi.com?subject=PatMaster%20Access%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20PatMaster.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=PatMaster%20Access%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20PatMaster.%0A%0AThank%20you."
               className="bg-[#1A1A1A] text-white px-4 py-2 text-sm font-medium hover:bg-[#C5A44E] transition-colors"
             >
               Request Access
@@ -76,7 +76,7 @@ export default function BlogArticle() {
           <div className="flex items-center gap-3 text-sm text-[#888]">
             <span>Written by</span>
             <span className="font-medium text-[#1A1A1A]">
-              Jurryi Tech Editorial Team
+              Cosmos Tech Editorial Team
             </span>
             <span>&bull;</span>
             <span>18 min read</span>
@@ -538,7 +538,7 @@ export default function BlogArticle() {
               How PatMaster Handles Office Action Response
             </h2>
             <p className="text-[15px] text-[#444] leading-relaxed mb-4">
-              PatMaster by Jurryi Tech integrates all of the above capabilities
+              PatMaster by Cosmos Tech integrates all of the above capabilities
               into a unified patent prosecution platform. Rather than
               requiring attorneys to switch between separate tools for rejection
               analysis, prior art review, examiner research, and response
@@ -824,7 +824,7 @@ export default function BlogArticle() {
                 },
                 {
                   q: "Is my patent data safe when using AI office action tools?",
-                  a: "Data security varies by platform. PatMaster by Jurryi Tech uses a privacy-first architecture where client data is never used for model training, full data isolation is maintained between clients, and all processing occurs in secure, SOC 2-compliant environments. Always verify a vendor\u2019s data handling policies, security certifications, and data retention practices before uploading confidential prosecution files.",
+                  a: "Data security varies by platform. PatMaster by Cosmos Tech uses a privacy-first architecture where client data is never used for model training, full data isolation is maintained between clients, and all processing occurs in secure, SOC 2-compliant environments. Always verify a vendor\u2019s data handling policies, security certifications, and data retention practices before uploading confidential prosecution files.",
                 },
               ].map((item, i) => (
                 <div key={i} className="bg-[#F5F0E8] p-6">
@@ -888,7 +888,7 @@ export default function BlogArticle() {
               prosecution teams.
             </p>
             <a
-              href="mailto:contact@jurryi.com?subject=PatMaster%20Demo%20Request%20%E2%80%93%20Office%20Action%20Response&body=Hi%20Jurryi%20Team%2C%0A%0AI%20read%20your%20guide%20on%20AI%20office%20action%20response%20and%20would%20like%20to%20see%20a%20demo%20of%20PatMaster.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=PatMaster%20Demo%20Request%20%E2%80%93%20Office%20Action%20Response&body=Hi%20Cosmos%20Team%2C%0A%0AI%20read%20your%20guide%20on%20AI%20office%20action%20response%20and%20would%20like%20to%20see%20a%20demo%20of%20PatMaster.%0A%0AThank%20you."
               className="inline-block bg-[#C5A44E] text-[#1A1A1A] px-6 py-3 text-sm font-semibold hover:bg-[#D4B55E] transition-colors"
             >
               Request a Demo &rarr;
@@ -902,10 +902,10 @@ export default function BlogArticle() {
               available to discuss how PatMaster fits into your workflow.
             </p>
             <a
-              href="mailto:contact@jurryi.com?subject=PatMaster%20Inquiry&body=Hi%20Jurryi%20Team%2C%0A%0AI%20have%20a%20question%20about%20PatMaster.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=PatMaster%20Inquiry&body=Hi%20Cosmos%20Team%2C%0A%0AI%20have%20a%20question%20about%20PatMaster.%0A%0AThank%20you."
               className="text-[#C5A44E] font-medium hover:underline text-sm"
             >
-              contact@jurryi.com
+              contact@cosmos.com
             </a>
           </div>
         </article>
@@ -919,11 +919,11 @@ export default function BlogArticle() {
               J
             </span>
             <span className="font-mono text-xs tracking-[0.3em] text-[#1A1A1A] uppercase">
-              JURRYI
+              COSMOS
             </span>
           </div>
           <p className="text-xs text-[#999]">
-            &copy; 2026 Jurryi Tech. All rights reserved.
+            &copy; 2026 Cosmos Tech. All rights reserved.
           </p>
         </div>
       </footer>

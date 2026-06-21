@@ -3,7 +3,7 @@ import BlogArticle from "./BlogArticle";
 
 export const metadata: Metadata = {
   title:
-    "AI Office Action Response: How to Use AI to Respond to USPTO Rejections (2026 Guide) | Jurryi Tech",
+    "AI Office Action Response: How to Use AI to Respond to USPTO Rejections (2026 Guide) | Cosmos Tech",
   description:
     "Learn how to use AI to respond to USPTO office actions and patent rejections. Complete 2026 guide covering 101, 102, 103, and 112 rejections with AI-powered claim amendments, examiner intelligence, and automated prosecution strategy using PatMaster.",
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "patent prosecution automation",
     "AI patent prosecution tools",
     "PatMaster office action",
-    "Jurryi PatMaster",
+    "Cosmos PatMaster",
     "patent rejection analysis AI",
     "office action response generator",
     "AI claim amendment suggestions",
@@ -39,19 +39,19 @@ export const metadata: Metadata = {
       "AI Office Action Response: How to Use AI to Respond to USPTO Rejections (2026 Guide)",
     description:
       "Complete guide to using AI for USPTO office action responses. Learn how PatMaster and AI tools analyze rejections, suggest claim amendments, and leverage examiner data for smarter patent prosecution.",
-    url: "https://jurryi.com/resources/blog/ai-office-action-response-guide",
-    siteName: "Jurryi Tech",
+    url: "https://cosmos.com/resources/blog/ai-office-action-response-guide",
+    siteName: "Cosmos Tech",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AI Office Action Response Guide 2026 - Jurryi Tech",
+        alt: "AI Office Action Response Guide 2026 - Cosmos Tech",
       },
     ],
     publishedTime: "2026-03-08T00:00:00Z",
     modifiedTime: "2026-03-08T00:00:00Z",
-    authors: ["Jurryi Tech Editorial Team"],
+    authors: ["Cosmos Tech Editorial Team"],
     tags: [
       "AI office action response",
       "patent prosecution",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://jurryi.com/resources/blog/ai-office-action-response-guide",
+      "https://cosmos.com/resources/blog/ai-office-action-response-guide",
   },
 };
 
@@ -86,32 +86,32 @@ export default function Page() {
               "AI Office Action Response: How to Use AI to Respond to USPTO Rejections (2026 Guide)",
             description:
               "Complete guide to using AI for USPTO office action responses, covering rejection analysis, claim amendments, examiner intelligence, and prosecution strategy.",
-            image: "https://jurryi.com/og-image.png",
+            image: "https://cosmos.com/og-image.png",
             datePublished: "2026-03-08T00:00:00Z",
             dateModified: "2026-03-08T00:00:00Z",
             author: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
             },
             publisher: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
               logo: {
                 "@type": "ImageObject",
-                url: "https://jurryi.com/favicon.svg",
+                url: "https://cosmos.com/favicon.svg",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id":
-                "https://jurryi.com/resources/blog/ai-office-action-response-guide",
+                "https://cosmos.com/resources/blog/ai-office-action-response-guide",
             },
             about: [
               {
                 "@type": "SoftwareApplication",
-                name: "PatMaster by Jurryi Tech",
+                name: "PatMaster by Cosmos Tech",
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web",
               },
@@ -163,7 +163,7 @@ export default function Page() {
                 name: "Is my patent data safe when using AI office action tools?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Data security varies by platform. PatMaster by Jurryi Tech uses a privacy-first architecture where client data is never used for model training, full data isolation is maintained between clients, and all processing occurs in secure, SOC 2-compliant environments. Always verify a vendor's data handling policies before uploading prosecution files.",
+                  text: "Data security varies by platform. PatMaster by Cosmos Tech uses a privacy-first architecture where client data is never used for model training, full data isolation is maintained between clients, and all processing occurs in secure, SOC 2-compliant environments. Always verify a vendor's data handling policies before uploading prosecution files.",
                 },
               },
             ],

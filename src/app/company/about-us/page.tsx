@@ -9,12 +9,12 @@ export default function AboutUsPage() {
       category="Company"
       title="About Us"
       subtitle="Transforming Patent Prosecution with Purpose-Built AI"
-      description="Jurryi was founded on a singular conviction: patent prosecution deserves intelligent tooling built by people who truly understand the craft. Our platform combines deep domain expertise in intellectual property law with state-of-the-art artificial intelligence to deliver prosecution workflows that are faster, more precise, and more strategically informed. We partner with patent professionals worldwide to reshape how inventions are protected — making the entire prosecution lifecycle more efficient without compromising the rigor and nuance the discipline demands."
+      description="Cosmos was founded on a singular conviction: patent prosecution deserves intelligent tooling built by people who truly understand the craft. Our platform combines deep domain expertise in intellectual property law with state-of-the-art artificial intelligence to deliver prosecution workflows that are faster, more precise, and more strategically informed. We partner with patent professionals worldwide to reshape how inventions are protected — making the entire prosecution lifecycle more efficient without compromising the rigor and nuance the discipline demands."
       features={[
         {
           title: "Founded by Patent Attorneys",
           description:
-            "Jurryi was built from the ground up by registered patent attorneys and agents who have spent years navigating the complexities of prosecution before the USPTO and international offices. Every product decision is informed by real-world IP practice.",
+            "Cosmos was built from the ground up by registered patent attorneys and agents who have spent years navigating the complexities of prosecution before the USPTO and international offices. Every product decision is informed by real-world IP practice.",
           icon: <HiOutlineScale size={20} />,
           cardType: "timeline" as const,
           cardData: { steps: ["Founded", "Product", "Scale"] },
@@ -62,7 +62,7 @@ export default function AboutUsPage() {
       ]}
       howItHelps={{
         attorneys:
-          "Built by your peers who understand the pressures of prosecution deadlines, the intricacies of claim strategy, and the high stakes of protecting client innovations. Jurryi is the partner you have been looking for.",
+          "Built by your peers who understand the pressures of prosecution deadlines, the intricacies of claim strategy, and the high stakes of protecting client innovations. Cosmos is the partner you have been looking for.",
         drafters:
           "Designed specifically for your daily workflow — from initial disclosure review through claim drafting and office action responses — so you can focus on substantive work rather than repetitive formatting and research tasks.",
         engineers:

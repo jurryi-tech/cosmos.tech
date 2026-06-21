@@ -26,7 +26,7 @@ export default function BlogArticle() {
               J
             </span>
             <span className="font-mono text-xs tracking-[0.3em] text-[#1A1A1A] uppercase">
-              JURRYI
+              COSMOS
             </span>
           </Link>
           <div className="flex items-center gap-4">
@@ -37,7 +37,7 @@ export default function BlogArticle() {
               &larr; All Articles
             </Link>
             <a
-              href="mailto:contact@jurryi.com?subject=PatMaster%20Access%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20PatMaster.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=PatMaster%20Access%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20PatMaster.%0A%0AThank%20you."
               className="bg-[#1A1A1A] text-white px-4 py-2 text-sm font-medium hover:bg-[#C5A44E] transition-colors"
             >
               Request Access
@@ -71,7 +71,7 @@ export default function BlogArticle() {
           <div className="flex items-center gap-3 text-sm text-[#888]">
             <span>Written by</span>
             <span className="font-medium text-[#1A1A1A]">
-              Jurryi Tech Editorial Team
+              Cosmos Tech Editorial Team
             </span>
             <span>&bull;</span>
             <span>18 min read</span>
@@ -599,7 +599,7 @@ export default function BlogArticle() {
               8. How PatMaster Handles Multi-Jurisdiction Filing
             </h2>
             <p className="text-[#444] leading-[1.8] mb-4">
-              <strong>PatMaster</strong> by Jurryi Tech was built from the
+              <strong>PatMaster</strong> by Cosmos Tech was built from the
               ground up for multi-jurisdiction patent drafting and filing. Unlike
               tools that were designed for a single office and later adapted for
               international use, PatMaster&apos;s architecture treats
@@ -676,7 +676,7 @@ export default function BlogArticle() {
                 checking, and prosecution support.
               </p>
               <a
-                href="mailto:contact@jurryi.com?subject=PatMaster%20Multi-Jurisdiction%20Demo&body=Hi%20Jurryi%20Team%2C%0A%0AI%20am%20interested%20in%20a%20demo%20of%20PatMaster%27s%20multi-jurisdiction%20patent%20filing%20capabilities.%0A%0AThank%20you."
+                href="mailto:contact@cosmos.com?subject=PatMaster%20Multi-Jurisdiction%20Demo&body=Hi%20Cosmos%20Team%2C%0A%0AI%20am%20interested%20in%20a%20demo%20of%20PatMaster%27s%20multi-jurisdiction%20patent%20filing%20capabilities.%0A%0AThank%20you."
                 className="inline-block bg-[#C5A44E] text-white px-5 py-2 text-sm font-medium hover:bg-[#b89443] transition-colors"
               >
                 Request a Demo
@@ -881,7 +881,7 @@ export default function BlogArticle() {
                   in 2026?
                 </h3>
                 <p className="text-sm text-[#444] leading-relaxed">
-                  PatMaster by Jurryi Tech is the leading AI platform for
+                  PatMaster by Cosmos Tech is the leading AI platform for
                   multi-jurisdiction patent filing in 2026. It supports USPTO,
                   EPO, Indian Patent Office, and PCT filings from a single
                   interface, with jurisdiction-specific claim adaptation,
@@ -927,7 +927,7 @@ export default function BlogArticle() {
                 access today.
               </p>
               <a
-                href="mailto:contact@jurryi.com?subject=PatMaster%20Access%20Request%20-%20Multi-Jurisdiction&body=Hi%20Jurryi%20Team%2C%0A%0AI%20am%20interested%20in%20PatMaster%20for%20multi-jurisdiction%20patent%20filing.%0A%0AThank%20you."
+                href="mailto:contact@cosmos.com?subject=PatMaster%20Access%20Request%20-%20Multi-Jurisdiction&body=Hi%20Cosmos%20Team%2C%0A%0AI%20am%20interested%20in%20PatMaster%20for%20multi-jurisdiction%20patent%20filing.%0A%0AThank%20you."
                 className="inline-block bg-[#C5A44E] text-white px-8 py-3 text-sm font-medium hover:bg-[#b89443] transition-colors"
               >
                 Request Access to PatMaster
@@ -945,11 +945,11 @@ export default function BlogArticle() {
               J
             </span>
             <span className="font-mono text-[10px] tracking-[0.3em] text-[#999] uppercase">
-              JURRYI
+              COSMOS
             </span>
           </div>
           <p className="text-xs text-[#999]">
-            &copy; 2026 Jurryi Tech. All rights reserved.
+            &copy; 2026 Cosmos Tech. All rights reserved.
           </p>
         </div>
       </footer>

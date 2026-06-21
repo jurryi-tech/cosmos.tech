@@ -15,8 +15,8 @@ const Footer = dynamic(() => import("@/components/sections/Footer"), { ssr: fals
 const steps = [
   {
     num: "01",
-    title: "Jurryi goes to Attorney/Inventor\u2019s device",
-    desc: "Jurryi Program Module + SLM download from our private cloud server to the end user device. Our Patent Language Model is a 4-billion parameter (3.6B non-embedding) model, fine-tuned exclusively on millions of granted patents and prosecution records. At just ~2.5 GB in its optimized 4-bit quantized form, it downloads in minutes and runs comfortably on any modern laptop with 8 GB RAM \u2014 no GPU required.",
+    title: "Cosmos goes to Attorney/Inventor\u2019s device",
+    desc: "Cosmos Program Module + SLM download from our private cloud server to the end user device. Our Patent Language Model is a 4-billion parameter (3.6B non-embedding) model, fine-tuned exclusively on millions of granted patents and prosecution records. At just ~2.5 GB in its optimized 4-bit quantized form, it downloads in minutes and runs comfortably on any modern laptop with 8 GB RAM \u2014 no GPU required.",
     highlight: "100A",
   },
   {
@@ -90,13 +90,13 @@ function ArchitectureDiagram({ activeStep }: { activeStep: number }) {
         Access Token Verifier <tspan textDecoration="underline">104</tspan>
       </text>
 
-      {/* Jurryi Program Module 106 */}
+      {/* Cosmos Program Module 106 */}
       <rect
         x="250" y="215" width="170" height="45" rx="0"
         fill={hl === "100A" ? "#00FFFF" : "#00FFFF"} stroke="#000" strokeWidth="1.5"
       />
       <text x="335" y="233" textAnchor="middle" fontFamily={TNR} fontSize="11" fontWeight="bold" fill="#000">
-        <tspan style={{ backgroundColor: "#00FFFF" }}>Jurryi</tspan>
+        <tspan style={{ backgroundColor: "#00FFFF" }}>Cosmos</tspan>
       </text>
       <text x="335" y="247" textAnchor="middle" fontFamily={TNR} fontSize="11" fill="#000">
         Program Module
@@ -405,11 +405,11 @@ function StepCard({ step, index, isActive, onClick }: {
 /*  COMPARISON TABLE                                                    */
 /* ------------------------------------------------------------------ */
 
-function ComparisonRow({ label, jurryi, others }: { label: string; jurryi: string; others: string }) {
+function ComparisonRow({ label, cosmos, others }: { label: string; cosmos: string; others: string }) {
   return (
     <div className="grid grid-cols-3 gap-4 border-b border-[#E8E4DD] py-4 text-sm font-serif">
       <span className="font-medium text-[#1A1A1A]">{label}</span>
-      <span className="text-center font-semibold text-[#C5A44E]">{jurryi}</span>
+      <span className="text-center font-semibold text-[#C5A44E]">{cosmos}</span>
       <span className="text-center text-[#8B7355]">{others}</span>
     </div>
   );
@@ -450,7 +450,7 @@ export default function HowItWorksPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            How Jurryi Works
+            How Cosmos Works
           </motion.p>
           <motion.h1
             className="font-serif text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.1] text-[#1A1A1A] max-w-[800px]"
@@ -466,7 +466,7 @@ export default function HowItWorksPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Jurryi operates on a fundamentally different principle from every AI patent tool
+            Cosmos operates on a fundamentally different principle from every AI patent tool
             in the market &mdash; instead of asking attorneys to upload confidential invention
             disclosures to external servers, our technology travels to the user&apos;s device.
           </motion.p>
@@ -579,7 +579,7 @@ export default function HowItWorksPage() {
       <section className="px-6 lg:px-12 py-20 border-t border-[#E8E4DD]">
         <div className="mx-auto max-w-[800px]">
           <h2 className="font-serif text-3xl font-bold text-[#1A1A1A] mb-4 text-center">
-            Jurryi vs. Every Other AI Patent Tool
+            Cosmos vs. Every Other AI Patent Tool
           </h2>
           <p className="text-center text-[#5A5A5A] mb-10 font-serif">
             Every competitor processes your inventions on their servers. We don&apos;t.
@@ -587,17 +587,17 @@ export default function HowItWorksPage() {
           <div className="rounded-xl border border-[#E8E4DD] bg-white p-8">
             <div className="grid grid-cols-3 gap-4 border-b-2 border-[#1A1A1A] pb-3 mb-2">
               <span className="text-xs font-mono uppercase tracking-wider text-[#8B7355]">Metric</span>
-              <span className="text-center text-xs font-mono uppercase tracking-wider text-[#C5A44E]">Jurryi</span>
+              <span className="text-center text-xs font-mono uppercase tracking-wider text-[#C5A44E]">Cosmos</span>
               <span className="text-center text-xs font-mono uppercase tracking-wider text-[#8B7355]">Others</span>
             </div>
-            <ComparisonRow label="Data leaves device?" jurryi="Never" others="Always" />
-            <ComparisonRow label="Processing location" jurryi="On-device" others="Cloud servers" />
-            <ComparisonRow label="API calls to external AI" jurryi="Zero" others="Every request" />
-            <ComparisonRow label="Training data risk" jurryi="None" others="Unclear/TOS" />
-            <ComparisonRow label="Sandbox isolation" jurryi="Encrypted sandbox" others="None" />
-            <ComparisonRow label="Post-session data" jurryi="Auto-deleted" others="Retained" />
-            <ComparisonRow label="GPU required" jurryi="No" others="N/A (cloud)" />
-            <ComparisonRow label="Works offline" jurryi="Yes (after download)" others="No" />
+            <ComparisonRow label="Data leaves device?" cosmos="Never" others="Always" />
+            <ComparisonRow label="Processing location" cosmos="On-device" others="Cloud servers" />
+            <ComparisonRow label="API calls to external AI" cosmos="Zero" others="Every request" />
+            <ComparisonRow label="Training data risk" cosmos="None" others="Unclear/TOS" />
+            <ComparisonRow label="Sandbox isolation" cosmos="Encrypted sandbox" others="None" />
+            <ComparisonRow label="Post-session data" cosmos="Auto-deleted" others="Retained" />
+            <ComparisonRow label="GPU required" cosmos="No" others="N/A (cloud)" />
+            <ComparisonRow label="Works offline" cosmos="Yes (after download)" others="No" />
           </div>
         </div>
       </section>
@@ -647,7 +647,7 @@ export default function HowItWorksPage() {
             We never collect, store, access, or transmit any information.
           </p>
           <a
-            href="mailto:contact@jurryi.com?subject=Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
+            href="mailto:contact@cosmos.com?subject=Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
             className="inline-block bg-[#1A1A1A] text-white px-8 py-3.5 rounded-md text-sm font-medium font-serif transition-colors hover:bg-[#C5A44E]"
           >
             Request a Demo

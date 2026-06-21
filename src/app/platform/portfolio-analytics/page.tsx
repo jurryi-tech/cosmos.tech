@@ -9,7 +9,7 @@ export default function PortfolioAnalyticsPage() {
       category="Platform"
       title="Portfolio Analytics"
       subtitle="Actionable Intelligence for Strategic IP Decisions"
-      description="Jurryi's Portfolio Analytics platform transforms raw patent data into strategic intelligence, delivering comprehensive visualizations and predictive insights across your entire IP portfolio. From competitive benchmarking to white space identification, gain the analytical clarity needed to make confident decisions about filing priorities, licensing opportunities, and portfolio optimization at every level of your organization."
+      description="Cosmos's Portfolio Analytics platform transforms raw patent data into strategic intelligence, delivering comprehensive visualizations and predictive insights across your entire IP portfolio. From competitive benchmarking to white space identification, gain the analytical clarity needed to make confident decisions about filing priorities, licensing opportunities, and portfolio optimization at every level of your organization."
       features={[
         {
           title: "Portfolio Heatmaps",

@@ -73,7 +73,7 @@ export default function PageTemplate({
               J
             </motion.span>
             <span className="font-mono text-sm tracking-[0.3em] text-[#1A1A1A] uppercase">
-              JURRYI
+              COSMOS
             </span>
           </Link>
           <motion.div whileHover={{ x: -3 }} transition={{ type: "spring", stiffness: 400 }}>
@@ -189,7 +189,7 @@ export default function PageTemplate({
         </div>
       </section>
 
-      {/* How Jurryi Helps Section */}
+      {/* How Cosmos Helps Section */}
       <section className="px-6 pb-24 bg-gradient-to-b from-[#FDFBF7] to-[#F5F3EE]">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -203,7 +203,7 @@ export default function PageTemplate({
               TAILORED FOR YOUR ROLE
             </span>
             <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] text-[#1A1A1A] mt-3">
-              How Jurryi Helps
+              How Cosmos Helps
             </h2>
           </motion.div>
 
@@ -271,7 +271,7 @@ export default function PageTemplate({
             transition={{ delay: 0.2 }}
           >
             <Link
-              href="mailto:contact@jurryi.com?subject=Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
               className="inline-block px-10 py-4 rounded-md text-sm font-medium text-[#1A1A1A] transition-all duration-300 hover:scale-105"
               style={{ backgroundColor: accentColor }}
             >
@@ -285,9 +285,9 @@ export default function PageTemplate({
       <footer className="bg-[#111] text-[#666] px-6 py-8">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
           <Link href="/" className="font-mono text-xs tracking-[0.2em] text-white hover:text-[#C5A44E] transition-colors">
-            JURRYI
+            COSMOS
           </Link>
-          <p className="text-xs">&copy; 2026 Jurryi Tech, Inc. All rights reserved.</p>
+          <p className="text-xs">&copy; 2026 Cosmos Tech, Inc. All rights reserved.</p>
         </div>
       </footer>
     </div>

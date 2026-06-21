@@ -9,7 +9,7 @@ export default function PatentLawGuidePage() {
       category="Resources"
       title="Patent Law Guide"
       subtitle="Educational resources for patent law practitioners and innovators"
-      description="Navigate the complexities of patent law with Jurryi's comprehensive legal reference library. Our guides distill decades of prosecution experience and current case law into actionable, practitioner-focused resources that help you strengthen applications, anticipate examiner rejections, and develop winning prosecution strategies across domestic and international jurisdictions."
+      description="Navigate the complexities of patent law with Cosmos's comprehensive legal reference library. Our guides distill decades of prosecution experience and current case law into actionable, practitioner-focused resources that help you strengthen applications, anticipate examiner rejections, and develop winning prosecution strategies across domestic and international jurisdictions."
       features={[
         {
           title: "Jurisdiction-Specific Guides",

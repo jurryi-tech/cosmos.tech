@@ -8,13 +8,13 @@ export default function TermsOfServicePage() {
     <PageTemplate
       category="Company"
       title="Terms of Service"
-      subtitle="Legal Terms Governing Use of the Jurryi Platform"
-      description="These Terms of Service establish the legal framework governing your access to and use of the Jurryi platform, including all associated tools, APIs, and services. We have drafted these terms to be clear, balanced, and fair — reflecting our belief that strong partnerships are built on mutual understanding. By using Jurryi, you agree to abide by these terms, which are designed to protect both your interests and ours while enabling you to leverage our AI-powered patent prosecution tools with confidence."
+      subtitle="Legal Terms Governing Use of the Cosmos Platform"
+      description="These Terms of Service establish the legal framework governing your access to and use of the Cosmos platform, including all associated tools, APIs, and services. We have drafted these terms to be clear, balanced, and fair — reflecting our belief that strong partnerships are built on mutual understanding. By using Cosmos, you agree to abide by these terms, which are designed to protect both your interests and ours while enabling you to leverage our AI-powered patent prosecution tools with confidence."
       features={[
         {
           title: "Service Scope & Definitions",
           description:
-            "A clear delineation of what the Jurryi platform encompasses, including AI-assisted drafting tools, prior art search capabilities, office action analysis, docketing integrations, and all ancillary features. Every service component is defined precisely so there is no ambiguity about what is covered.",
+            "A clear delineation of what the Cosmos platform encompasses, including AI-assisted drafting tools, prior art search capabilities, office action analysis, docketing integrations, and all ancillary features. Every service component is defined precisely so there is no ambiguity about what is covered.",
           icon: <HiOutlineDocumentText size={20} />,
           cardType: "list" as const,
           cardData: { items: ["API access", "Platform tools", "Support", "Updates"] },
@@ -30,7 +30,7 @@ export default function TermsOfServicePage() {
         {
           title: "Intellectual Property Ownership",
           description:
-            "You retain full ownership of all content you create, upload, or generate using Jurryi. Our terms explicitly confirm that no intellectual property rights in your patent drafts, claims, disclosures, or other work product transfer to Jurryi through your use of the platform.",
+            "You retain full ownership of all content you create, upload, or generate using Cosmos. Our terms explicitly confirm that no intellectual property rights in your patent drafts, claims, disclosures, or other work product transfer to Cosmos through your use of the platform.",
           icon: <HiOutlineShieldCheck size={20} />,
           cardType: "stat" as const,
           cardData: { value: "100%", label: "your IP stays yours", change: "Guaranteed" },
@@ -46,7 +46,7 @@ export default function TermsOfServicePage() {
         {
           title: "Liability Framework",
           description:
-            "A balanced liability framework that clearly allocates risk between Jurryi and our users. We stand behind our platform with meaningful warranties while establishing reasonable limitations that reflect the advisory nature of AI-assisted patent prosecution tools.",
+            "A balanced liability framework that clearly allocates risk between Cosmos and our users. We stand behind our platform with meaningful warranties while establishing reasonable limitations that reflect the advisory nature of AI-assisted patent prosecution tools.",
           icon: <HiOutlineScale size={20} />,
           cardType: "comparison" as const,
           cardData: { before: "Ambiguous", after: "Crystal clear", improvement: "Fair terms" },
@@ -66,7 +66,7 @@ export default function TermsOfServicePage() {
         drafters:
           "Understand exactly what you can and cannot do on the platform with straightforward usage guidelines that support productive workflows while maintaining the quality standards expected in professional patent prosecution.",
         engineers:
-          "Access detailed API usage terms including rate limits, authentication requirements, data format specifications, and integration guidelines that enable you to build robust, compliant connections with the Jurryi platform.",
+          "Access detailed API usage terms including rate limits, authentication requirements, data format specifications, and integration guidelines that enable you to build robust, compliant connections with the Cosmos platform.",
       }}
       accentColor="#8B5E3C"
     />

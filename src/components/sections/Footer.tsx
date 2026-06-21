@@ -71,13 +71,13 @@ export default function Footer() {
           {/* Column 1: Brand */}
           <div className="footer-col">
             <p className="font-mono text-white text-xl tracking-[0.2em] font-bold mb-4">
-              JURRYI
+              COSMOS
             </p>
             <p className="text-sm leading-relaxed mb-6">
               AI-Powered Patent Prosecution Infrastructure
             </p>
             <p className="text-xs text-[#666]">
-              &copy; 2026 Jurryi Tech, Inc. All rights reserved.
+              &copy; 2026 Cosmos Tech, Inc. All rights reserved.
             </p>
           </div>
 

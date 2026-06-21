@@ -25,10 +25,10 @@ export default function CostCalculator() {
   const resultsRef = useRef<HTMLDivElement>(null);
 
   const traditionalCost = applications * officeActions * hourlyRate * hoursPerResponse;
-  const jurryiCost = applications * officeActions * 250;
-  const annualSavings = traditionalCost - jurryiCost;
+  const cosmosCost = applications * officeActions * 250;
+  const annualSavings = traditionalCost - cosmosCost;
   const timeSaved = applications * officeActions * (hoursPerResponse - 0.5);
-  const roi = jurryiCost > 0 ? (annualSavings / jurryiCost) * 100 : 0;
+  const roi = cosmosCost > 0 ? (annualSavings / cosmosCost) * 100 : 0;
   const traditionalPerResponse = hourlyRate * hoursPerResponse;
 
   useEffect(() => {

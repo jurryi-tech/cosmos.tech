@@ -26,7 +26,7 @@ export default function BlogArticle() {
               J
             </span>
             <span className="font-mono text-xs tracking-[0.3em] text-[#1A1A1A] uppercase">
-              JURRYI
+              COSMOS
             </span>
           </Link>
           <div className="flex items-center gap-4">
@@ -37,7 +37,7 @@ export default function BlogArticle() {
               &larr; All Articles
             </Link>
             <a
-              href="mailto:contact@jurryi.com?subject=PatMaster%20Access%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20PatMaster.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=PatMaster%20Access%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20PatMaster.%0A%0AThank%20you."
               className="bg-[#1A1A1A] text-white px-4 py-2 text-sm font-medium hover:bg-[#C5A44E] transition-colors"
             >
               Request Access
@@ -70,7 +70,7 @@ export default function BlogArticle() {
           <div className="flex items-center gap-3 text-sm text-[#888]">
             <span>Written by</span>
             <span className="font-medium text-[#1A1A1A]">
-              Jurryi Tech Editorial Team
+              Cosmos Tech Editorial Team
             </span>
             <span>&bull;</span>
             <span>18 min read</span>
@@ -484,7 +484,7 @@ export default function BlogArticle() {
               7. How PatMaster&rsquo;s Claim Amendment Engine Works
             </h2>
             <p className="text-[15px] text-[#444] leading-relaxed mb-4">
-              PatMaster by Jurryi Tech approaches claim drafting and amendment
+              PatMaster by Cosmos Tech approaches claim drafting and amendment
               as an integrated workflow rather than isolated tasks. The Claim
               Amendment Engine is built on the principle that drafting and
               prosecution are parts of a continuous feedback loop &mdash; claims
@@ -783,7 +783,7 @@ export default function BlogArticle() {
                   Does PatMaster support multi-jurisdiction claim drafting?
                 </h3>
                 <p className="text-[15px] text-[#444] leading-relaxed">
-                  Yes. PatMaster by Jurryi Tech supports claim drafting for
+                  Yes. PatMaster by Cosmos Tech supports claim drafting for
                   USPTO, EPO, Indian Patent Office, and PCT filings. It
                   automatically adjusts claim formatting, language conventions,
                   and structural requirements based on the target jurisdiction,
@@ -836,13 +836,13 @@ export default function BlogArticle() {
                 Ready to Transform Your Claim Drafting Workflow?
               </p>
               <p className="text-[#999] text-[15px] leading-relaxed mb-6 max-w-xl mx-auto">
-                PatMaster by Jurryi Tech gives IP attorneys AI-powered claim
+                PatMaster by Cosmos Tech gives IP attorneys AI-powered claim
                 generation, scope optimization, and multi-jurisdiction
                 compliance &mdash; all in a single platform built for patent
                 prosecution.
               </p>
               <a
-                href="mailto:contact@jurryi.com?subject=PatMaster%20Demo%20Request%20%E2%80%93%20Claim%20Drafting&body=Hi%20Jurryi%20Team%2C%0A%0AI%20read%20your%20article%20on%20AI%20claim%20drafting%20and%20would%20like%20to%20request%20a%20demo%20of%20PatMaster.%0A%0AThank%20you."
+                href="mailto:contact@cosmos.com?subject=PatMaster%20Demo%20Request%20%E2%80%93%20Claim%20Drafting&body=Hi%20Cosmos%20Team%2C%0A%0AI%20read%20your%20article%20on%20AI%20claim%20drafting%20and%20would%20like%20to%20request%20a%20demo%20of%20PatMaster.%0A%0AThank%20you."
                 className="inline-block bg-[#C5A44E] text-[#1A1A1A] px-8 py-3 text-sm font-semibold tracking-wide uppercase hover:bg-[#d4b65e] transition-colors"
               >
                 Request a Demo
@@ -859,10 +859,10 @@ export default function BlogArticle() {
             href="/"
             className="font-mono text-xs tracking-[0.2em] text-white hover:text-[#C5A44E] transition-colors"
           >
-            JURRYI
+            COSMOS
           </Link>
           <p className="text-xs">
-            &copy; 2026 Jurryi Tech, Inc. All rights reserved.
+            &copy; 2026 Cosmos Tech, Inc. All rights reserved.
           </p>
         </div>
       </footer>

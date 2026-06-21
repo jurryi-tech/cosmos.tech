@@ -3,7 +3,7 @@ import BlogArticle from "./BlogArticle";
 
 export const metadata: Metadata = {
   title:
-    "AI Prior Art Search vs Traditional Prior Art Search: What Patent Attorneys Need to Know (2026) | Jurryi Tech",
+    "AI Prior Art Search vs Traditional Prior Art Search: What Patent Attorneys Need to Know (2026) | Cosmos Tech",
   description:
     "Compare AI prior art search vs traditional prior art search methods. Learn how semantic AI, NLP, and vector embeddings are transforming patent novelty searches, reducing search time by 80%, and improving prior art coverage for patent attorneys in 2026.",
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "prior art discovery tool",
     "patent search automation",
     "PatMaster prior art search",
-    "Jurryi prior art tool",
+    "Cosmos prior art tool",
     "patent invalidity search AI",
     "AI freedom to operate search",
     "patent database search AI",
@@ -39,19 +39,19 @@ export const metadata: Metadata = {
       "AI Prior Art Search vs Traditional Prior Art Search: What Patent Attorneys Need to Know (2026)",
     description:
       "In-depth comparison of AI-powered and traditional prior art search methods. Discover how semantic search, NLP, and vector embeddings are giving patent attorneys faster, more comprehensive prior art coverage.",
-    url: "https://jurryi.com/resources/blog/ai-prior-art-search-vs-traditional",
-    siteName: "Jurryi Tech",
+    url: "https://cosmos.com/resources/blog/ai-prior-art-search-vs-traditional",
+    siteName: "Cosmos Tech",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AI Prior Art Search vs Traditional Prior Art Search - Jurryi Tech",
+        alt: "AI Prior Art Search vs Traditional Prior Art Search - Cosmos Tech",
       },
     ],
     publishedTime: "2026-03-08T00:00:00Z",
     modifiedTime: "2026-03-08T00:00:00Z",
-    authors: ["Jurryi Tech Editorial Team"],
+    authors: ["Cosmos Tech Editorial Team"],
     tags: [
       "prior art search",
       "AI patent search",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://jurryi.com/resources/blog/ai-prior-art-search-vs-traditional",
+      "https://cosmos.com/resources/blog/ai-prior-art-search-vs-traditional",
   },
 };
 
@@ -88,32 +88,32 @@ export default function Page() {
               "AI Prior Art Search vs Traditional Prior Art Search: What Patent Attorneys Need to Know (2026)",
             description:
               "Comprehensive comparison of AI-powered and traditional prior art search methods for patent attorneys, covering semantic search, NLP, vector embeddings, and practical implementation guidance.",
-            image: "https://jurryi.com/og-image.png",
+            image: "https://cosmos.com/og-image.png",
             datePublished: "2026-03-08T00:00:00Z",
             dateModified: "2026-03-08T00:00:00Z",
             author: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
             },
             publisher: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
               logo: {
                 "@type": "ImageObject",
-                url: "https://jurryi.com/favicon.svg",
+                url: "https://cosmos.com/favicon.svg",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id":
-                "https://jurryi.com/resources/blog/ai-prior-art-search-vs-traditional",
+                "https://cosmos.com/resources/blog/ai-prior-art-search-vs-traditional",
             },
             about: [
               {
                 "@type": "SoftwareApplication",
-                name: "PatMaster by Jurryi Tech",
+                name: "PatMaster by Cosmos Tech",
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web",
               },

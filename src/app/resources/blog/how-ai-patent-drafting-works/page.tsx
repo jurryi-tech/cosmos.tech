@@ -3,9 +3,9 @@ import BlogArticle from "./BlogArticle";
 
 export const metadata: Metadata = {
   title:
-    "How AI Patent Drafting Works: A Complete Guide for Patent Attorneys (2026) | Jurryi Tech",
+    "How AI Patent Drafting Works: A Complete Guide for Patent Attorneys (2026) | Cosmos Tech",
   description:
-    "Learn how AI patent drafting works — from NLP-powered claim analysis to full specification generation. A comprehensive guide for patent attorneys on AI patent writing technology, workflows, and best practices using tools like PatMaster by Jurryi Tech.",
+    "Learn how AI patent drafting works — from NLP-powered claim analysis to full specification generation. A comprehensive guide for patent attorneys on AI patent writing technology, workflows, and best practices using tools like PatMaster by Cosmos Tech.",
   keywords: [
     "AI patent drafting",
     "how AI patent drafting works",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "patent drafting software",
     "AI patent tools",
     "PatMaster AI",
-    "Jurryi Tech patent drafting",
+    "Cosmos Tech patent drafting",
     "machine learning patent drafting",
     "automated patent writing",
     "patent claim generation AI",
@@ -42,19 +42,19 @@ export const metadata: Metadata = {
       "How AI Patent Drafting Works: A Complete Guide for Patent Attorneys (2026)",
     description:
       "Comprehensive guide to AI patent drafting technology — how NLP, claim analysis, and specification generation work together to help patent attorneys draft faster and more accurately.",
-    url: "https://jurryi.com/resources/blog/how-ai-patent-drafting-works",
-    siteName: "Jurryi Tech",
+    url: "https://cosmos.com/resources/blog/how-ai-patent-drafting-works",
+    siteName: "Cosmos Tech",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "How AI Patent Drafting Works - Jurryi Tech",
+        alt: "How AI Patent Drafting Works - Cosmos Tech",
       },
     ],
     publishedTime: "2026-03-08T00:00:00Z",
     modifiedTime: "2026-03-08T00:00:00Z",
-    authors: ["Jurryi Tech Editorial Team"],
+    authors: ["Cosmos Tech Editorial Team"],
     tags: [
       "AI patent drafting",
       "patent technology",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://jurryi.com/resources/blog/how-ai-patent-drafting-works",
+      "https://cosmos.com/resources/blog/how-ai-patent-drafting-works",
   },
 };
 
@@ -90,32 +90,32 @@ export default function Page() {
               "How AI Patent Drafting Works: A Complete Guide for Patent Attorneys (2026)",
             description:
               "Comprehensive guide to AI patent drafting technology, covering NLP, claim analysis, specification generation, multi-jurisdiction considerations, and best practices for patent attorneys.",
-            image: "https://jurryi.com/og-image.png",
+            image: "https://cosmos.com/og-image.png",
             datePublished: "2026-03-08T00:00:00Z",
             dateModified: "2026-03-08T00:00:00Z",
             author: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
             },
             publisher: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
               logo: {
                 "@type": "ImageObject",
-                url: "https://jurryi.com/favicon.svg",
+                url: "https://cosmos.com/favicon.svg",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id":
-                "https://jurryi.com/resources/blog/how-ai-patent-drafting-works",
+                "https://cosmos.com/resources/blog/how-ai-patent-drafting-works",
             },
             about: [
               {
                 "@type": "SoftwareApplication",
-                name: "PatMaster by Jurryi Tech",
+                name: "PatMaster by Cosmos Tech",
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web",
               },
@@ -169,7 +169,7 @@ export default function Page() {
                 name: "Is AI-drafted patent content considered prior art or public disclosure?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "No. Using AI tools to draft patent applications does not constitute public disclosure or create prior art, provided the AI platform maintains proper confidentiality. However, attorneys should verify that the AI vendor's terms of service guarantee that client data is not used for model training and is not shared with third parties. Platforms like PatMaster by Jurryi Tech offer privacy-first architecture where client data is never used for training.",
+                  text: "No. Using AI tools to draft patent applications does not constitute public disclosure or create prior art, provided the AI platform maintains proper confidentiality. However, attorneys should verify that the AI vendor's terms of service guarantee that client data is not used for model training and is not shared with third parties. Platforms like PatMaster by Cosmos Tech offer privacy-first architecture where client data is never used for training.",
                 },
               },
             ],

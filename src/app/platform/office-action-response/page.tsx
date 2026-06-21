@@ -9,7 +9,7 @@ export default function OfficeActionResponsePage() {
       category="Platform"
       title="Office Action Response"
       subtitle="AI-Generated Responses in Minutes, Not Days"
-      description="Jurryi's Office Action Response engine analyzes examiner rejections with surgical precision and generates comprehensive, persuasive response strategies in minutes. By understanding rejection patterns, examiner tendencies, and successful prosecution histories, the platform produces arguments and amendments that dramatically increase allowance rates while reducing response preparation time by up to 80%."
+      description="Cosmos's Office Action Response engine analyzes examiner rejections with surgical precision and generates comprehensive, persuasive response strategies in minutes. By understanding rejection patterns, examiner tendencies, and successful prosecution histories, the platform produces arguments and amendments that dramatically increase allowance rates while reducing response preparation time by up to 80%."
       features={[
         {
           title: "Examiner Pattern Analysis",

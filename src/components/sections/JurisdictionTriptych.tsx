@@ -16,7 +16,7 @@ interface RejectionCard {
   id: string;
   title: string;
   quote: string;
-  jurryi: string;
+  cosmos: string;
 }
 
 const usptoCards: RejectionCard[] = [
@@ -25,32 +25,32 @@ const usptoCards: RejectionCard[] = [
     title: "\u00a7 101: Subject Matter Eligibility",
     quote:
       "An abstract idea, law of nature, or natural phenomenon is not patentable subject matter under 35 U.S.C. \u00a7 101. The Alice/Mayo framework requires examiners to determine whether additional claim elements transform the nature of the claim into a patent-eligible application.",
-    jurryi:
-      "Jurryi\u2019s 101 Engine analyzes claim language against 14,000+ Alice rejections to identify abstract idea triggers before filing and restructures claims around specific technical implementations that satisfy Step 2B of the Alice framework.",
+    cosmos:
+      "Cosmos\u2019s 101 Engine analyzes claim language against 14,000+ Alice rejections to identify abstract idea triggers before filing and restructures claims around specific technical implementations that satisfy Step 2B of the Alice framework.",
   },
   {
     id: "102",
     title: "\u00a7 102: Novelty",
     quote:
       "A claimed invention must be novel \u2014 not anticipated by any single prior art reference. Under \u00a7 102, if every element of a claim is disclosed in a single prior art document, the claim is unpatentable.",
-    jurryi:
-      "Jurryi\u2019s Prior Art Neural Network cross-references the invention disclosure against 147 million+ patent documents, scientific papers, and technical publications across USPTO, EPO, WIPO, and IPO databases in under 90 seconds.",
+    cosmos:
+      "Cosmos\u2019s Prior Art Neural Network cross-references the invention disclosure against 147 million+ patent documents, scientific papers, and technical publications across USPTO, EPO, WIPO, and IPO databases in under 90 seconds.",
   },
   {
     id: "103",
     title: "\u00a7 103: Obviousness",
     quote:
       "An invention is unpatentable if the differences between it and the prior art would have been obvious to a person having ordinary skill in the art. Examiners combine multiple references to establish a prima facie case of obviousness under KSR International v. Teleflex.",
-    jurryi:
-      "Jurryi\u2019s Obviousness Prediction Model identifies the most likely reference combinations an examiner would use by analyzing prosecution patterns within the assigned Art Unit.",
+    cosmos:
+      "Cosmos\u2019s Obviousness Prediction Model identifies the most likely reference combinations an examiner would use by analyzing prosecution patterns within the assigned Art Unit.",
   },
   {
     id: "112",
     title: "\u00a7 112: Specification Requirements",
     quote:
       "The specification must describe the invention in full, clear, concise, and exact terms to enable a person skilled in the art to make and use it.",
-    jurryi:
-      "Jurryi\u2019s Specification Analyzer ensures every claim term has explicit antecedent basis in the description, flags indefinite language patterns, verifies enablement coverage for all claim permutations.",
+    cosmos:
+      "Cosmos\u2019s Specification Analyzer ensures every claim term has explicit antecedent basis in the description, flags indefinite language patterns, verifies enablement coverage for all claim permutations.",
   },
 ];
 
@@ -63,7 +63,7 @@ const usptoStats = [
   { label: "Average Claim Count", value: "18.4", highlight: false },
   { label: "RCE Filing Rate", value: "34.2%", highlight: false },
   { label: "Appeal Rate", value: "8.7%", highlight: false },
-  { label: "Jurryi-Drafted Grant Rate", value: "84.3%", highlight: true },
+  { label: "Cosmos-Drafted Grant Rate", value: "84.3%", highlight: true },
 ];
 
 const ipoExclusions = [
@@ -77,26 +77,26 @@ const epoArticles = [
   {
     id: "52",
     title: "Article 52: Patentable Inventions",
-    jurryi:
-      "Jurryi\u2019s Article 52 Navigator maps claim elements against the exclusion lists in Article 52(2) and applies the \u201cas such\u201d doctrine of Article 52(3) to identify technical character arguments that survive examination.",
+    cosmos:
+      "Cosmos\u2019s Article 52 Navigator maps claim elements against the exclusion lists in Article 52(2) and applies the \u201cas such\u201d doctrine of Article 52(3) to identify technical character arguments that survive examination.",
   },
   {
     id: "54",
     title: "Article 54: Novelty",
-    jurryi:
-      "Jurryi\u2019s global prior art search spans 140+ million documents across all EP member states, PCT publications, and national filings to ensure absolute novelty under the EPO\u2019s state-of-the-art standard.",
+    cosmos:
+      "Cosmos\u2019s global prior art search spans 140+ million documents across all EP member states, PCT publications, and national filings to ensure absolute novelty under the EPO\u2019s state-of-the-art standard.",
   },
   {
     id: "56",
     title: "Article 56: Inventive Step",
-    jurryi:
-      "Jurryi\u2019s PSA Module automatically identifies the closest prior art, formulates the objective technical problem, and evaluates whether the claimed solution would have been obvious \u2014 reduces Article 56 rejections by 62%.",
+    cosmos:
+      "Cosmos\u2019s PSA Module automatically identifies the closest prior art, formulates the objective technical problem, and evaluates whether the claimed solution would have been obvious \u2014 reduces Article 56 rejections by 62%.",
   },
   {
     id: "83",
     title: "Article 83: Disclosure / Sufficiency",
-    jurryi:
-      "Jurryi\u2019s Sufficiency Checker validates that the description enables a skilled person to reproduce the invention across the full scope of the claims, flagging gaps in experimental data or missing implementation details.",
+    cosmos:
+      "Cosmos\u2019s Sufficiency Checker validates that the description enables a skilled person to reproduce the invention across the full scope of the claims, flagging gaps in experimental data or missing implementation details.",
   },
 ];
 
@@ -106,7 +106,7 @@ const epoGrantRates = [
   { sector: "Electrical", rate: 78 },
   { sector: "Mechanical", rate: 84 },
   { sector: "CompSci", rate: 51 },
-  { sector: "AI/ML", rate: 43, jurryiRate: 74 },
+  { sector: "AI/ML", rate: 43, cosmosRate: 74 },
   { sector: "Telecoms", rate: 73 },
 ];
 
@@ -289,13 +289,13 @@ function EPOBarChart() {
               className="h-full  bg-gradient-to-r from-[#1A1A1A]/70 to-[#1A1A1A]/40"
               style={{ width: `${item.rate}%` }}
             />
-            {item.jurryiRate && (
+            {item.cosmosRate && (
               <div
                 className="absolute top-0 h-full  border-2 border-[#C5A44E] bg-[#C5A44E]/10"
-                style={{ width: `${item.jurryiRate}%` }}
+                style={{ width: `${item.cosmosRate}%` }}
               >
                 <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-bold text-[#C5A44E]">
-                  Jurryi: {item.jurryiRate}%
+                  Cosmos: {item.cosmosRate}%
                 </span>
               </div>
             )}
@@ -478,7 +478,7 @@ export default function JurisdictionTriptych() {
                       {card.quote}
                     </blockquote>
                     <p className="mt-3 text-xs leading-relaxed text-[#8B7355]">
-                      {card.jurryi}
+                      {card.cosmos}
                     </p>
                   </div>
                 ))}
@@ -538,7 +538,7 @@ export default function JurisdictionTriptych() {
 
             <div className={`anim-card ${cardBase} border-[#C5A44E]/20 border-l-4 border-l-[#C5A44E]`}>
               <p className="text-sm leading-relaxed text-[#3A3A3A]">
-                Jurryi&apos;s India Drafting Agent generates complete patent
+                Cosmos&apos;s India Drafting Agent generates complete patent
                 specifications formatted per Indian Patent Office requirements:
                 Form 1, Form 2, Form 3, Form 5, and Form 26. The{" "}
                 <span className="font-bold text-[#C5A44E]">
@@ -559,7 +559,7 @@ export default function JurisdictionTriptych() {
                 47%
               </div>
               <p className="text-sm text-[#5A5A5A]">
-                Jurryi increases FER-to-Grant conversion by{" "}
+                Cosmos increases FER-to-Grant conversion by{" "}
                 <span className="font-bold text-[#C5A44E]">47%</span> through
                 predictive claim structuring.
               </p>
@@ -603,7 +603,7 @@ export default function JurisdictionTriptych() {
                     {art.title}
                   </h3>
                   <p className="mt-3 text-xs leading-relaxed text-[#5A5A5A]">
-                    {art.jurryi}
+                    {art.cosmos}
                   </p>
                 </div>
               ))}
@@ -684,7 +684,7 @@ function MobilePanelUSPTO({ cardBase }: { cardBase: string }) {
               {card.quote}
             </blockquote>
             <p className="mt-3 text-xs leading-relaxed text-[#8B7355]">
-              {card.jurryi}
+              {card.cosmos}
             </p>
           </motion.div>
         ))}
@@ -774,7 +774,7 @@ function MobilePanelIPO({ cardBase }: { cardBase: string }) {
           className={`${cardBase} border-[#C5A44E]/20 border-l-4 border-l-[#C5A44E]`}
         >
           <p className="text-sm leading-relaxed text-[#3A3A3A]">
-            Jurryi&apos;s India Drafting Agent generates complete patent
+            Cosmos&apos;s India Drafting Agent generates complete patent
             specifications. The{" "}
             <span className="font-bold text-[#C5A44E]">One-Click Drafting</span>{" "}
             produces a filing-ready document package in under{" "}
@@ -817,7 +817,7 @@ function MobilePanelEPO({ cardBase }: { cardBase: string }) {
             className={`${cardBase} border-[#1A1A1A]/10`}
           >
             <h3 className="text-sm font-bold text-[#1A1A1A]">{art.title}</h3>
-            <p className="mt-3 text-xs leading-relaxed text-[#5A5A5A]">{art.jurryi}</p>
+            <p className="mt-3 text-xs leading-relaxed text-[#5A5A5A]">{art.cosmos}</p>
           </motion.div>
         ))}
 

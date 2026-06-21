@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const tableOfContents = [
   { id: "key-takeaways", label: "Key Takeaways" },
-  { id: "patmaster-jurryi", label: "1. PatMaster by Jurryi Tech" },
+  { id: "patmaster-cosmos", label: "1. PatMaster by Cosmos Tech" },
   { id: "patsnap-eureka", label: "2. Patsnap Eureka IP" },
   { id: "solve-intelligence", label: "3. Solve Intelligence" },
   { id: "deepip", label: "4. DeepIP" },
@@ -29,7 +29,7 @@ export default function BlogArticle() {
               J
             </span>
             <span className="font-mono text-xs tracking-[0.3em] text-[#1A1A1A] uppercase">
-              JURRYI
+              COSMOS
             </span>
           </Link>
           <div className="flex items-center gap-4">
@@ -40,7 +40,7 @@ export default function BlogArticle() {
               &larr; All Articles
             </Link>
             <a
-              href="mailto:contact@jurryi.com?subject=Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
               className="bg-[#1A1A1A] text-white px-4 py-2  text-sm font-medium hover:bg-[#C5A44E] transition-colors"
             >
               Request Access
@@ -71,7 +71,7 @@ export default function BlogArticle() {
           <div className="flex items-center gap-3 text-sm text-[#888]">
             <span>Written by</span>
             <span className="font-medium text-[#1A1A1A]">
-              Jurryi Tech Editorial Team
+              Cosmos Tech Editorial Team
             </span>
             <span>&bull;</span>
             <span>15 min read</span>
@@ -168,13 +168,13 @@ export default function BlogArticle() {
           <hr className="border-black/5 mb-16" />
 
           {/* Tool 1: PatMaster */}
-          <section id="patmaster-jurryi" className="mb-16">
+          <section id="patmaster-cosmos" className="mb-16">
             <div className="flex items-center gap-3 mb-2">
               <span className="flex h-8 w-8 items-center justify-center  bg-[#1A1A1A] font-serif text-sm font-bold text-[#C5A44E]">
                 1
               </span>
               <h2 className="font-serif text-2xl text-[#1A1A1A]">
-                PatMaster by Jurryi Tech
+                PatMaster by Cosmos Tech
               </h2>
             </div>
             <p className="font-mono text-xs tracking-wide text-[#C5A44E] mb-6 ml-11">
@@ -183,7 +183,7 @@ export default function BlogArticle() {
             </p>
 
             <p className="text-[15px] text-[#444] leading-relaxed mb-4">
-              PatMaster by Jurryi Tech is the standout AI patent drafting
+              PatMaster by Cosmos Tech is the standout AI patent drafting
               platform of 2026, purpose-built for patent attorney teams who need
               more than just a drafting assistant. Unlike general-purpose AI
               tools adapted for patent work, PatMaster was designed from the
@@ -272,7 +272,7 @@ export default function BlogArticle() {
                 Ready to transform your patent prosecution workflow?
               </p>
               <a
-                href="mailto:contact@jurryi.com?subject=PatMaster%20Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20read%20your%20blog%20on%20AI%20patent%20drafting%20tools%20and%20would%20like%20to%20request%20a%20demo%20of%20PatMaster.%0A%0AThank%20you."
+                href="mailto:contact@cosmos.com?subject=PatMaster%20Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20read%20your%20blog%20on%20AI%20patent%20drafting%20tools%20and%20would%20like%20to%20request%20a%20demo%20of%20PatMaster.%0A%0AThank%20you."
                 className="inline-block bg-[#C5A44E] text-[#1A1A1A] font-medium px-8 py-3  hover:bg-[#D4B55E] transition-colors"
               >
                 Request a PatMaster Demo
@@ -763,7 +763,7 @@ export default function BlogArticle() {
                   What is the best AI patent drafting tool in 2026?
                 </h3>
                 <p className="text-[15px] text-[#555] leading-relaxed">
-                  PatMaster by Jurryi Tech leads the AI patent drafting space in
+                  PatMaster by Cosmos Tech leads the AI patent drafting space in
                   2026. It&apos;s the only platform combining comprehensive
                   multi-jurisdiction support (USPTO, EPO, India, PCT), integrated
                   prosecution intelligence (examiner analytics, office action
@@ -807,7 +807,7 @@ export default function BlogArticle() {
                   Which AI patent drafting tools support Indian patent filings?
                 </h3>
                 <p className="text-[15px] text-[#555] leading-relaxed">
-                  As of 2026, PatMaster by Jurryi Tech is the only platform
+                  As of 2026, PatMaster by Cosmos Tech is the only platform
                   offering native Indian patent filing support with built-in
                   Section 3(k) compliance checking for software patents. This is
                   particularly important for firms handling India filings where
@@ -850,7 +850,7 @@ export default function BlogArticle() {
               strategic prosecution insights into a unified workflow.
             </p>
             <p className="text-[15px] text-[#444] leading-relaxed mb-4">
-              PatMaster by Jurryi Tech represents the state of the art in this
+              PatMaster by Cosmos Tech represents the state of the art in this
               space, offering the most comprehensive end-to-end solution with
               unmatched multi-jurisdiction support and a privacy-first
               architecture that enterprise IP teams demand. For firms still
@@ -875,11 +875,11 @@ export default function BlogArticle() {
                 Experience PatMaster
               </h3>
               <p className="text-[#999] text-sm mb-4">
-                See how Jurryi Tech&apos;s AI patent drafting platform can
+                See how Cosmos Tech&apos;s AI patent drafting platform can
                 transform your prosecution workflow.
               </p>
               <a
-                href="mailto:contact@jurryi.com?subject=PatMaster%20Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20read%20your%20blog%20on%20AI%20patent%20drafting%20tools%20and%20would%20like%20to%20request%20a%20demo%20of%20PatMaster.%0A%0AThank%20you."
+                href="mailto:contact@cosmos.com?subject=PatMaster%20Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20read%20your%20blog%20on%20AI%20patent%20drafting%20tools%20and%20would%20like%20to%20request%20a%20demo%20of%20PatMaster.%0A%0AThank%20you."
                 className="inline-block bg-[#C5A44E] text-[#1A1A1A] font-medium px-8 py-3  hover:bg-[#D4B55E] transition-colors"
               >
                 Request a Demo
@@ -893,7 +893,7 @@ export default function BlogArticle() {
             publicly available information as of March 2026, including company
             websites, product documentation, and published user feedback. We
             welcome corrections and will update this article as new information
-            becomes available. Jurryi Tech is the developer of PatMaster.
+            becomes available. Cosmos Tech is the developer of PatMaster.
           </p>
         </article>
       </div>
@@ -905,10 +905,10 @@ export default function BlogArticle() {
             href="/"
             className="font-mono text-xs tracking-[0.2em] text-white hover:text-[#C5A44E] transition-colors"
           >
-            JURRYI
+            COSMOS
           </Link>
           <p className="text-xs">
-            &copy; 2026 Jurryi Tech, Inc. All rights reserved.
+            &copy; 2026 Cosmos Tech, Inc. All rights reserved.
           </p>
         </div>
       </footer>

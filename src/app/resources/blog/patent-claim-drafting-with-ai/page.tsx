@@ -3,9 +3,9 @@ import BlogArticle from "./BlogArticle";
 
 export const metadata: Metadata = {
   title:
-    "Patent Claim Drafting with AI: Best Practices for IP Attorneys (2026) | Jurryi Tech",
+    "Patent Claim Drafting with AI: Best Practices for IP Attorneys (2026) | Cosmos Tech",
   description:
-    "Learn how AI transforms patent claim drafting. Best practices for independent and dependent claims, claim scope optimization, multi-jurisdiction compliance, and avoiding 112 rejections. See how PatMaster by Jurryi Tech streamlines claim drafting for IP attorneys.",
+    "Learn how AI transforms patent claim drafting. Best practices for independent and dependent claims, claim scope optimization, multi-jurisdiction compliance, and avoiding 112 rejections. See how PatMaster by Cosmos Tech streamlines claim drafting for IP attorneys.",
   keywords: [
     "patent claim drafting AI",
     "AI claim drafting",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "EPO claim drafting",
     "India patent claims",
     "PatMaster claim drafting",
-    "Jurryi Tech patent AI",
+    "Cosmos Tech patent AI",
     "patent claim amendment engine",
     "AI patent drafting tool",
     "prior art aware claim drafting",
@@ -39,19 +39,19 @@ export const metadata: Metadata = {
       "Patent Claim Drafting with AI: Best Practices for IP Attorneys (2026)",
     description:
       "Comprehensive guide to AI-assisted patent claim drafting. Covers independent and dependent claims, scope optimization, multi-jurisdiction considerations, and best practices for combining AI with attorney expertise.",
-    url: "https://jurryi.com/resources/blog/patent-claim-drafting-with-ai",
-    siteName: "Jurryi Tech",
+    url: "https://cosmos.com/resources/blog/patent-claim-drafting-with-ai",
+    siteName: "Cosmos Tech",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Patent Claim Drafting with AI - Best Practices 2026 - Jurryi Tech",
+        alt: "Patent Claim Drafting with AI - Best Practices 2026 - Cosmos Tech",
       },
     ],
     publishedTime: "2026-03-08T00:00:00Z",
     modifiedTime: "2026-03-08T00:00:00Z",
-    authors: ["Jurryi Tech Editorial Team"],
+    authors: ["Cosmos Tech Editorial Team"],
     tags: [
       "patent claim drafting",
       "AI claim generation",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://jurryi.com/resources/blog/patent-claim-drafting-with-ai",
+      "https://cosmos.com/resources/blog/patent-claim-drafting-with-ai",
   },
 };
 
@@ -88,32 +88,32 @@ export default function Page() {
               "Patent Claim Drafting with AI: Best Practices for IP Attorneys (2026)",
             description:
               "Comprehensive guide to AI-assisted patent claim drafting covering best practices for independent and dependent claims, scope optimization, multi-jurisdiction compliance, and combining AI with attorney expertise.",
-            image: "https://jurryi.com/og-image.png",
+            image: "https://cosmos.com/og-image.png",
             datePublished: "2026-03-08T00:00:00Z",
             dateModified: "2026-03-08T00:00:00Z",
             author: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
             },
             publisher: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
               logo: {
                 "@type": "ImageObject",
-                url: "https://jurryi.com/favicon.svg",
+                url: "https://cosmos.com/favicon.svg",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id":
-                "https://jurryi.com/resources/blog/patent-claim-drafting-with-ai",
+                "https://cosmos.com/resources/blog/patent-claim-drafting-with-ai",
             },
             about: [
               {
                 "@type": "SoftwareApplication",
-                name: "PatMaster by Jurryi Tech",
+                name: "PatMaster by Cosmos Tech",
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web",
               },
@@ -157,7 +157,7 @@ export default function Page() {
                 name: "Does PatMaster support multi-jurisdiction patent claim drafting?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes. PatMaster by Jurryi Tech supports claim drafting for USPTO, EPO, Indian Patent Office, and PCT filings. It automatically adjusts claim formatting, language conventions, and structural requirements based on the target jurisdiction, ensuring compliance with each office's specific rules.",
+                  text: "Yes. PatMaster by Cosmos Tech supports claim drafting for USPTO, EPO, Indian Patent Office, and PCT filings. It automatically adjusts claim formatting, language conventions, and structural requirements based on the target jurisdiction, ensuring compliance with each office's specific rules.",
                 },
               },
               {

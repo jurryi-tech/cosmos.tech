@@ -13,9 +13,9 @@ if (typeof window !== "undefined") {
 const steps = [
   {
     number: "01",
-    title: "Jurryi goes to Attorney/Inventor\u2019s device",
+    title: "Cosmos goes to Attorney/Inventor\u2019s device",
     description:
-      "One-time installation. Jurryi Program Module + SLM download from our private cloud server to the end user device. SLM model size is only 2.5 GB for 4 billion parameters and is perfect for iterative reasoning. Reduces Hallucination.",
+      "One-time installation. Cosmos Program Module + SLM download from our private cloud server to the end user device. SLM model size is only 2.5 GB for 4 billion parameters and is perfect for iterative reasoning. Reduces Hallucination.",
   },
   {
     number: "02",
@@ -131,7 +131,7 @@ export default function SecurityVault() {
 
       <div className="relative z-10">
         {/* ═══════════════════════════════════════════════ */}
-        {/* SECTION 1: HOW JURRYI WORKS                    */}
+        {/* SECTION 1: HOW COSMOS WORKS                    */}
         {/* ═══════════════════════════════════════════════ */}
         <div className="py-24 md:py-32">
           {/* Title */}
@@ -152,7 +152,7 @@ export default function SecurityVault() {
               transition={{ duration: 0.7 }}
               className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide mb-6"
             >
-              How Jurryi is the world&apos;s most private artificial intelligence?
+              How Cosmos is the world&apos;s most private artificial intelligence?
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 15 }}

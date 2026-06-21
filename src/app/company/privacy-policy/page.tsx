@@ -8,13 +8,13 @@ export default function PrivacyPolicyPage() {
     <PageTemplate
       category="Company"
       title="Privacy Policy"
-      subtitle="How Jurryi Handles and Protects Your Data"
-      description="At Jurryi, we recognize that trust is the foundation of every client relationship — especially when that relationship involves confidential patent data. Our privacy policy reflects our unwavering commitment to transparency, regulatory compliance, and user empowerment. We collect only what is necessary, protect it with industry-leading safeguards, and give you full control over your information. This policy explains in clear terms what data we collect, why we collect it, how we use it, and what rights you have."
+      subtitle="How Cosmos Handles and Protects Your Data"
+      description="At Cosmos, we recognize that trust is the foundation of every client relationship — especially when that relationship involves confidential patent data. Our privacy policy reflects our unwavering commitment to transparency, regulatory compliance, and user empowerment. We collect only what is necessary, protect it with industry-leading safeguards, and give you full control over your information. This policy explains in clear terms what data we collect, why we collect it, how we use it, and what rights you have."
       features={[
         {
           title: "Data Collection Transparency",
           description:
-            "We provide a comprehensive, plain-language accounting of every category of data we collect — from account registration details and usage analytics to document content and AI interaction logs. You will always know exactly what information Jurryi processes and for what purpose.",
+            "We provide a comprehensive, plain-language accounting of every category of data we collect — from account registration details and usage analytics to document content and AI interaction logs. You will always know exactly what information Cosmos processes and for what purpose.",
           icon: <HiOutlineChartBar size={20} />,
           cardType: "list" as const,
           cardData: { items: ["Usage analytics", "Account info", "Patent content", "Communication prefs"] },
@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
         {
           title: "GDPR & Global Compliance",
           description:
-            "Jurryi is fully compliant with the General Data Protection Regulation, the California Consumer Privacy Act, and other major data protection frameworks worldwide. We maintain lawful bases for processing, honor data subject rights, and work with certified data protection officers.",
+            "Cosmos is fully compliant with the General Data Protection Regulation, the California Consumer Privacy Act, and other major data protection frameworks worldwide. We maintain lawful bases for processing, honor data subject rights, and work with certified data protection officers.",
           icon: <HiOutlineGlobeEuropeAfrica size={20} />,
           cardType: "metric" as const,
           cardData: { value: 100, max: 100, label: "GDPR compliant" },
@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
         {
           title: "Third-Party Sharing Limits",
           description:
-            "Jurryi does not sell your data — ever. We share information with third parties only when strictly necessary for service delivery, and only with vendors who are contractually bound to equivalent privacy and security standards through comprehensive data processing agreements.",
+            "Cosmos does not sell your data — ever. We share information with third parties only when strictly necessary for service delivery, and only with vendors who are contractually bound to equivalent privacy and security standards through comprehensive data processing agreements.",
           icon: <HiOutlineHandRaised size={20} />,
           cardType: "list" as const,
           cardData: { items: ["No selling data", "No ad targeting", "No third-party sharing", "Strict NDAs"] },

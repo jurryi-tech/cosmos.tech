@@ -413,7 +413,7 @@ export default function ClaimsEngine() {
           <div ref={analysisRef} className="bg-white border border-[#E5E0D5] rounded-xl p-6 md:p-8 shadow-sm">
             <div className="mb-5">
               <p className="text-[10px] tracking-[0.3em] uppercase text-[#C8A960] font-sans font-semibold">
-                Jurryi Claim Analysis
+                Cosmos Claim Analysis
               </p>
             </div>
 

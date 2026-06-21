@@ -302,7 +302,7 @@ export default function DataFlow() {
             <div className="w-40 h-40 rounded-full border border-[#C8A960]/40" />
             <div className="absolute -bottom-10 text-center">
               <p className="text-[8px] tracking-[0.25em] uppercase text-[#C8A960] font-sans whitespace-nowrap">
-                Jurryi Secure Ingestion Layer | AES-256 | Zero Retention
+                Cosmos Secure Ingestion Layer | AES-256 | Zero Retention
               </p>
             </div>
           </div>
@@ -553,7 +553,7 @@ export default function DataFlow() {
                 <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
               </div>
               <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8A960] font-sans">
-                Jurryi Platform
+                Cosmos Platform
               </span>
               <div className="w-12" />
             </div>

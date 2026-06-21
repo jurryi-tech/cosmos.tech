@@ -9,7 +9,7 @@ export default function ApiReferencePage() {
       category="Resources"
       title="API Reference"
       subtitle="Powerful REST and SDK APIs for seamless integration"
-      description="Integrate Jurryi's patent prosecution intelligence directly into your existing tools and workflows with our robust API platform. Whether you need to automate prior art searches, programmatically generate claim analyses, or build custom dashboards, our well-documented APIs and multi-language SDKs provide the flexibility and reliability your engineering teams demand."
+      description="Integrate Cosmos's patent prosecution intelligence directly into your existing tools and workflows with our robust API platform. Whether you need to automate prior art searches, programmatically generate claim analyses, or build custom dashboards, our well-documented APIs and multi-language SDKs provide the flexibility and reliability your engineering teams demand."
       features={[
         {
           title: "RESTful Endpoints",
@@ -25,7 +25,7 @@ export default function ApiReferencePage() {
             "Official client libraries for Python, JavaScript, Java, and C# that abstract away HTTP complexity and provide type-safe interfaces, helper utilities, and built-in error handling for rapid development.",
           icon: <HiOutlineCube size={20} />,
           cardType: "code",
-          cardData: { lines: ["import { Jurryi } from", "  '@jurryi/sdk';", "const client = new", "  Jurryi({ key: '...' })"] },
+          cardData: { lines: ["import { Cosmos } from", "  '@cosmos/sdk';", "const client = new", "  Cosmos({ key: '...' })"] },
         },
         {
           title: "Webhooks",
@@ -66,7 +66,7 @@ export default function ApiReferencePage() {
         drafters:
           "Execute bulk operations across patent portfolios — run batch prior art searches, generate comparative claim analyses, and produce consistency reports across large application sets.",
         engineers:
-          "Build custom integrations that connect Jurryi with your firm's docketing systems, document management platforms, and internal tools using well-documented, reliable API endpoints.",
+          "Build custom integrations that connect Cosmos with your firm's docketing systems, document management platforms, and internal tools using well-documented, reliable API endpoints.",
       }}
       accentColor="#2D7D46"
     />

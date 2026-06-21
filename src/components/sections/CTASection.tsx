@@ -112,12 +112,12 @@ export default function CTASection() {
 
         <p className="text-[18px] text-[#999] mb-10 max-w-xl mx-auto leading-relaxed">
           Join the firms that are already drafting faster, responding smarter,
-          and winning more patents with Jurryi.
+          and winning more patents with Cosmos.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <motion.a
-            href="mailto:contact@jurryi.com?subject=Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
+            href="mailto:contact@cosmos.com?subject=Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="inline-block bg-[#C5A44E] text-black font-medium text-base px-10 py-4 rounded-lg hover:bg-[#D4B55E] transition-colors duration-200"

@@ -1,5 +1,5 @@
-# Jurryi Tech - AI Patent Drafting & Prosecution Platform
-# https://jurryi.com
+# Cosmos Tech - AI Patent Drafting & Prosecution Platform
+# https://cosmos.com
 
 User-agent: *
 Allow: /
@@ -53,4 +53,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://jurryi.com/sitemap.xml
+Sitemap: https://cosmos.com/sitemap.xml

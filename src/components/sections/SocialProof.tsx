@@ -10,14 +10,14 @@ if (typeof window !== "undefined") {
 const testimonials = [
   {
     quote:
-      "Jurryi has fundamentally changed how our team approaches patent prosecution. What used to take our associates 15-20 hours per application now takes 2 hours of review time. The quality is indistinguishable from senior associate work.",
+      "Cosmos has fundamentally changed how our team approaches patent prosecution. What used to take our associates 15-20 hours per application now takes 2 hours of review time. The quality is indistinguishable from senior associate work.",
     attribution:
       "\u2014 David Harrington, Partner, IP Practice Group | AmLaw 50 Firm",
     stars: 5,
   },
   {
     quote:
-      "The Indian patent drafting capability alone justified our investment. We were outsourcing all India filings \u2014 now we handle them in-house with Jurryi\u2019s one-click drafting. Section 3(k) compliance checking has been a game-changer.",
+      "The Indian patent drafting capability alone justified our investment. We were outsourcing all India filings \u2014 now we handle them in-house with Cosmos\u2019s one-click drafting. Section 3(k) compliance checking has been a game-changer.",
     attribution:
       "\u2014 Anand Subramanian, VP of Intellectual Property | Global Technology Company",
     stars: 5,

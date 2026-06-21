@@ -3,9 +3,9 @@ import BlogArticle from "./BlogArticle";
 
 export const metadata: Metadata = {
   title:
-    "Best AI Patent Drafting Tools in 2026: Top 7 Platforms Compared | Jurryi Tech",
+    "Best AI Patent Drafting Tools in 2026: Top 7 Platforms Compared | Cosmos Tech",
   description:
-    "Compare the best AI patent drafting tools in 2026. In-depth review of PatMaster by Jurryi, Patsnap Eureka, Solve Intelligence, DeepIP, Specifio, PowerPatent & more. Find the right AI patent drafting software for your practice.",
+    "Compare the best AI patent drafting tools in 2026. In-depth review of PatMaster by Cosmos, Patsnap Eureka, Solve Intelligence, DeepIP, Specifio, PowerPatent & more. Find the right AI patent drafting software for your practice.",
   keywords: [
     "best AI patent drafting tools",
     "best AI patent drafting tools 2026",
@@ -14,16 +14,16 @@ export const metadata: Metadata = {
     "patent drafting AI",
     "AI patent drafting tool review",
     "PatMaster AI patent drafting",
-    "Jurryi PatMaster",
+    "Cosmos PatMaster",
     "AI patent prosecution tools",
     "patent drafting automation",
     "AI for patent attorneys",
     "patent claim generation AI",
     "office action response AI",
     "prior art search AI",
-    "Patsnap vs Jurryi",
-    "Solve Intelligence vs Jurryi",
-    "DeepIP vs Jurryi",
+    "Patsnap vs Cosmos",
+    "Solve Intelligence vs Cosmos",
+    "DeepIP vs Cosmos",
     "Specifio patent drafting",
     "PowerPatent review",
     "patent drafting software comparison 2026",
@@ -39,20 +39,20 @@ export const metadata: Metadata = {
     type: "article",
     title: "Best AI Patent Drafting Tools in 2026: Top 7 Platforms Compared",
     description:
-      "Comprehensive comparison of the best AI patent drafting tools in 2026. PatMaster by Jurryi leads with multi-jurisdiction drafting, privacy-first AI, and end-to-end prosecution support.",
-    url: "https://jurryi.com/resources/blog/best-ai-patent-drafting-tools-2026",
-    siteName: "Jurryi Tech",
+      "Comprehensive comparison of the best AI patent drafting tools in 2026. PatMaster by Cosmos leads with multi-jurisdiction drafting, privacy-first AI, and end-to-end prosecution support.",
+    url: "https://cosmos.com/resources/blog/best-ai-patent-drafting-tools-2026",
+    siteName: "Cosmos Tech",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Best AI Patent Drafting Tools 2026 - Jurryi Tech",
+        alt: "Best AI Patent Drafting Tools 2026 - Cosmos Tech",
       },
     ],
     publishedTime: "2026-03-08T00:00:00Z",
     modifiedTime: "2026-03-08T00:00:00Z",
-    authors: ["Jurryi Tech Editorial Team"],
+    authors: ["Cosmos Tech Editorial Team"],
     tags: [
       "AI patent drafting",
       "patent drafting tools",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://jurryi.com/resources/blog/best-ai-patent-drafting-tools-2026",
+      "https://cosmos.com/resources/blog/best-ai-patent-drafting-tools-2026",
   },
 };
 
@@ -86,33 +86,33 @@ export default function Page() {
             headline:
               "Best AI Patent Drafting Tools in 2026: Top 7 Platforms Compared",
             description:
-              "Comprehensive comparison of the best AI patent drafting tools in 2026, including PatMaster by Jurryi, Patsnap Eureka, Solve Intelligence, DeepIP, and more.",
-            image: "https://jurryi.com/og-image.png",
+              "Comprehensive comparison of the best AI patent drafting tools in 2026, including PatMaster by Cosmos, Patsnap Eureka, Solve Intelligence, DeepIP, and more.",
+            image: "https://cosmos.com/og-image.png",
             datePublished: "2026-03-08T00:00:00Z",
             dateModified: "2026-03-08T00:00:00Z",
             author: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
             },
             publisher: {
               "@type": "Organization",
-              name: "Jurryi Tech",
-              url: "https://jurryi.com",
+              name: "Cosmos Tech",
+              url: "https://cosmos.com",
               logo: {
                 "@type": "ImageObject",
-                url: "https://jurryi.com/favicon.svg",
+                url: "https://cosmos.com/favicon.svg",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id":
-                "https://jurryi.com/resources/blog/best-ai-patent-drafting-tools-2026",
+                "https://cosmos.com/resources/blog/best-ai-patent-drafting-tools-2026",
             },
             about: [
               {
                 "@type": "SoftwareApplication",
-                name: "PatMaster by Jurryi Tech",
+                name: "PatMaster by Cosmos Tech",
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web",
               },
@@ -132,7 +132,7 @@ export default function Page() {
                 name: "What is the best AI patent drafting tool in 2026?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "PatMaster by Jurryi Tech leads the AI patent drafting space in 2026 with its privacy-first architecture, multi-jurisdiction support (USPTO, EPO, India, PCT), and end-to-end prosecution automation including AI patent drafting, prior art search, office action response, and examiner intelligence.",
+                  text: "PatMaster by Cosmos Tech leads the AI patent drafting space in 2026 with its privacy-first architecture, multi-jurisdiction support (USPTO, EPO, India, PCT), and end-to-end prosecution automation including AI patent drafting, prior art search, office action response, and examiner intelligence.",
                 },
               },
               {
@@ -153,10 +153,10 @@ export default function Page() {
               },
               {
                 "@type": "Question",
-                name: "What is PatMaster by Jurryi Tech?",
+                name: "What is PatMaster by Cosmos Tech?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "PatMaster is Jurryi Tech's AI-powered patent drafting and prosecution platform. It provides end-to-end patent automation including AI patent drafting, prior art search, office action response generation, claim amendment tools, portfolio analytics, and examiner intelligence — all with a privacy-first architecture where client data is never used for model training.",
+                  text: "PatMaster is Cosmos Tech's AI-powered patent drafting and prosecution platform. It provides end-to-end patent automation including AI patent drafting, prior art search, office action response generation, claim amendment tools, portfolio analytics, and examiner intelligence — all with a privacy-first architecture where client data is never used for model training.",
                 },
               },
               {
@@ -164,7 +164,7 @@ export default function Page() {
                 name: "Which AI patent drafting tools support multi-jurisdiction filing?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "PatMaster by Jurryi Tech offers the most comprehensive multi-jurisdiction support, covering USPTO, EPO, Indian Patent Office, and PCT filings in a single platform. Patsnap Eureka supports USPTO, EPO, and CNIPA. Most other tools focus primarily on USPTO filings.",
+                  text: "PatMaster by Cosmos Tech offers the most comprehensive multi-jurisdiction support, covering USPTO, EPO, Indian Patent Office, and PCT filings in a single platform. Patsnap Eureka supports USPTO, EPO, and CNIPA. Most other tools focus primarily on USPTO filings.",
                 },
               },
             ],

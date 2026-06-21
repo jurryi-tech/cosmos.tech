@@ -17,7 +17,7 @@ const tableOfContents = [
 ];
 
 const demoMailto =
-  "mailto:contact@jurryi.com?subject=PatMaster%20Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo%20of%20PatMaster.%0A%0AThank%20you.";
+  "mailto:contact@cosmos.com?subject=PatMaster%20Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo%20of%20PatMaster.%0A%0AThank%20you.";
 
 export default function BlogArticle() {
   return (
@@ -30,7 +30,7 @@ export default function BlogArticle() {
               J
             </span>
             <span className="font-mono text-xs tracking-[0.3em] text-[#1A1A1A] uppercase">
-              JURRYI
+              COSMOS
             </span>
           </Link>
           <div className="flex items-center gap-4">
@@ -77,7 +77,7 @@ export default function BlogArticle() {
           <div className="flex items-center gap-3 text-sm text-[#888]">
             <span>Written by</span>
             <span className="font-medium text-[#1A1A1A]">
-              Jurryi Tech Editorial Team
+              Cosmos Tech Editorial Team
             </span>
             <span>&bull;</span>
             <span>18 min read</span>
@@ -488,10 +488,10 @@ export default function BlogArticle() {
           {/* ============================================================ */}
           <section id="patmaster-approach" className="mb-16">
             <h2 className="font-serif text-2xl text-[#1A1A1A] mb-6">
-              How PatMaster by Jurryi Tech Approaches AI Drafting
+              How PatMaster by Cosmos Tech Approaches AI Drafting
             </h2>
             <p className="text-[15px] text-[#444] leading-relaxed mb-4">
-              PatMaster, developed by Jurryi Tech, exemplifies the purpose-built
+              PatMaster, developed by Cosmos Tech, exemplifies the purpose-built
               approach to AI patent drafting. Rather than adapting a
               general-purpose AI model for patent work, PatMaster was
               engineered from the ground up as patent prosecution infrastructure
@@ -883,7 +883,7 @@ export default function BlogArticle() {
                   attorneys should verify that the AI vendor&apos;s terms of service
                   guarantee that client data is not used for model training and
                   is not shared with third parties. Platforms like PatMaster by
-                  Jurryi Tech offer privacy-first architecture where client data
+                  Cosmos Tech offer privacy-first architecture where client data
                   is never used for training and complete data isolation is
                   maintained.
                 </p>
@@ -936,7 +936,7 @@ export default function BlogArticle() {
                 Ready to See AI Patent Drafting in Action?
               </p>
               <p className="text-[#FDFBF7]/80 text-[15px] leading-relaxed mb-6 max-w-lg mx-auto">
-                PatMaster by Jurryi Tech provides end-to-end AI patent drafting
+                PatMaster by Cosmos Tech provides end-to-end AI patent drafting
                 and prosecution automation with multi-jurisdiction support and
                 privacy-first architecture. Request a demo to see how it works
                 with your practice.
@@ -956,10 +956,10 @@ export default function BlogArticle() {
       <footer className="border-t border-black/5 py-8 px-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <span className="font-mono text-xs tracking-[0.3em] text-[#999] uppercase">
-            JURRYI
+            COSMOS
           </span>
           <span className="text-xs text-[#999]">
-            &copy; 2026 Jurryi Tech. All rights reserved.
+            &copy; 2026 Cosmos Tech. All rights reserved.
           </span>
         </div>
       </footer>

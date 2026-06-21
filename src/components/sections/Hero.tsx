@@ -269,7 +269,7 @@ export default function Hero() {
           <div ref={ctaRef} className="flex items-center gap-8 opacity-0">
             {/* Primary CTA */}
             <motion.a
-              href="mailto:contact@jurryi.com?subject=Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
               className="relative overflow-hidden bg-[#1A1A1A] text-[#FDFBF7] px-10 py-[18px] rounded-md text-sm font-medium inline-block"
               whileHover="hover"
             >

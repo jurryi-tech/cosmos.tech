@@ -9,7 +9,7 @@ export default function PriorArtSearchPage() {
       category="Platform"
       title="Prior Art Search"
       subtitle="AI-Powered Search Across Global Patent Databases"
-      description="Jurryi's Prior Art Search engine scours over 150 million patent documents and non-patent literature sources worldwide using advanced semantic understanding — not just keyword matching. Uncover the most relevant prior art in seconds, generate detailed relevance reports, and build airtight prosecution strategies grounded in comprehensive landscape intelligence."
+      description="Cosmos's Prior Art Search engine scours over 150 million patent documents and non-patent literature sources worldwide using advanced semantic understanding — not just keyword matching. Uncover the most relevant prior art in seconds, generate detailed relevance reports, and build airtight prosecution strategies grounded in comprehensive landscape intelligence."
       features={[
         {
           title: "Semantic Search",

@@ -1,8 +1,8 @@
-# Jurryi Tech
+# Cosmos Tech
 
 > AI-Powered Patent Drafting & Prosecution Platform
 
-Jurryi is the world's first AI infrastructure purpose-built for patent attorney teams. We provide enterprise-grade AI tools for patent drafting, prosecution, and portfolio management.
+Cosmos is the world's first AI infrastructure purpose-built for patent attorney teams. We provide enterprise-grade AI tools for patent drafting, prosecution, and portfolio management.
 
 ## Platform
 
@@ -33,17 +33,17 @@ AI-powered USPTO patent examiner analytics. Understand examiner behavior pattern
 - SOC 2 Type II certification in progress
 
 ## Company Info
-- Website: https://jurryi.com
-- Contact: contact@jurryi.com
+- Website: https://cosmos.com
+- Contact: contact@cosmos.com
 - Industry: Legal Technology, Patent Technology, Intellectual Property
 
 ## Links
-- [AI Patent Drafter](https://jurryi.com/platform/ai-patent-drafter)
-- [Prior Art Search](https://jurryi.com/platform/prior-art-search)
-- [Office Action Response](https://jurryi.com/platform/office-action-response)
-- [Claim Amendment Engine](https://jurryi.com/platform/claim-amendment-engine)
-- [Portfolio Analytics](https://jurryi.com/platform/portfolio-analytics)
-- [Examiner Intelligence](https://jurryi.com/platform/examiner-intelligence)
-- [About Us](https://jurryi.com/company/about-us)
-- [Security](https://jurryi.com/company/security)
-- [Contact](https://jurryi.com/company/contact)
+- [AI Patent Drafter](https://cosmos.com/platform/ai-patent-drafter)
+- [Prior Art Search](https://cosmos.com/platform/prior-art-search)
+- [Office Action Response](https://cosmos.com/platform/office-action-response)
+- [Claim Amendment Engine](https://cosmos.com/platform/claim-amendment-engine)
+- [Portfolio Analytics](https://cosmos.com/platform/portfolio-analytics)
+- [Examiner Intelligence](https://cosmos.com/platform/examiner-intelligence)
+- [About Us](https://cosmos.com/company/about-us)
+- [Security](https://cosmos.com/company/security)
+- [Contact](https://cosmos.com/company/contact)

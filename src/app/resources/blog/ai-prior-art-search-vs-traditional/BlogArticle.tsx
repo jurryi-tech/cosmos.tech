@@ -26,7 +26,7 @@ export default function BlogArticle() {
               J
             </span>
             <span className="font-mono text-xs tracking-[0.3em] text-[#1A1A1A] uppercase">
-              JURRYI
+              COSMOS
             </span>
           </Link>
           <div className="flex items-center gap-4">
@@ -37,7 +37,7 @@ export default function BlogArticle() {
               &larr; All Articles
             </Link>
             <a
-              href="mailto:contact@jurryi.com?subject=PatMaster%20Access%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20PatMaster.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=PatMaster%20Access%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20PatMaster.%0A%0AThank%20you."
               className="bg-[#1A1A1A] text-white px-4 py-2 text-sm font-medium hover:bg-[#C5A44E] transition-colors"
             >
               Request Access
@@ -70,7 +70,7 @@ export default function BlogArticle() {
           <div className="flex items-center gap-3 text-sm text-[#888]">
             <span>Written by</span>
             <span className="font-medium text-[#1A1A1A]">
-              Jurryi Tech Editorial Team
+              Cosmos Tech Editorial Team
             </span>
             <span>&bull;</span>
             <span>14 min read</span>
@@ -614,7 +614,7 @@ export default function BlogArticle() {
               How PatMaster&rsquo;s Prior Art Search Engine Works
             </h2>
             <p className="text-[15px] text-[#444] leading-relaxed mb-4">
-              PatMaster by Jurryi Tech integrates AI prior art search directly
+              PatMaster by Cosmos Tech integrates AI prior art search directly
               into the patent drafting and prosecution workflow. Rather than
               treating prior art search as a standalone step, PatMaster embeds
               search intelligence throughout the patent lifecycle &mdash; from
@@ -883,7 +883,7 @@ export default function BlogArticle() {
               The key is choosing a platform that integrates prior art
               intelligence into the full patent lifecycle &mdash; not just as a
               search tool, but as an integral part of drafting, claim
-              construction, and prosecution strategy. PatMaster by Jurryi Tech
+              construction, and prosecution strategy. PatMaster by Cosmos Tech
               was built with exactly this philosophy, combining AI prior art
               search with patent drafting, office action response, and examiner
               intelligence in a single, privacy-first platform.
@@ -904,7 +904,7 @@ export default function BlogArticle() {
               applications and reduce prosecution costs.
             </p>
             <a
-              href="mailto:contact@jurryi.com?subject=PatMaster%20Prior%20Art%20Search%20Demo&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20PatMaster%27s%20AI%20prior%20art%20search%20capabilities.%0A%0AThank%20you."
+              href="mailto:contact@cosmos.com?subject=PatMaster%20Prior%20Art%20Search%20Demo&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20PatMaster%27s%20AI%20prior%20art%20search%20capabilities.%0A%0AThank%20you."
               className="inline-block bg-[#C5A44E] text-[#1A1A1A] px-6 py-3 text-sm font-semibold hover:bg-[#D4B35E] transition-colors"
             >
               Request a Demo &rarr;
@@ -937,10 +937,10 @@ export default function BlogArticle() {
             href="/"
             className="font-mono text-xs tracking-[0.2em] text-white hover:text-[#C5A44E] transition-colors"
           >
-            JURRYI
+            COSMOS
           </Link>
           <p className="text-xs">
-            &copy; 2026 Jurryi Tech, Inc. All rights reserved.
+            &copy; 2026 Cosmos Tech, Inc. All rights reserved.
           </p>
         </div>
       </footer>

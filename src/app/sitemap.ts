@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://jurryi.com";
+  const baseUrl = "https://cosmos.com";
 
   const platformPages = [
     "ai-patent-drafter",

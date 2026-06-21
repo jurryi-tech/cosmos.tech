@@ -9,12 +9,12 @@ export default function SecurityPage() {
       category="Company"
       title="Security"
       subtitle="Enterprise-Grade Security for Sensitive Patent Data"
-      description="Patent prosecution involves some of the most confidential information in any organization — unpublished inventions, trade secrets, and strategic IP portfolios. Jurryi's security infrastructure is purpose-built to meet the stringent requirements of law firms, corporate IP departments, and government agencies. We maintain the highest industry standards for data protection, access control, and regulatory compliance so that you can leverage AI with complete confidence."
+      description="Patent prosecution involves some of the most confidential information in any organization — unpublished inventions, trade secrets, and strategic IP portfolios. Cosmos's security infrastructure is purpose-built to meet the stringent requirements of law firms, corporate IP departments, and government agencies. We maintain the highest industry standards for data protection, access control, and regulatory compliance so that you can leverage AI with complete confidence."
       features={[
         {
           title: "SOC 2 Type II — In Progress",
           description:
-            "Jurryi is actively pursuing SOC 2 Type II certification with independent auditing currently under process. Upon completion, this certification will validate that our security controls, availability safeguards, processing integrity, confidentiality measures, and privacy practices meet rigorous industry standards.",
+            "Cosmos is actively pursuing SOC 2 Type II certification with independent auditing currently under process. Upon completion, this certification will validate that our security controls, availability safeguards, processing integrity, confidentiality measures, and privacy practices meet rigorous industry standards.",
           icon: <HiOutlineShieldCheck size={20} />,
           cardType: "metric" as const,
           cardData: { value: 100, max: 100, label: "SOC 2 compliance" },
@@ -30,7 +30,7 @@ export default function SecurityPage() {
         {
           title: "Zero-Knowledge Architecture",
           description:
-            "Our platform is designed so that Jurryi personnel cannot access your patent documents or invention disclosures. Data processing occurs in isolated, ephemeral environments, and no customer content is used for model training without explicit, documented consent.",
+            "Our platform is designed so that Cosmos personnel cannot access your patent documents or invention disclosures. Data processing occurs in isolated, ephemeral environments, and no customer content is used for model training without explicit, documented consent.",
           icon: <HiOutlineEye size={20} />,
           cardType: "comparison" as const,
           cardData: { before: "Visible", after: "Zero-knowledge", improvement: "Private" },

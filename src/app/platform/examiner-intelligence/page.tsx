@@ -10,7 +10,7 @@ export default function ExaminerIntelligencePage() {
       category="Platform"
       title="Examiner Intelligence"
       subtitle="Predict Outcomes. Tailor Strategies. Win Allowances."
-      description="Jurryi's Examiner Intelligence platform decodes the patterns behind patent examination, providing deep behavioral analytics on individual examiners, art units, and technology centers. By analyzing millions of prosecution histories, the platform predicts rejection likelihood, recommends examiner-specific argumentation strategies, and identifies the optimal timing and approach for every interaction — turning examiner unpredictability into a strategic advantage."
+      description="Cosmos's Examiner Intelligence platform decodes the patterns behind patent examination, providing deep behavioral analytics on individual examiners, art units, and technology centers. By analyzing millions of prosecution histories, the platform predicts rejection likelihood, recommends examiner-specific argumentation strategies, and identifies the optimal timing and approach for every interaction — turning examiner unpredictability into a strategic advantage."
       features={[
         {
           title: "Examiner Profiles",

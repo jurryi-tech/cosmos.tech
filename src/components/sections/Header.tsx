@@ -50,7 +50,7 @@ export default function Header() {
             J
           </span>
           <span className="font-mono text-sm tracking-[0.3em] text-[#1A1A1A] uppercase">
-            JURRYI
+            COSMOS
           </span>
         </a>
 
@@ -73,7 +73,7 @@ export default function Header() {
         {/* Right: CTA */}
         <div className="hidden lg:flex items-center gap-6">
           <a
-            href="mailto:contact@jurryi.com?subject=Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
+            href="mailto:contact@cosmos.com?subject=Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
             className="bg-[#1A1A1A] text-white px-5 py-2.5 rounded-md text-sm font-medium transition-colors hover:bg-[#C5A44E]"
           >
             Request Access
@@ -117,7 +117,7 @@ export default function Header() {
           <a href="/company/about-us" className="text-sm font-medium text-[#1A1A1A]">About</a>
           <a href="/motivation" className="text-sm font-medium text-[#1A1A1A]">Motivation</a>
           <a
-            href="mailto:contact@jurryi.com?subject=Demo%20Request&body=Hi%20Jurryi%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
+            href="mailto:contact@cosmos.com?subject=Demo%20Request&body=Hi%20Cosmos%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20demo.%0A%0AThank%20you."
             className="inline-block text-center bg-[#1A1A1A] text-white px-5 py-2.5 rounded-md text-sm font-medium"
           >
             Request Access
