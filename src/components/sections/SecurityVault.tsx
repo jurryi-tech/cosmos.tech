@@ -13,27 +13,27 @@ if (typeof window !== "undefined") {
 const steps = [
   {
     number: "01",
-    title: "Cosmos goes to Attorney/Inventor\u2019s device",
+    title: "Cosmos installs on the attorney or inventor\u2019s device",
     description:
-      "One-time installation. Cosmos Program Module + SLM download from our private cloud server to the end user device. SLM model size is only 2.5 GB for 4 billion parameters and is perfect for iterative reasoning. Reduces Hallucination.",
+      "One-time installation. The Cosmos program module and small language model download from our private server to the device. The model is about 2.5 GB (4-bit quantized) for a roughly 4-billion-parameter model. After download, it runs offline on 8 GB of RAM with no GPU required.",
   },
   {
     number: "02",
-    title: "Sandbox Creation (Protection of IP)",
+    title: "Sandbox creation",
     description:
-      "Isolated encrypted sandbox in a specified Installer Directory. No external process can access it. Sandbox gets killed once the drafting process is complete. This protects our own IP plus ensures patent data security.",
+      "Cosmos creates an isolated, AES-256-encrypted sandbox in the install directory. No external process can access it. The sandbox is deleted once drafting is complete. This keeps your patent data secure on the device.",
   },
   {
     number: "03",
-    title: "On-Device Drafting",
+    title: "On-device drafting",
     description:
-      "Inventor docs loaded as input. SLM as brain is used for iterative review, read, reason and write process to extract, parse, and convert inventor data into patent-ready format \u2014 entirely on-device. No API calls are ever made to any external AI model\u2019s API Server. 100% Private, Secure and Confidential Patent Drafting Process.",
+      "The inventor\u2019s documents are loaded as input. The small language model reads, reasons over, and drafts from them, converting the disclosure into patent-ready format \u2014 entirely on-device. No API calls are made to any external AI model. The drafting process stays private and confidential.",
   },
   {
     number: "04",
-    title: "Output & Clean-Up",
+    title: "Output and clean-up",
     description:
-      "Patent document outputted. Control Component permanently deletes the entire sandbox \u2014 zero trace.",
+      "The patent document is written to the device. Cosmos then deletes the entire sandbox, leaving nothing behind.",
   },
 ];
 
@@ -41,32 +41,32 @@ const steps = [
 const solutionCards = [
   {
     icon: "lock",
-    title: "On-Device Processing and No API calls.",
+    title: "On-device processing, no API calls",
     points: [
-      "Data processed in encrypted memory. Never stored, never logged, never trained on.",
-      "No API-Calling to external AI models",
+      "Data is processed in an encrypted sandbox. It is never stored, logged, or used for training.",
+      "No calls are made to external AI models.",
     ],
   },
   {
     icon: "shield",
-    title: "No Hallucination due to SLM",
+    title: "Iterative review with a small language model",
     points: [
-      "We use SLM as brain for agentic calling for repetitive reasoning and review. Zero Hallucination Guaranteed.",
+      "The model works in repeated read, reason, and review passes over your disclosure to keep the draft grounded in the source material.",
     ],
   },
   {
     icon: "server",
-    title: "Provision for Private Cloud Deployment",
+    title: "Private cloud deployment available",
     points: [
       "Deploy entirely within your own infrastructure. Your data never leaves the premises.",
-      "On Device Processing is the second service we provide for Confidentiality and Privacy of Patents.",
+      "On-device processing is our second option for keeping patent work confidential and private.",
     ],
   },
   {
     icon: "privilege",
-    title: "Privilege Preserved",
+    title: "Privilege preserved",
     points: [
-      "Outputs are work product under attorney direction. Privilege intact.",
+      "Outputs are work product produced under attorney direction, so privilege stays intact.",
     ],
   },
 ];
@@ -164,7 +164,7 @@ export default function SecurityVault() {
               transition={{ duration: 0.7 }}
               className="font-serif text-3xl md:text-5xl lg:text-[3.4rem] font-semibold text-[#1A1A1A] tracking-tight leading-[1.1] mb-7 max-w-4xl mx-auto"
             >
-              How Cosmos is the world&apos;s most private artificial intelligence
+              How Cosmos keeps your invention private
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
@@ -173,7 +173,7 @@ export default function SecurityVault() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="font-sans text-[#5A5A5A] text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
             >
-              Your invention never leaves your device. Our technology goes to the user&apos;s device, drafts the patent, and leaves. We never collect, store, or transmit any data.
+              Your invention never leaves your device. Cosmos runs locally, drafts the patent, then deletes its sandbox. We do not collect, store, or transmit your data.
             </motion.p>
           </div>
 
@@ -247,7 +247,7 @@ export default function SecurityVault() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="font-sans text-[#5A5A5A] text-base md:text-lg max-w-3xl leading-relaxed"
             >
-              Our proprietary method drafts patents on inventor/attorney device with no API Calls to any external AI model. We deliver privacy and data security alongside intelligent patent drafting.
+              Cosmos drafts patents on the inventor or attorney device, with no API calls to any external AI model. Privacy and data security come built in, not bolted on.
             </motion.p>
           </div>
 
@@ -295,7 +295,7 @@ export default function SecurityVault() {
             <div className="flex items-center gap-5">
               <span className="h-px flex-1 bg-[#1A1A1A]/10" />
               <p className="font-serif text-xl md:text-2xl italic text-[#8B7355] text-center">
-                This is not a feature. This is our foundation.
+                Privacy is the architecture, not an add-on.
               </p>
               <span className="h-px flex-1 bg-[#1A1A1A]/10" />
             </div>

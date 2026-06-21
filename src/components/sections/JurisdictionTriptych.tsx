@@ -26,7 +26,7 @@ const usptoCards: RejectionCard[] = [
     quote:
       "An abstract idea, law of nature, or natural phenomenon is not patentable subject matter under 35 U.S.C. \u00a7 101. The Alice/Mayo framework requires examiners to determine whether additional claim elements transform the nature of the claim into a patent-eligible application.",
     cosmos:
-      "Cosmos\u2019s 101 Engine analyzes claim language against 14,000+ Alice rejections to identify abstract idea triggers before filing and restructures claims around specific technical implementations that satisfy Step 2B of the Alice framework.",
+      "Cosmos analyzes claim language for abstract-idea risk under the Alice/Mayo framework and helps tie claims to specific technical implementations to support eligibility at Step 2B.",
   },
   {
     id: "102",
@@ -34,7 +34,7 @@ const usptoCards: RejectionCard[] = [
     quote:
       "A claimed invention must be novel \u2014 not anticipated by any single prior art reference. Under \u00a7 102, if every element of a claim is disclosed in a single prior art document, the claim is unpatentable.",
     cosmos:
-      "Cosmos\u2019s Prior Art Neural Network cross-references the invention disclosure against 147 million+ patent documents, scientific papers, and technical publications across USPTO, EPO, WIPO, and IPO databases in under 90 seconds.",
+      "Cosmos cross-references the invention disclosure against major patent and technical literature databases to surface anticipating references before filing.",
   },
   {
     id: "103",
@@ -42,7 +42,7 @@ const usptoCards: RejectionCard[] = [
     quote:
       "An invention is unpatentable if the differences between it and the prior art would have been obvious to a person having ordinary skill in the art. Examiners combine multiple references to establish a prima facie case of obviousness under KSR International v. Teleflex.",
     cosmos:
-      "Cosmos\u2019s Obviousness Prediction Model identifies the most likely reference combinations an examiner would use by analyzing prosecution patterns within the assigned Art Unit.",
+      "Cosmos identifies likely reference combinations an examiner could use to build a prima facie obviousness case, drawing on prosecution patterns in the relevant Art Unit.",
   },
   {
     id: "112",
@@ -50,7 +50,7 @@ const usptoCards: RejectionCard[] = [
     quote:
       "The specification must describe the invention in full, clear, concise, and exact terms to enable a person skilled in the art to make and use it.",
     cosmos:
-      "Cosmos\u2019s Specification Analyzer ensures every claim term has explicit antecedent basis in the description, flags indefinite language patterns, verifies enablement coverage for all claim permutations.",
+      "Cosmos checks that every claim term has antecedent basis in the description, flags indefinite language, and reviews the specification for enablement coverage.",
   },
 ];
 
@@ -63,7 +63,6 @@ const usptoStats = [
   { label: "Average Claim Count", value: "18.4", highlight: false },
   { label: "RCE Filing Rate", value: "34.2%", highlight: false },
   { label: "Appeal Rate", value: "8.7%", highlight: false },
-  { label: "Cosmos-Drafted Grant Rate", value: "84.3%", highlight: true },
 ];
 
 const epoArticles = [
@@ -71,25 +70,25 @@ const epoArticles = [
     id: "52",
     title: "Article 52: Patentable Inventions",
     cosmos:
-      "Cosmos\u2019s Article 52 Navigator maps claim elements against the exclusion lists in Article 52(2) and applies the \u201cas such\u201d doctrine of Article 52(3) to identify technical character arguments that survive examination.",
+      "Cosmos maps claim elements against the exclusions in Article 52(2) and applies the \u201cas such\u201d qualification of Article 52(3) to help frame technical-character arguments.",
   },
   {
     id: "54",
     title: "Article 54: Novelty",
     cosmos:
-      "Cosmos\u2019s global prior art search spans 140+ million documents across all EP member states, PCT publications, and national filings to ensure absolute novelty under the EPO\u2019s state-of-the-art standard.",
+      "Cosmos searches prior art across EP member-state filings, PCT publications, and national records to assess novelty under the EPO\u2019s state-of-the-art standard.",
   },
   {
     id: "56",
     title: "Article 56: Inventive Step",
     cosmos:
-      "Cosmos\u2019s PSA Module automatically identifies the closest prior art, formulates the objective technical problem, and evaluates whether the claimed solution would have been obvious \u2014 reduces Article 56 rejections by 62%.",
+      "Cosmos applies the problem-solution approach: it identifies the closest prior art, formulates the objective technical problem, and assesses whether the claimed solution would have been obvious.",
   },
   {
     id: "83",
     title: "Article 83: Disclosure / Sufficiency",
     cosmos:
-      "Cosmos\u2019s Sufficiency Checker validates that the description enables a skilled person to reproduce the invention across the full scope of the claims, flagging gaps in experimental data or missing implementation details.",
+      "Cosmos checks that the description enables a skilled person to reproduce the invention across the full scope of the claims, flagging gaps in data or missing implementation detail.",
   },
 ];
 
@@ -99,7 +98,7 @@ const epoGrantRates = [
   { sector: "Electrical", rate: 78 },
   { sector: "Mechanical", rate: 84 },
   { sector: "CompSci", rate: 51 },
-  { sector: "AI/ML", rate: 43, cosmosRate: 74 },
+  { sector: "AI/ML", rate: 43 },
   { sector: "Telecoms", rate: 73 },
 ];
 
@@ -240,16 +239,6 @@ function EPOBarChart() {
               className="h-full  bg-gradient-to-r from-[#1A1A1A]/70 to-[#1A1A1A]/40"
               style={{ width: `${item.rate}%` }}
             />
-            {item.cosmosRate && (
-              <div
-                className="absolute top-0 h-full  border-2 border-[#C5A44E] bg-[#C5A44E]/10"
-                style={{ width: `${item.cosmosRate}%` }}
-              >
-                <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-bold text-[#C5A44E]">
-                  Cosmos: {item.cosmosRate}%
-                </span>
-              </div>
-            )}
           </div>
         </div>
       ))}
@@ -403,7 +392,7 @@ export default function JurisdictionTriptych() {
             <div className="flex-1 space-y-8">
               <div className="anim-card">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#C5A44E]">
-                  The American Patent Cathedral
+                  United States
                 </p>
                 <h2 className="mt-2 text-4xl font-black text-[#1A1A1A]">USPTO</h2>
                 <p className="mt-1 text-lg text-[#5A5A5A]">
@@ -433,7 +422,7 @@ export default function JurisdictionTriptych() {
 
             <div className="hidden w-72 shrink-0 pt-20 xl:block">
               <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-[#1A1A1A]/40 font-mono">
-                USPTO FY2025 Statistics
+                USPTO Prosecution Context
               </p>
               <USPTOStatsTicker />
             </div>
@@ -451,7 +440,7 @@ export default function JurisdictionTriptych() {
           <div className="mx-auto w-full max-w-7xl space-y-8 px-6 py-16 lg:px-12">
             <div className="anim-card">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#C5A44E]">
-                The Precision Chamber
+                Europe
               </p>
               <h2 className="mt-2 text-4xl font-black text-[#1A1A1A]">EPO</h2>
               <p className="mt-1 text-lg text-[#5A5A5A]">
@@ -535,7 +524,7 @@ function MobilePanelUSPTO({ cardBase }: { cardBase: string }) {
           transition={{ duration: 0.6 }}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C5A44E]">
-            The American Patent Cathedral
+            United States
           </p>
           <h2 className="mt-2 text-3xl font-black text-[#1A1A1A]">USPTO</h2>
           <p className="mt-1 text-base text-[#5A5A5A]">
@@ -570,7 +559,7 @@ function MobilePanelUSPTO({ cardBase }: { cardBase: string }) {
           className="space-y-2"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-[#1A1A1A]/40 font-mono">
-            USPTO FY2025 Statistics
+            USPTO Prosecution Context
           </p>
           {usptoStats.map((s, i) => (
             <div
@@ -604,7 +593,7 @@ function MobilePanelEPO({ cardBase }: { cardBase: string }) {
           transition={{ duration: 0.6 }}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C5A44E]">
-            The Precision Chamber
+            Europe
           </p>
           <h2 className="mt-2 text-3xl font-black text-[#1A1A1A]">EPO</h2>
           <p className="mt-1 text-base text-[#5A5A5A]">European Patent Office</p>

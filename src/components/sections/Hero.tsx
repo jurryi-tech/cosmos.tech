@@ -250,16 +250,16 @@ export default function Hero() {
             ref={statsRef}
             className="flex items-center flex-wrap gap-y-4 mb-12 opacity-0"
           >
-            <AnimatedStat value={5} suffix="" label="rejection grounds pre-addressed" />
+            <AnimatedStat value={8} suffix="" label="statutory grounds pre-addressed" />
             <GoldSeparator />
             <AnimatedStat value={100} suffix="%" label="on-device · zero data leaks" />
             <GoldSeparator />
             <div className="flex flex-col items-start gap-1">
               <span className="font-serif font-bold text-[28px] text-[#1A1A1A]">
-                1 week → 25 min
+                8 GB RAM
               </span>
               <span className="font-mono text-[11px] tracking-[0.05em] text-[#8B7355]">
-                drafting time reduced
+                runs on a standard laptop, no GPU
               </span>
             </div>
           </div>

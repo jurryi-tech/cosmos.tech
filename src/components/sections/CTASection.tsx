@@ -61,18 +61,18 @@ export default function CTASection() {
         <div className="flex items-center justify-center gap-4 mb-8">
           <span className="h-px w-10 bg-[#C5A44E]/40" />
           <p className="font-mono text-[11px] tracking-[0.32em] uppercase text-[#C5A44E]">
-            The Future of Patent Prosecution
+            On-Device Patent Drafting
           </p>
           <span className="h-px w-10 bg-[#C5A44E]/40" />
         </div>
 
         <h2 className="font-serif text-[clamp(2.5rem,5vw,4.25rem)] text-[#FDFBF7] leading-[1.12] mb-7">
-          Ready to Transform Your Patent Practice?
+          See Cosmos on Your Own Cases
         </h2>
 
         <p className="font-sans text-[17px] text-[#A8A39A] mb-12 max-w-xl mx-auto leading-relaxed">
-          Join the firms already drafting faster, responding smarter, and winning
-          more patents with Cosmos.
+          Cosmos drafts specifications, responses, and amendments on your device.
+          Nothing leaves your machine. Request access to try it on your own work.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -97,7 +97,7 @@ export default function CTASection() {
         </div>
 
         <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#FDFBF7]/35">
-          No credit card required · 14-day trial · Cancel anytime
+          Runs on your device · No cloud · 8 GB RAM, no GPU required
         </p>
       </div>
     </section>

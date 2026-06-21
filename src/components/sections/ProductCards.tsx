@@ -27,9 +27,9 @@ const products = [
       </svg>
     ),
     description:
-      "Generate complete patent specifications from invention disclosures. Multi-jurisdiction formatting. Claims, descriptions, abstracts — all in one pass.",
-    features: ["One-click drafting", "Multi-jurisdiction", "Claims optimization"],
-    badges: ["USPTO", "IPO", "EPO"],
+      "Drafts patent specifications from an invention disclosure. Produces claims, a written description, and an abstract in a single pass. Runs entirely on your device.",
+    features: ["Specification drafting", "Claims and abstract", "On-device"],
+    badges: ["USPTO", "EPO"],
   },
   {
     title: "Office Action Response Generator",
@@ -42,8 +42,8 @@ const products = [
       </svg>
     ),
     description:
-      "Analyze office actions, identify weaknesses in the examiner's arguments, and generate strategic responses with predicted success rates.",
-    features: ["AI analysis", "Strategy selection", "Success prediction"],
+      "Reads an office action, identifies the basis for each rejection, and drafts a response addressing the examiner's arguments.",
+    features: ["Office action analysis", "Argument drafting", "On-device"],
     badges: [],
   },
   {
@@ -62,14 +62,14 @@ const products = [
       </svg>
     ),
     description:
-      "Intelligent claim narrowing and broadening suggestions based on prosecution-history analytics. Art Unit-specific optimization.",
-    features: ["Prosecution analytics", "Art Unit data", "Claim optimization"],
+      "Suggests amendments to narrow or broaden claims and shows how each change affects scope and support under 35 U.S.C. § 112.",
+    features: ["Claim narrowing", "Claim broadening", "Section 112 support"],
     badges: [],
   },
   {
     title: "Examiner Intelligence",
     docType: "Dossier",
-    docNo: "8,400+ Profiles",
+    docNo: "Examiner Profiles",
     icon: (
       <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
         <circle cx="24" cy="14" r="8" stroke="#1A1A1A" strokeWidth="2" fill="none" />
@@ -80,8 +80,8 @@ const products = [
       </svg>
     ),
     description:
-      "Deep profiles on 8,400+ patent examiners. Allowance rates, favorite rejections, response patterns, interview success rates.",
-    features: ["8,400+ examiners", "Allowance patterns", "Interview data"],
+      "Compiles a profile of the assigned examiner from public USPTO records, including their common rejection types and prosecution history.",
+    features: ["Examiner history", "Common rejections", "Public USPTO data"],
     badges: [],
   },
 ];
@@ -251,8 +251,8 @@ export default function ProductCards() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.18 }}
         >
-          A suite of instruments built for the discipline of prosecution — each
-          rendering a precise, filing-ready work product.
+          A set of tools for patent prosecution. Each produces a filing-ready
+          work product, drafted on your device.
         </motion.p>
       </div>
 

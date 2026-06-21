@@ -33,10 +33,10 @@ const layer4 = ["Patent Application Assembler"];
 const layers = [layer1, layer2, layer3, layer4];
 
 const metrics = [
-  "Processing 847 technical terms | 23 key features identified",
-  "Searching 147M+ documents | 12 relevant references found | 0 anticipatory references",
-  "Generating 22 claims | 8 figures | Estimated grant probability: 87%",
-  "Assembling complete application package",
+  "Extracting technical features from the disclosure",
+  "Searching prior-art databases",
+  "Drafting claims and figures",
+  "Assembling the application package",
 ];
 
 const outputDocs = [
@@ -475,7 +475,6 @@ export default function DataFlow() {
                   <line x1="14" y1="32" x2="24" y2="32" stroke="#1A1A1A" strokeWidth="1" opacity="0.3" />
                   <line x1="14" y1="36" x2="28" y2="36" stroke="#1A1A1A" strokeWidth="1" opacity="0.2" />
                   <rect x="32" y="6" width="8" height="8" rx="1" stroke="#C5A44E" strokeWidth="1" fill="#C5A44E" opacity="0.1" />
-                  <text x="36" y="12" textAnchor="middle" fontSize="5" fill="#C5A44E" fontFamily="monospace">22</text>
                 </svg>
               )}
               {doc.icon === "drawing" && (
@@ -507,9 +506,9 @@ export default function DataFlow() {
                   <line x1="19" y1="31" x2="28" y2="31" stroke="#1A1A1A" strokeWidth="1" opacity="0.4" />
                   <rect x="12" y="36" width="4" height="4" rx="0.5" stroke="#C5A44E" strokeWidth="1" />
                   <line x1="19" y1="38" x2="30" y2="38" stroke="#1A1A1A" strokeWidth="1" opacity="0.3" />
-                  {/* Percentage badge */}
+                  {/* Status badge */}
                   <circle cx="38" cy="14" r="7" fill="#1A1A1A" />
-                  <text x="38" y="16" textAnchor="middle" fontSize="5" fontWeight="bold" fill="#C5A44E" fontFamily="monospace">87%</text>
+                  <path d="M35 14 L37 16 L41 12" stroke="#C5A44E" strokeWidth="1.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               )}
               <p className="font-serif text-sm font-semibold text-[#1A1A1A] text-center">
@@ -624,19 +623,19 @@ export default function DataFlow() {
 
               <div className="flex flex-col gap-1 pt-2">
                 <span className="text-[10px] text-[#5A5A5A] uppercase">
-                  Grant Probability
+                  Draft Status
                 </span>
                 <div className="flex items-center gap-3">
                   <div className="flex-1 h-2 bg-[#333] rounded-full overflow-hidden">
                     <motion.div
                       className="h-full bg-[#C5A44E] rounded-full"
                       initial={{ width: 0 }}
-                      whileInView={{ width: "87%" }}
+                      whileInView={{ width: "100%" }}
                       transition={{ duration: 1.5, ease: "easeOut" }}
                     />
                   </div>
                   <span className="text-[#C5A44E] text-sm font-semibold">
-                    87%
+                    Draft ready
                   </span>
                 </div>
               </div>
@@ -673,12 +672,11 @@ export default function DataFlow() {
             style={{ opacity: 0 }}
           >
             <p className="text-sm md:text-base text-[#5A5A5A] leading-relaxed font-sans">
-              From invention disclosure to filing-ready patent application
-              &mdash; across all major jurisdictions &mdash; in under 12
-              minutes. Every claim pre-validated against historical prosecution
-              data. Every specification compliant with local patent office
-              requirements. Every rejection risk identified and mitigated before
-              you file.
+              From invention disclosure to a filing-ready draft. Claims are
+              checked for antecedent basis and statutory support. The
+              specification is formatted to patent office requirements. Likely
+              rejection grounds are flagged for review before you file. The model
+              runs on your device. Nothing leaves it.
             </p>
           </div>
         </div>

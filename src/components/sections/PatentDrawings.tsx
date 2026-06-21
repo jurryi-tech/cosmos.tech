@@ -274,7 +274,7 @@ function Fig3({ containerRef }: { containerRef: React.RefObject<HTMLDivElement |
   const outputX = 620;
 
   const inputLabels = ["Claim Text", "Prior Art", "Examiner Data", "Jurisdiction"];
-  const outputLabels = ["Grant Probability", "Risk Score", "Strategy"];
+  const outputLabels = ["Claim Scope", "Prior Art", "Strategy"];
 
   const inputYs = [80, 160, 240, 320];
   const hidden1Ys = [60, 120, 180, 240, 300, 360];
@@ -427,7 +427,7 @@ function Fig4({ containerRef }: { containerRef: React.RefObject<HTMLDivElement |
 
       {/* Document label */}
       <text x="190" y="370" textAnchor="middle" fontSize="10" fontFamily="'IBM Plex Mono', monospace" fill={INK_MUTED}>Patent Documents</text>
-      <text x="190" y="385" textAnchor="middle" fontSize="10" fontFamily="'IBM Plex Mono', monospace" fill={INK_MUTED}>147M+ Records</text>
+      <text x="190" y="385" textAnchor="middle" fontSize="10" fontFamily="'IBM Plex Mono', monospace" fill={INK_MUTED}>Prior Art Corpus</text>
       <RefNumeral x={115} y={170} num="401" />
       <line className="draw-path" x1="115" y1="177" x2="115" y2="180" stroke={STROKE_COLOR} strokeWidth="0.8" />
 
@@ -463,24 +463,24 @@ function Fig4({ containerRef }: { containerRef: React.RefObject<HTMLDivElement |
 
       {/* Result items */}
       <circle cx="605" cy="155" r="5" fill={GOLD} opacity="0.9" />
-      <text x="618" y="158" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={STROKE_COLOR}>98.2% Match — US9,123,456</text>
+      <text x="618" y="158" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={STROKE_COLOR}>Close — US9,123,456</text>
 
       <circle cx="605" cy="185" r="5" fill={GOLD} opacity="0.7" />
-      <text x="618" y="188" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={STROKE_COLOR}>91.7% Match — EP3,456,789</text>
+      <text x="618" y="188" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={STROKE_COLOR}>Close — EP3,456,789</text>
 
       <circle cx="605" cy="215" r="5" fill={GOLD} opacity="0.5" />
-      <text x="618" y="218" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={STROKE_COLOR}>78.3% Match — IN202011xxx</text>
+      <text x="618" y="218" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={STROKE_COLOR}>Related — IN202011xxx</text>
 
       <circle cx="605" cy="245" r="5" fill={INK_MUTED} opacity="0.5" />
-      <text x="618" y="248" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={STROKE_COLOR}>65.1% Match — WO2021/xxx</text>
+      <text x="618" y="248" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={STROKE_COLOR}>Related — WO2021/xxx</text>
 
       <circle cx="605" cy="275" r="5" fill={INK_MUTED} opacity="0.3" />
-      <text x="618" y="278" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={INK_MUTED}>42.8% Match — CN112xxx</text>
+      <text x="618" y="278" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={INK_MUTED}>Distant — CN112xxx</text>
 
-      {/* Novelty score */}
+      {/* Section 102 / 103 reference */}
       <rect x="600" y="310" width="140" height="45" rx="3" fill={GOLD} opacity="0.08" stroke={GOLD} strokeWidth="1" />
-      <text x="670" y="330" textAnchor="middle" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={INK_MUTED}>NOVELTY SCORE</text>
-      <text x="670" y="348" textAnchor="middle" fontSize="16" fontWeight="bold" fontFamily="'IBM Plex Mono', monospace" fill={GOLD}>72.4%</text>
+      <text x="670" y="330" textAnchor="middle" fontSize="9" fontFamily="'IBM Plex Mono', monospace" fill={INK_MUTED}>NOVELTY REVIEW</text>
+      <text x="670" y="348" textAnchor="middle" fontSize="11" fontFamily="'IBM Plex Mono', monospace" fill={GOLD}>§ 102 / § 103</text>
 
       <RefNumeral x={595} y={90} num="403" />
       <line className="draw-path" x1="595" y1="97" x2="595" y2="100" stroke={STROKE_COLOR} strokeWidth="0.8" />
@@ -631,7 +631,7 @@ export default function PatentDrawings() {
           <FigureFrame
             figNum="3"
             title="Neural Network Architecture"
-            description="Simplified representation of the deep learning model architecture with four input features (Claim Text, Prior Art, Examiner Data, Jurisdiction), two hidden layers of six neurons each, and three output predictions (Grant Probability, Risk Score, Strategy)."
+            description="Simplified representation of the on-device model. Inputs (Claim Text, Prior Art, Examiner Data, Jurisdiction) pass through hidden layers to produce outputs covering claim scope, prior art, and prosecution strategy."
           >
             <Fig3 containerRef={fig3Ref} />
           </FigureFrame>
@@ -641,7 +641,7 @@ export default function PatentDrawings() {
           <FigureFrame
             figNum="4"
             title="Prior Art Analysis System"
-            description="Illustration of the AI-powered prior art search and analysis pipeline. The system examines 147M+ patent documents, academic papers, and technical publications using semantic matching to identify relevant prior art references across 12 languages."
+            description="Illustration of the prior art search and analysis pipeline. The system compares the claims against patent documents and technical publications using semantic matching to surface relevant references for review under 35 U.S.C. § 102 and § 103."
           >
             <Fig4 containerRef={fig4Ref} />
           </FigureFrame>

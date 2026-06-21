@@ -70,7 +70,6 @@ const analysisChecks = [
   { section: "\u00A7 102 (Novelty)", status: "pass", text: "PASS - Novel combination: federated + differential privacy + medical imaging" },
   { section: "\u00A7 103 (Obviousness)", status: "warn", text: "LOW RISK - 3 closest references identified, combination requires hindsight" },
   { section: "\u00A7 112 (Specification)", status: "pass", text: "PASS - All terms have antecedent basis" },
-  { section: "Indian \u00A7 3(k)", status: "pass", text: "PASS - Technical effect demonstrated" },
   { section: "EPO Art. 52", status: "pass", text: "PASS - Further technical effect demonstrated" },
 ];
 
@@ -477,24 +476,21 @@ export default function ClaimsEngine() {
             <p className="font-serif text-[15px] text-[#E8E4DD] leading-[1.7] relative z-10">
               Narrow &lsquo;differential privacy mechanism&rsquo; to
               specifically recite &lsquo;Gaussian noise injection with
-              R&eacute;nyi differential privacy accounting&rsquo; &mdash; this
-              language carries a{" "}
-              <span className="text-[#d4b766] font-semibold">
-                91% success rate
-              </span>{" "}
-              against Art Unit 2122 &sect;103 rejections.
+              R&eacute;nyi differential privacy accounting&rsquo;. The narrower
+              language ties the claim to a concrete technical implementation,
+              which strengthens it against a &sect;103 obviousness rejection.
             </p>
             <div className="mt-6 flex items-center gap-3 relative z-10">
               <div className="flex-1 h-px bg-white/15 overflow-hidden">
                 <motion.div
                   className="h-full bg-[#C5A44E]"
                   initial={{ width: 0 }}
-                  whileInView={{ width: "91%" }}
+                  whileInView={{ width: "100%" }}
                   transition={{ duration: 1.2, ease: "easeOut" }}
                   viewport={{ once: true }}
                 />
               </div>
-              <span className="text-[#d4b766] text-xs font-mono tracking-wider">91%</span>
+              <span className="text-[#d4b766] text-xs font-mono tracking-wider">Suggested</span>
             </div>
           </div>
         </div>

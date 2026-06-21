@@ -26,17 +26,17 @@ const rings = [
       "No teaching, suggestion, or motivation to combine Smith with Patel in medical domain",
   },
   {
-    label: "Searching historical responses...",
-    result: "847 similar Art Unit 2122 \u00A7 103 rejections analyzed",
+    label: "Reviewing prior responses...",
+    result: "Comparable Art Unit 2122 \u00A7 103 rejections reviewed",
   },
   {
-    label: "Identifying successful strategies...",
+    label: "Identifying response strategies...",
     result:
-      "Strategy #1: Challenge motivation (78%) | Strategy #2: Unexpected results (71%) | Strategy #3: Amend claims (89%)",
+      "Option 1: Challenge motivation to combine | Option 2: Argue unexpected results | Option 3: Amend claims",
   },
   {
-    label: "Generating optimal response...",
-    result: "Combined strategy: Amend + Challenge | Predicted: 91% allowance",
+    label: "Drafting the response...",
+    result: "Proposed approach: amend claims and challenge motivation",
   },
 ];
 
@@ -325,15 +325,15 @@ export default function OfficeActionTheater() {
           <div ref={metricsRef} className="border-t border-[#E8E4DD] pt-4 space-y-2 opacity-0">
             <div className="flex items-center gap-2 text-[#5A5A5A] text-[11px] md:text-[12px]">
               <span className="w-2 h-2 rounded-full bg-[#8B7355] inline-block" />
-              Time to generate response: 4 minutes 23 seconds
+              Drafted on-device. No data left the machine.
             </div>
             <div className="flex items-center gap-2 text-[#5A5A5A] text-[11px] md:text-[12px]">
               <span className="w-2 h-2 rounded-full bg-[#8B7355] inline-block" />
-              Historical success rate for this strategy: 91%
+              Argument grounded in the cited references and § 103 case law.
             </div>
             <div className="flex items-center gap-2 text-[#1A1A1A] font-semibold text-[11px] md:text-[12px]">
               <span className="w-2 h-2 rounded-full bg-[#C5A44E] inline-block" />
-              Predicted outcome: ALLOWANCE
+              Ready for attorney review.
             </div>
           </div>
 
