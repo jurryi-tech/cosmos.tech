@@ -477,7 +477,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             lineHeight: 1,
           }}
         >
-          J
+          C
         </span>
       </div>
     </div>

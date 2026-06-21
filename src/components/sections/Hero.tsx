@@ -243,7 +243,6 @@ export default function Hero() {
           >
             Patents pre-built to withstand rejections — 35 U.S.C. §101, §102, §103, §112
             and European Articles 52, 54, 56, 83 addressed from the first draft.
-            Private, on-device drafting where your invention never leaves your computer.
           </p>
 
           {/* Stat Trio */}

@@ -104,8 +104,8 @@ function CheckMark({ status }: { status: string }) {
       >
         <path
           d="M9 3l1.5 4.5H15l-3.5 2.5L13 15 9 12l-4 3 1.5-5L3 7.5h4.5L9 3z"
-          fill="#E5A100"
-          stroke="#E5A100"
+          fill="#C5A44E"
+          stroke="#C5A44E"
           strokeWidth="0.5"
         />
       </motion.svg>
@@ -124,7 +124,7 @@ function CheckMark({ status }: { status: string }) {
     >
       <motion.path
         d="M4 9l3.5 3.5L14 5"
-        stroke="#27C93F"
+        stroke="#4A7C59"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -180,21 +180,21 @@ function TreeNode({
         {depth > 0 && (
           <div className="flex items-center gap-0">
             {Array.from({ length: depth }).map((_, i) => (
-              <span key={i} className="text-[#D4C5A9] text-xs select-none px-[2px]">
+              <span key={i} className="text-[#C9BFA8] text-xs select-none px-[2px]">
                 {i === depth - 1 ? (node.children ? "\u251C\u2500" : "\u2514\u2500") : "\u2502 "}
               </span>
             ))}
           </div>
         )}
         {depth === 0 && (
-          <span className="text-[#D4C5A9] text-xs select-none">{"\u251C\u2500"}</span>
+          <span className="text-[#C9BFA8] text-xs select-none">{"\u251C\u2500"}</span>
         )}
         {/* Node dot */}
         <div
-          className={`w-3.5 h-3.5 rounded-full border-2 flex-shrink-0 ${
+          className={`w-3 h-3 rounded-full border flex-shrink-0 ${
             node.independent
-              ? "bg-[#C8A960] border-[#C8A960] shadow-[0_0_8px_rgba(200,169,96,0.4)]"
-              : "bg-transparent border-[#C8A960]/60"
+              ? "bg-[#C5A44E] border-[#C5A44E] shadow-[0_0_6px_rgba(197,164,78,0.3)]"
+              : "bg-transparent border-[#8B7355]/50"
           }`}
         />
         {/* Label */}
@@ -202,7 +202,7 @@ function TreeNode({
           className={`text-xs font-mono ${
             node.independent
               ? "text-[#1A1A1A] font-semibold"
-              : "text-[#6B6B6B]"
+              : "text-[#5A5A5A]"
           }`}
         >
           {node.label}
@@ -314,13 +314,13 @@ export default function ClaimsEngine() {
       className="relative min-h-[250vh]"
       style={{ background: "#FDFBF7" }}
     >
-      {/* Red margin line */}
+      {/* Ruled margin line (legal manuscript motif) */}
       <div
-        className="absolute top-0 bottom-0 pointer-events-none z-0"
+        className="absolute top-0 bottom-0 pointer-events-none z-0 hidden lg:block"
         style={{
           left: "12%",
           width: "1px",
-          background: "rgba(204,51,51,0.15)",
+          background: "rgba(176,87,58,0.18)",
         }}
       />
 
@@ -333,12 +333,17 @@ export default function ClaimsEngine() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-xs tracking-[0.35em] uppercase text-[#8B7E6A] mb-3 font-sans">
+          <p className="text-[11px] tracking-[0.4em] uppercase text-[#8B7355] mb-4 font-mono">
             Section IV
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-[#1A1A1A] font-bold">
+          <h2 className="font-serif text-4xl md:text-5xl text-[#1A1A1A] font-medium tracking-tight leading-[1.1]">
             The Anatomy of a Granted Claim
           </h2>
+          <div className="mx-auto mt-6 h-px w-16 bg-[#C5A44E]/60" />
+          <p className="mx-auto mt-6 max-w-xl font-serif text-base md:text-lg italic text-[#5A5A5A] leading-relaxed">
+            From drafted limitation to allowance &mdash; every claim, traced,
+            tested, and defended against examination.
+          </p>
         </motion.div>
       </div>
 
@@ -347,20 +352,20 @@ export default function ClaimsEngine() {
         {/* ── LEFT COLUMN: Sticky claim tree ── */}
         <div className="w-full lg:w-[40%]">
           <div
-            className="lg:sticky lg:top-[20vh] bg-white/80 backdrop-blur-sm border border-[#E5E0D5] rounded-xl p-6 shadow-sm"
+            className="lg:sticky lg:top-[20vh] bg-[#F3F1EC] border border-[#E8E4DD] rounded-sm p-7 shadow-[0_1px_2px_rgba(26,26,26,0.04)]"
           >
-            <div className="mb-4">
-              <p className="text-[10px] tracking-[0.3em] uppercase text-[#8B7E6A] font-sans mb-1">
+            <div className="mb-5">
+              <p className="text-[10px] tracking-[0.35em] uppercase text-[#8B7355] font-mono mb-2">
                 Claim Tree
               </p>
-              <p className="text-xs text-[#6B6B6B] font-mono">
+              <p className="text-xs text-[#5A5A5A] font-mono">
                 Patent Application JT-25-0847
               </p>
             </div>
 
-            <div className="border-t border-[#E5E0D5] pt-4">
+            <div className="border-t border-[#E8E4DD] pt-5">
               {/* Trunk */}
-              <div className="text-[#D4C5A9] text-xs select-none mb-1">{"\u2502"}</div>
+              <div className="text-[#C9BFA8] text-xs select-none mb-1">{"\u2502"}</div>
 
               {claimTree.map((rootNode, i) => (
                 <TreeNode
@@ -373,16 +378,16 @@ export default function ClaimsEngine() {
             </div>
 
             {/* Legend */}
-            <div className="flex items-center gap-4 mt-6 pt-4 border-t border-[#E5E0D5]">
-              <div className="flex items-center gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-[#C8A960] border-2 border-[#C8A960]" />
-                <span className="text-[9px] text-[#8B7E6A] font-sans">
+            <div className="flex items-center gap-5 mt-6 pt-5 border-t border-[#E8E4DD]">
+              <div className="flex items-center gap-2">
+                <div className="w-2.5 h-2.5 rounded-full bg-[#C5A44E] border border-[#C5A44E]" />
+                <span className="text-[9px] tracking-[0.12em] uppercase text-[#8B7355] font-mono">
                   Independent
                 </span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-transparent border-2 border-[#C8A960]/60" />
-                <span className="text-[9px] text-[#8B7E6A] font-sans">
+              <div className="flex items-center gap-2">
+                <div className="w-2.5 h-2.5 rounded-full bg-transparent border border-[#8B7355]/50" />
+                <span className="text-[9px] tracking-[0.12em] uppercase text-[#8B7355] font-mono">
                   Dependent
                 </span>
               </div>
@@ -393,16 +398,19 @@ export default function ClaimsEngine() {
         {/* ── RIGHT COLUMN: Scrollable content ── */}
         <div className="w-full lg:w-[55%] space-y-16 pb-32">
           {/* Block 1: Claim Text */}
-          <div ref={claimTextRef} className="bg-white border border-[#E5E0D5] rounded-xl p-6 md:p-8 shadow-sm">
-            <div className="mb-4">
-              <p className="text-[10px] tracking-[0.3em] uppercase text-[#8B7E6A] font-sans">
+          <div ref={claimTextRef} className="bg-[#FDFBF7] border border-[#E8E4DD] rounded-sm p-7 md:p-9 shadow-[0_1px_2px_rgba(26,26,26,0.04)]">
+            <div className="mb-5 flex items-center justify-between border-b border-[#E8E4DD] pb-3">
+              <p className="text-[10px] tracking-[0.35em] uppercase text-[#8B7355] font-mono">
                 Claim Text
               </p>
+              <span className="text-[10px] tracking-[0.15em] uppercase text-[#8B7355]/70 font-mono">
+                As Drafted
+              </span>
             </div>
-            <div className="font-mono text-[13px] text-[#1A1A1A] leading-relaxed whitespace-pre-wrap min-h-[400px]">
+            <div className="font-mono text-[13px] text-[#2C2C2C] leading-relaxed whitespace-pre-wrap min-h-[400px]">
               <span ref={typedTextRef}></span>
               <motion.span
-                className="inline-block w-[2px] h-[14px] bg-[#C8A960] ml-[1px] align-middle"
+                className="inline-block w-[2px] h-[14px] bg-[#C5A44E] ml-[1px] align-middle"
                 animate={{ opacity: [1, 0] }}
                 transition={{ duration: 0.8, repeat: Infinity }}
               />
@@ -410,40 +418,39 @@ export default function ClaimsEngine() {
           </div>
 
           {/* Block 2: Claim Analysis */}
-          <div ref={analysisRef} className="bg-white border border-[#E5E0D5] rounded-xl p-6 md:p-8 shadow-sm">
-            <div className="mb-5">
-              <p className="text-[10px] tracking-[0.3em] uppercase text-[#C8A960] font-sans font-semibold">
+          <div ref={analysisRef} className="bg-[#FDFBF7] border border-[#E8E4DD] rounded-sm p-7 md:p-9 shadow-[0_1px_2px_rgba(26,26,26,0.04)]">
+            <div className="mb-6 border-b border-[#E8E4DD] pb-3">
+              <p className="text-[10px] tracking-[0.35em] uppercase text-[#8B7355] font-mono">
                 Cosmos Claim Analysis
               </p>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {analysisChecks.map((check, i) => (
                 <div
                   key={i}
                   ref={(el) => {
                     checkRefs.current[i] = el;
                   }}
-                  className={`flex items-start gap-3 p-3 rounded-lg ${
+                  className={`flex items-start gap-3 p-3.5 rounded-sm border-l-2 ${
                     check.status === "warn"
-                      ? "bg-[#FFF8E1] border border-[#E5A100]/20"
-                      : "bg-[#F5FFF5] border border-[#27C93F]/10"
+                      ? "bg-[#C5A44E]/[0.06] border-l-[#C5A44E]"
+                      : "bg-[#4A7C59]/[0.05] border-l-[#4A7C59]"
                   }`}
                   style={{ opacity: 0 }}
                 >
                   <CheckMark status={check.status} />
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
                     <span className="font-mono text-xs text-[#1A1A1A] font-semibold whitespace-nowrap">
-                      {check.section}:
+                      {check.section}
                     </span>
                     <span
-                      className={`font-mono text-xs ${
+                      className={`font-mono text-xs leading-relaxed ${
                         check.status === "warn"
-                          ? "text-[#B8860B]"
-                          : "text-[#2D8B2D]"
+                          ? "text-[#8B7355]"
+                          : "text-[#4A7C59]"
                       }`}
                     >
-                      {check.status === "warn" ? "\u26A0" : "\u2713"}{" "}
                       {check.text}
                     </span>
                   </div>
@@ -455,35 +462,39 @@ export default function ClaimsEngine() {
           {/* Block 3: Amendment Strategy */}
           <div
             ref={amendmentRef}
-            className="bg-[#1A1A1A] rounded-xl p-6 md:p-8 shadow-lg"
+            className="bg-[#1A1A1A] rounded-sm p-7 md:p-9 shadow-[0_8px_30px_rgba(26,26,26,0.12)] relative overflow-hidden"
             style={{ opacity: 0 }}
           >
-            <div className="mb-4">
-              <p className="text-[10px] tracking-[0.3em] uppercase text-[#C8A960] font-sans font-semibold">
+            <div
+              className="absolute -top-16 -right-16 w-48 h-48 rounded-full pointer-events-none"
+              style={{ background: "radial-gradient(circle, rgba(197,164,78,0.10) 0%, transparent 70%)" }}
+            />
+            <div className="mb-5 border-b border-white/10 pb-3 relative z-10">
+              <p className="text-[10px] tracking-[0.35em] uppercase text-[#d4b766] font-mono">
                 Amendment Strategy
               </p>
             </div>
-            <p className="font-sans text-sm text-[#CCCCCC] leading-relaxed">
+            <p className="font-serif text-[15px] text-[#E8E4DD] leading-[1.7] relative z-10">
               Narrow &lsquo;differential privacy mechanism&rsquo; to
               specifically recite &lsquo;Gaussian noise injection with
               R&eacute;nyi differential privacy accounting&rsquo; &mdash; this
-              language has{" "}
-              <span className="text-[#C8A960] font-semibold">
+              language carries a{" "}
+              <span className="text-[#d4b766] font-semibold">
                 91% success rate
               </span>{" "}
               against Art Unit 2122 &sect;103 rejections.
             </p>
-            <div className="mt-4 flex items-center gap-2">
-              <div className="flex-1 h-1.5 bg-[#333] rounded-full overflow-hidden">
+            <div className="mt-6 flex items-center gap-3 relative z-10">
+              <div className="flex-1 h-px bg-white/15 overflow-hidden">
                 <motion.div
-                  className="h-full bg-[#C8A960] rounded-full"
+                  className="h-full bg-[#C5A44E]"
                   initial={{ width: 0 }}
                   whileInView={{ width: "91%" }}
                   transition={{ duration: 1.2, ease: "easeOut" }}
                   viewport={{ once: true }}
                 />
               </div>
-              <span className="text-[#C8A960] text-xs font-mono">91%</span>
+              <span className="text-[#d4b766] text-xs font-mono tracking-wider">91%</span>
             </div>
           </div>
         </div>

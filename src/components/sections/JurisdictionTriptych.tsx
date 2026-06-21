@@ -66,13 +66,6 @@ const usptoStats = [
   { label: "Cosmos-Drafted Grant Rate", value: "84.3%", highlight: true },
 ];
 
-const ipoExclusions = [
-  { id: "3d", title: "\u00a7 3(d)", desc: "New form of known substance" },
-  { id: "3k", title: "\u00a7 3(k)", desc: "Mathematical/business methods, computer programs per se" },
-  { id: "3e", title: "\u00a7 3(e)", desc: "Mere admixture/aggregation" },
-  { id: "3i", title: "\u00a7 3(i)", desc: "Treatment methods" },
-];
-
 const epoArticles = [
   {
     id: "52",
@@ -160,48 +153,6 @@ function USPTOStatsTicker() {
   );
 }
 
-function SankeyFlowDiagram() {
-  return (
-    <div className="w-full py-6">
-      <div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-0">
-        <div className="flex flex-col items-center">
-          <div className=" border-2 border-[#1A1A1A] bg-[#1A1A1A]/5 px-6 py-4 text-center">
-            <p className="text-xs uppercase tracking-wider text-[#1A1A1A] font-medium">Applications Filed</p>
-            <p className="mt-1 text-2xl font-bold text-[#1A1A1A]">66,440</p>
-          </div>
-        </div>
-
-        <div className="hidden h-[2px] w-16 bg-gradient-to-r from-[#1A1A1A] to-[#C5A44E] lg:block" />
-        <div className="block h-8 w-[2px] bg-gradient-to-b from-[#1A1A1A] to-[#C5A44E] lg:hidden" />
-
-        <div className="flex flex-col items-center">
-          <div className=" border-2 border-[#C5A44E] bg-[#C5A44E]/5 px-6 py-4 text-center">
-            <p className="text-xs uppercase tracking-wider text-[#C5A44E] font-medium">Examined</p>
-            <p className="mt-1 text-2xl font-bold text-[#1A1A1A]">48,200</p>
-          </div>
-          <div className="mt-2 flex gap-3 text-xs">
-            <span className=" bg-red-50 border border-red-200 px-3 py-1 text-red-600">Abandoned: 11,200</span>
-          </div>
-        </div>
-
-        <div className="hidden h-[2px] w-16 bg-gradient-to-r from-[#C5A44E] to-[#C5A44E] lg:block" />
-        <div className="block h-8 w-[2px] bg-gradient-to-b from-[#C5A44E] to-[#C5A44E] lg:hidden" />
-
-        <div className="flex flex-col items-center">
-          <div className=" border-2 border-[#C5A44E] bg-[#C5A44E]/5 px-6 py-4 text-center">
-            <p className="text-xs uppercase tracking-wider text-[#C5A44E] font-medium">Granted</p>
-            <p className="mt-1 text-2xl font-bold text-[#1A1A1A]">29,840</p>
-          </div>
-          <div className="mt-2 flex gap-3 text-xs">
-            <span className=" bg-orange-50 border border-orange-200 px-3 py-1 text-orange-600">Opposition: 4,120</span>
-            <span className=" bg-gray-50 border border-gray-200 px-3 py-1 text-gray-500">Refused: 3,040</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 // Pre-computed gear path for 10-tooth gear (cx=50, cy=50, outerRadius=28, toothDepth=8)
 // to avoid floating-point hydration mismatches between server and client
 function buildGearPath(teeth: number, outerR: number, toothD: number): string {
@@ -257,9 +208,9 @@ function ProblemSolutionGears() {
     <div className="flex items-center justify-center py-8">
       <div className="relative" style={{ width: 130, height: 130 }}>
         <div className="absolute inset-0 animate-spin-slow">
-          <GearSVG color="#003399" className="w-full h-full" />
+          <GearSVG color="#1A1A1A" className="w-full h-full" />
         </div>
-        <span className="absolute inset-0 flex items-center justify-center text-[11px] font-bold uppercase tracking-wider text-[#003399] pointer-events-none">
+        <span className="absolute inset-0 flex items-center justify-center text-[11px] font-bold uppercase tracking-wider text-[#1A1A1A] pointer-events-none">
           Problem
         </span>
       </div>
@@ -367,14 +318,13 @@ export default function JurisdictionTriptych() {
     const section = sectionRef.current;
     const wrapper = panelWrapperRef.current;
     const panels = panelsRef.current.filter(Boolean) as HTMLDivElement[];
-    if (!section || !wrapper || panels.length < 3) return;
+    if (!section || !wrapper || panels.length < 2) return;
 
     // Small delay to ensure DOM is fully settled after React render
     const timer = setTimeout(() => {
       const ctx = gsap.context(() => {
         gsap.set(panels[0], { opacity: 1, xPercent: 0 });
         gsap.set(panels[1], { opacity: 0, xPercent: 100 });
-        gsap.set(panels[2], { opacity: 0, xPercent: 100 });
 
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -389,9 +339,6 @@ export default function JurisdictionTriptych() {
 
         tl.to(panels[0], { opacity: 0, xPercent: -50, duration: 1 }, 0)
           .to(panels[1], { opacity: 1, xPercent: 0, duration: 1 }, 0);
-
-        tl.to(panels[1], { opacity: 0, xPercent: -50, duration: 1 }, 1.5)
-          .to(panels[2], { opacity: 1, xPercent: 0, duration: 1 }, 1.5);
 
         panels.forEach((panel) => {
           const cards = panel.querySelectorAll(".anim-card");
@@ -434,7 +381,6 @@ export default function JurisdictionTriptych() {
     return (
       <section className="relative" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
         <MobilePanelUSPTO cardBase={cardBase} />
-        <MobilePanelIPO cardBase={cardBase} />
         <MobilePanelEPO cardBase={cardBase} />
       </section>
     );
@@ -442,7 +388,7 @@ export default function JurisdictionTriptych() {
 
   /* ---------- DESKTOP LAYOUT ---------- */
   return (
-    <section ref={sectionRef} className="relative min-h-[400vh]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
+    <section ref={sectionRef} className="relative min-h-[250vh]" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
       <div ref={panelWrapperRef} className="relative h-screen w-full overflow-hidden">
 
         {/* ============ PANEL 1: USPTO ============ */}
@@ -494,82 +440,9 @@ export default function JurisdictionTriptych() {
           </div>
         </div>
 
-        {/* ============ PANEL 2: IPO ============ */}
+        {/* ============ PANEL 2: EPO ============ */}
         <div
           ref={setPanelRef(1)}
-          className="absolute inset-0 flex items-start justify-center overflow-y-auto"
-          style={{ background: jurisdictionStyles.india.bg }}
-        >
-          {/* removed accent bar */}
-
-          <div className="mx-auto w-full max-w-7xl space-y-8 px-6 py-16 lg:px-12">
-            <div className="anim-card">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#C5A44E]">
-                The Innovation Sanctum
-              </p>
-              <h2 className="mt-2 text-4xl font-black text-[#1A1A1A]">IPO</h2>
-              <p className="mt-1 text-lg text-[#5A5A5A]">
-                Indian Patent Office
-              </p>
-            </div>
-
-            <p className="anim-card max-w-3xl text-sm leading-relaxed text-[#5A5A5A]">
-              The Indian patent system operates under The Patents Act, 1970
-              (amended 2005), which introduced product patents for
-              pharmaceuticals and aligned India with TRIPS obligations while
-              retaining uniquely stringent exclusions under Section 3.
-            </p>
-
-            <div className="grid grid-cols-2 gap-4 xl:grid-cols-4">
-              {ipoExclusions.map((ex) => (
-                <div
-                  key={ex.id}
-                  className={`anim-card ${cardBase} border-[#1A1A1A]/15 text-center hover:border-[#1A1A1A]/30`}
-                >
-                  <p className="text-2xl font-black text-[#1A1A1A]">
-                    {ex.title}
-                  </p>
-                  <p className="mt-2 text-xs leading-snug text-[#5A5A5A]">
-                    {ex.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className={`anim-card ${cardBase} border-[#C5A44E]/20 border-l-4 border-l-[#C5A44E]`}>
-              <p className="text-sm leading-relaxed text-[#3A3A3A]">
-                Cosmos&apos;s India Drafting Agent generates complete patent
-                specifications formatted per Indian Patent Office requirements:
-                Form 1, Form 2, Form 3, Form 5, and Form 26. The{" "}
-                <span className="font-bold text-[#C5A44E]">
-                  One-Click Drafting
-                </span>{" "}
-                feature takes a plain-language invention disclosure and produces
-                a filing-ready document package in under{" "}
-                <span className="font-bold text-[#1A1A1A]">8 minutes</span>.
-              </p>
-            </div>
-
-            <div className="anim-card">
-              <SankeyFlowDiagram />
-            </div>
-
-            <div className={`anim-card flex items-center gap-5 ${cardBase} border-[#C5A44E]/15`}>
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center  border-2 border-[#C5A44E] text-xl font-black text-[#C5A44E]">
-                47%
-              </div>
-              <p className="text-sm text-[#5A5A5A]">
-                Cosmos increases FER-to-Grant conversion by{" "}
-                <span className="font-bold text-[#C5A44E]">47%</span> through
-                predictive claim structuring.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* ============ PANEL 3: EPO ============ */}
-        <div
-          ref={setPanelRef(2)}
           className="absolute inset-0 flex items-start justify-center overflow-y-auto"
           style={{ background: jurisdictionStyles.europe.bg }}
         >
@@ -715,74 +588,6 @@ function MobilePanelUSPTO({ cardBase }: { cardBase: string }) {
             </div>
           ))}
         </motion.div>
-      </div>
-    </div>
-  );
-}
-
-function MobilePanelIPO({ cardBase }: { cardBase: string }) {
-  return (
-    <div className="min-h-screen px-4 py-16" style={{ background: jurisdictionStyles.india.bg }}>
-      <div className="mx-auto max-w-lg space-y-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C5A44E]">
-            The Innovation Sanctum
-          </p>
-          <h2 className="mt-2 text-3xl font-black text-[#1A1A1A]">IPO</h2>
-          <p className="mt-1 text-base text-[#5A5A5A]">Indian Patent Office</p>
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
-          className="text-sm leading-relaxed text-[#5A5A5A]"
-        >
-          The Indian patent system operates under The Patents Act, 1970
-          (amended 2005), which introduced product patents for pharmaceuticals
-          and aligned India with TRIPS obligations while retaining uniquely
-          stringent exclusions under Section 3.
-        </motion.p>
-
-        <div className="grid grid-cols-2 gap-3">
-          {ipoExclusions.map((ex, i) => (
-            <motion.div
-              key={ex.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`${cardBase} border-[#1A1A1A]/15 text-center`}
-            >
-              <p className="text-xl font-black text-[#1A1A1A]">{ex.title}</p>
-              <p className="mt-1 text-[11px] leading-snug text-[#5A5A5A]">{ex.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className={`${cardBase} border-[#C5A44E]/20 border-l-4 border-l-[#C5A44E]`}
-        >
-          <p className="text-sm leading-relaxed text-[#3A3A3A]">
-            Cosmos&apos;s India Drafting Agent generates complete patent
-            specifications. The{" "}
-            <span className="font-bold text-[#C5A44E]">One-Click Drafting</span>{" "}
-            produces a filing-ready document package in under{" "}
-            <span className="font-bold text-[#1A1A1A]">8 minutes</span>.
-          </p>
-        </motion.div>
-
-        <SankeyFlowDiagram />
       </div>
     </div>
   );

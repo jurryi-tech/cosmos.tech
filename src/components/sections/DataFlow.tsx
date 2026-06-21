@@ -93,11 +93,11 @@ export default function DataFlow() {
         { x: "40vw", duration: 5, ease: "power1.in" },
         5
       );
-      // Portal glows
+      // Portal resolves into view
       tl.fromTo(
         portalRef.current,
-        { opacity: 0, scale: 0.5 },
-        { opacity: 1, scale: 1, duration: 4, ease: "back.out(1.7)" },
+        { opacity: 0, scale: 0.9 },
+        { opacity: 1, scale: 1, duration: 4, ease: "power2.out" },
         3
       );
       // Document dissolves, particles appear
@@ -127,8 +127,8 @@ export default function DataFlow() {
           if (ref) {
             tl.fromTo(
               ref,
-              { opacity: 0, scale: 0 },
-              { opacity: 1, scale: 1, duration: 1.5, ease: "back.out(2)" },
+              { opacity: 0, scale: 0.85, y: 6 },
+              { opacity: 1, scale: 1, y: 0, duration: 1.5, ease: "power2.out" },
               17 + nodeIndex * 1.2
             );
           }
@@ -231,11 +231,11 @@ export default function DataFlow() {
   }
 
   /* Particle positions */
-  const particles = Array.from({ length: 24 }, (_, i) => ({
+  const particles = Array.from({ length: 18 }, (_, i) => ({
     x: 50 + (Math.random() - 0.5) * 30,
     y: 50 + (Math.random() - 0.5) * 30,
     delay: Math.random() * 0.5,
-    size: 3 + Math.random() * 4,
+    size: 1.5 + Math.random() * 2,
   }));
 
   globalNodeIndex = 0;
@@ -245,24 +245,25 @@ export default function DataFlow() {
       ref={sectionRef}
       className="relative min-h-[250vh]"
       style={{
-        background: "linear-gradient(to bottom, #FFFFFF, #F5F5F3)",
+        background: "linear-gradient(to bottom, #FDFBF7, #F3EFE8)",
       }}
     >
       {/* Section heading */}
-      <div className="absolute top-0 left-0 w-full z-10 pt-12 pointer-events-none">
+      <div className="absolute top-0 left-0 w-full z-10 pt-14 pointer-events-none">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-center"
+          className="text-center px-6"
         >
-          <p className="text-xs tracking-[0.35em] uppercase text-[#8B7E6A] mb-3 font-sans">
-            Section III
+          <p className="text-[11px] tracking-[0.4em] uppercase text-[#8B7355] mb-4 font-mono">
+            Section III &mdash; The Pipeline
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-[#1A1A1A] font-bold">
+          <h2 className="font-serif text-4xl md:text-5xl text-[#1A1A1A] font-semibold tracking-tight">
             From Infrastructure to Insight
           </h2>
+          <div className="mx-auto mt-5 h-px w-16 bg-[#C5A44E]" />
         </motion.div>
       </div>
 
@@ -271,23 +272,23 @@ export default function DataFlow() {
         {/* ── Phase 1: Disclosure Card ── */}
         <div
           ref={docCardRef}
-          className="absolute top-1/2 left-[5%] -translate-y-1/2 w-[340px] bg-white border border-[#D4C5A9] rounded-lg shadow-lg p-6 z-20"
+          className="absolute top-1/2 left-[5%] -translate-y-1/2 w-[340px] bg-[#FDFBF7] border border-[#E8E4DD] rounded-sm shadow-[0_1px_24px_rgba(26,26,26,0.06)] p-7 z-20"
           style={{ opacity: 0 }}
         >
-          <div className="text-[10px] tracking-[0.3em] text-[#8B7E6A] uppercase mb-3 font-sans">
+          <div className="text-[10px] tracking-[0.35em] text-[#8B7355] uppercase mb-3 font-mono">
             Invention Disclosure
           </div>
-          <div className="w-full h-px bg-[#D4C5A9] mb-4" />
-          <p className="font-serif text-sm font-semibold text-[#1A1A1A] leading-snug mb-3">
+          <div className="w-full h-px bg-[#E8E4DD] mb-5" />
+          <p className="font-serif text-[15px] font-medium text-[#1A1A1A] leading-snug mb-5">
             Federated Learning System with Differential Privacy for
             Cross-Institutional Medical Imaging
           </p>
-          <div className="flex flex-col gap-1 text-xs text-[#6B6B6B] font-sans">
+          <div className="flex flex-col gap-1.5 text-xs text-[#5A5A5A] font-sans">
             <span>
-              <span className="text-[#8B7E6A]">Inventor:</span> Dr. S. Mehta
+              <span className="text-[#8B7355] font-mono text-[10px] tracking-wider uppercase mr-1">Inventor</span> Dr. S. Mehta
             </span>
             <span>
-              <span className="text-[#8B7E6A]">Date:</span> March 8, 2026
+              <span className="text-[#8B7355] font-mono text-[10px] tracking-wider uppercase mr-1">Date</span> March 8, 2026
             </span>
           </div>
         </div>
@@ -298,11 +299,12 @@ export default function DataFlow() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
           style={{ opacity: 0 }}
         >
-          <div className="w-48 h-48 rounded-full border-[3px] border-[#C8A960] flex items-center justify-center relative">
-            <div className="w-40 h-40 rounded-full border border-[#C8A960]/40" />
-            <div className="absolute -bottom-10 text-center">
-              <p className="text-[8px] tracking-[0.25em] uppercase text-[#C8A960] font-sans whitespace-nowrap">
-                Cosmos Secure Ingestion Layer | AES-256 | Zero Retention
+          <div className="w-48 h-48 rounded-full border border-[#C5A44E] flex items-center justify-center relative">
+            <div className="w-40 h-40 rounded-full border border-[#C5A44E]/30" />
+            <div className="w-2 h-2 rounded-full bg-[#C5A44E] absolute" />
+            <div className="absolute -bottom-12 text-center">
+              <p className="text-[9px] tracking-[0.3em] uppercase text-[#8B7355] font-mono whitespace-nowrap">
+                Secure Ingestion Layer &nbsp;&middot;&nbsp; AES-256 &nbsp;&middot;&nbsp; Zero Retention
               </p>
             </div>
           </div>
@@ -317,7 +319,7 @@ export default function DataFlow() {
           {particles.map((p, i) => (
             <motion.div
               key={i}
-              className="absolute rounded-full bg-[#C8A960]"
+              className="absolute rounded-full bg-[#C5A44E]"
               style={{
                 width: p.size,
                 height: p.size,
@@ -327,10 +329,10 @@ export default function DataFlow() {
               animate={{
                 x: [(Math.random() - 0.5) * 100, (Math.random() - 0.5) * 200],
                 y: [(Math.random() - 0.5) * 100, (Math.random() - 0.5) * 200],
-                opacity: [1, 0],
+                opacity: [0.7, 0],
               }}
               transition={{
-                duration: 2,
+                duration: 2.4,
                 delay: p.delay,
                 repeat: Infinity,
                 ease: "easeOut",
@@ -361,9 +363,10 @@ export default function DataFlow() {
                   y1={c.y1}
                   x2={`${c.x2}%`}
                   y2={c.y2}
-                  stroke="#C8A960"
-                  strokeWidth="0.35"
-                  strokeOpacity="0.55"
+                  stroke="#1A1A1A"
+                  strokeWidth="0.15"
+                  strokeOpacity="0.12"
+                  vectorEffect="non-scaling-stroke"
                 />
               ))}
             </svg>
@@ -373,13 +376,39 @@ export default function DataFlow() {
               layer.map((name, ni) => {
                 const idx = globalNodeIndex++;
                 const isGolden = li === 3;
+                if (isGolden) {
+                  return (
+                    <div
+                      key={idx}
+                      ref={(el) => {
+                        nodeRefs.current[idx] = el;
+                      }}
+                      className="absolute z-10"
+                      style={{
+                        left: `${getNodeX(layer.length, ni)}%`,
+                        top: layerYPositions[li],
+                        transform: "translate(-50%, -50%)",
+                        opacity: 0,
+                      }}
+                    >
+                      <div className="flex flex-col items-center gap-2 px-6 py-3 rounded-sm bg-[#1A1A1A] border border-[#C5A44E] shadow-[0_2px_30px_rgba(197,164,78,0.18)]">
+                        <span className="text-[9px] tracking-[0.3em] uppercase text-[#C5A44E] font-mono">
+                          Output
+                        </span>
+                        <span className="font-serif text-[13px] font-medium text-[#FDFBF7] text-center leading-tight whitespace-nowrap">
+                          {name}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                }
                 return (
                   <div
                     key={idx}
                     ref={(el) => {
                       nodeRefs.current[idx] = el;
                     }}
-                    className="absolute flex flex-col items-center gap-1"
+                    className="absolute flex flex-col items-center gap-2"
                     style={{
                       left: `${getNodeX(layer.length, ni)}%`,
                       top: layerYPositions[li],
@@ -387,22 +416,10 @@ export default function DataFlow() {
                       opacity: 0,
                     }}
                   >
-                    <div
-                      className={`w-8 h-8 rounded-full border-2 flex items-center justify-center ${
-                        isGolden
-                          ? "bg-[#C8A960] border-[#C8A960] shadow-[0_0_16px_rgba(200,169,96,0.6)]"
-                          : "bg-white border-[#C8A960] shadow-[0_0_8px_rgba(200,169,96,0.15)]"
-                      }`}
-                    >
-                      {!isGolden && <div className="w-2.5 h-2.5 rounded-full bg-[#C8A960]/40" />}
+                    <div className="w-2.5 h-2.5 rounded-full border border-[#1A1A1A] bg-[#FDFBF7] flex items-center justify-center">
+                      <div className="w-1 h-1 rounded-full bg-[#C5A44E]" />
                     </div>
-                    <span
-                      className={`text-[10px] text-center font-sans max-w-[120px] leading-tight ${
-                        isGolden
-                          ? "text-[#C8A960] font-bold text-[11px]"
-                          : "text-[#4A4A4A] font-medium"
-                      }`}
-                    >
+                    <span className="text-[10px] text-center font-sans max-w-[110px] leading-tight text-[#2C2C2C] font-medium tracking-tight">
                       {name}
                     </span>
                   </div>
@@ -417,13 +434,13 @@ export default function DataFlow() {
                 ref={(el) => {
                   metricRefs.current[i] = el;
                 }}
-                className="absolute left-1/2 -translate-x-1/2 text-center px-4 py-2 rounded-full bg-[#1A1A1A]/90 backdrop-blur"
+                className="absolute left-1/2 -translate-x-1/2 text-center px-4 py-1.5 rounded-sm bg-[#FDFBF7]/90 backdrop-blur border border-[#E8E4DD]"
                 style={{
-                  top: layerYPositions[i] + 40,
+                  top: layerYPositions[i] + 38,
                   opacity: 0,
                 }}
               >
-                <span className="text-[10px] text-[#C8A960] font-mono tracking-wide">
+                <span className="text-[10px] text-[#5A5A5A] font-mono tracking-wide">
                   {text}
                 </span>
               </div>
@@ -443,30 +460,30 @@ export default function DataFlow() {
               ref={(el) => {
                 outputCardRefs.current[i] = el;
               }}
-              className={`w-[240px] ${doc.thickness} bg-white border border-[#D4C5A9] rounded-lg shadow-xl flex flex-col items-center justify-center p-6`}
+              className={`w-[240px] ${doc.thickness} bg-[#FDFBF7] border border-[#E8E4DD] rounded-sm shadow-[0_2px_30px_rgba(26,26,26,0.07)] flex flex-col items-center justify-center p-6`}
               style={{ opacity: 0 }}
             >
               {/* Unique icon per document type */}
               {doc.icon === "spec" && (
                 <svg viewBox="0 0 48 48" className="w-12 h-12 mb-3" fill="none">
                   <rect x="8" y="4" width="28" height="38" rx="3" stroke="#1A1A1A" strokeWidth="1.5" />
-                  <rect x="8" y="4" width="28" height="10" rx="3" fill="#C8A960" opacity="0.15" />
-                  <text x="22" y="12" textAnchor="middle" fontSize="6" fontWeight="bold" fill="#C8A960" fontFamily="monospace">SPEC</text>
+                  <rect x="8" y="4" width="28" height="10" rx="3" fill="#C5A44E" opacity="0.15" />
+                  <text x="22" y="12" textAnchor="middle" fontSize="6" fontWeight="bold" fill="#C5A44E" fontFamily="monospace">SPEC</text>
                   <line x1="14" y1="20" x2="30" y2="20" stroke="#1A1A1A" strokeWidth="1" opacity="0.4" />
                   <line x1="14" y1="24" x2="28" y2="24" stroke="#1A1A1A" strokeWidth="1" opacity="0.3" />
                   <line x1="14" y1="28" x2="30" y2="28" stroke="#1A1A1A" strokeWidth="1" opacity="0.4" />
                   <line x1="14" y1="32" x2="24" y2="32" stroke="#1A1A1A" strokeWidth="1" opacity="0.3" />
                   <line x1="14" y1="36" x2="28" y2="36" stroke="#1A1A1A" strokeWidth="1" opacity="0.2" />
-                  <rect x="32" y="6" width="8" height="8" rx="1" stroke="#C8A960" strokeWidth="1" fill="#C8A960" opacity="0.1" />
-                  <text x="36" y="12" textAnchor="middle" fontSize="5" fill="#C8A960" fontFamily="monospace">22</text>
+                  <rect x="32" y="6" width="8" height="8" rx="1" stroke="#C5A44E" strokeWidth="1" fill="#C5A44E" opacity="0.1" />
+                  <text x="36" y="12" textAnchor="middle" fontSize="5" fill="#C5A44E" fontFamily="monospace">22</text>
                 </svg>
               )}
               {doc.icon === "drawing" && (
                 <svg viewBox="0 0 48 48" className="w-12 h-12 mb-3" fill="none">
                   <rect x="6" y="6" width="36" height="32" rx="2" stroke="#1A1A1A" strokeWidth="1.5" />
                   {/* Technical drawing: circuit/flowchart */}
-                  <rect x="12" y="12" width="10" height="8" rx="1" stroke="#C8A960" strokeWidth="1.2" />
-                  <rect x="28" y="12" width="10" height="8" rx="1" stroke="#C8A960" strokeWidth="1.2" />
+                  <rect x="12" y="12" width="10" height="8" rx="1" stroke="#C5A44E" strokeWidth="1.2" />
+                  <rect x="28" y="12" width="10" height="8" rx="1" stroke="#C5A44E" strokeWidth="1.2" />
                   <line x1="22" y1="16" x2="28" y2="16" stroke="#1A1A1A" strokeWidth="1" />
                   <circle cx="17" cy="30" r="5" stroke="#1A1A1A" strokeWidth="1" />
                   <line x1="22" y1="30" x2="28" y2="30" stroke="#1A1A1A" strokeWidth="1" />
@@ -479,20 +496,20 @@ export default function DataFlow() {
                 <svg viewBox="0 0 48 48" className="w-12 h-12 mb-3" fill="none">
                   <rect x="6" y="4" width="30" height="38" rx="3" stroke="#1A1A1A" strokeWidth="1.5" />
                   {/* Chess/strategy icon */}
-                  <path d="M16 12 L20 8 L24 12" stroke="#C8A960" strokeWidth="1.5" fill="none" />
-                  <rect x="16" y="12" width="8" height="4" rx="1" fill="#C8A960" opacity="0.2" stroke="#C8A960" strokeWidth="1" />
+                  <path d="M16 12 L20 8 L24 12" stroke="#C5A44E" strokeWidth="1.5" fill="none" />
+                  <rect x="16" y="12" width="8" height="4" rx="1" fill="#C5A44E" opacity="0.2" stroke="#C5A44E" strokeWidth="1" />
                   {/* Checklist items */}
-                  <rect x="12" y="22" width="4" height="4" rx="0.5" stroke="#50A050" strokeWidth="1" />
-                  <path d="M13 24 L14.5 25.5 L17 22.5" stroke="#50A050" strokeWidth="0.8" />
+                  <rect x="12" y="22" width="4" height="4" rx="0.5" stroke="#8B7355" strokeWidth="1" />
+                  <path d="M13 24 L14.5 25.5 L17 22.5" stroke="#8B7355" strokeWidth="0.8" />
                   <line x1="19" y1="24" x2="30" y2="24" stroke="#1A1A1A" strokeWidth="1" opacity="0.4" />
-                  <rect x="12" y="29" width="4" height="4" rx="0.5" stroke="#50A050" strokeWidth="1" />
-                  <path d="M13 31 L14.5 32.5 L17 29.5" stroke="#50A050" strokeWidth="0.8" />
+                  <rect x="12" y="29" width="4" height="4" rx="0.5" stroke="#8B7355" strokeWidth="1" />
+                  <path d="M13 31 L14.5 32.5 L17 29.5" stroke="#8B7355" strokeWidth="0.8" />
                   <line x1="19" y1="31" x2="28" y2="31" stroke="#1A1A1A" strokeWidth="1" opacity="0.4" />
-                  <rect x="12" y="36" width="4" height="4" rx="0.5" stroke="#C8A960" strokeWidth="1" />
+                  <rect x="12" y="36" width="4" height="4" rx="0.5" stroke="#C5A44E" strokeWidth="1" />
                   <line x1="19" y1="38" x2="30" y2="38" stroke="#1A1A1A" strokeWidth="1" opacity="0.3" />
                   {/* Percentage badge */}
                   <circle cx="38" cy="14" r="7" fill="#1A1A1A" />
-                  <text x="38" y="16" textAnchor="middle" fontSize="5" fontWeight="bold" fill="#C8A960" fontFamily="monospace">87%</text>
+                  <text x="38" y="16" textAnchor="middle" fontSize="5" fontWeight="bold" fill="#C5A44E" fontFamily="monospace">87%</text>
                 </svg>
               )}
               <p className="font-serif text-sm font-semibold text-[#1A1A1A] text-center">
@@ -503,7 +520,7 @@ export default function DataFlow() {
                   <>
                     <div className="h-[2px] bg-[#E5E0D5] rounded-full" style={{ width: "95%" }} />
                     <div className="h-[2px] bg-[#E5E0D5] rounded-full" style={{ width: "85%" }} />
-                    <div className="h-[2px] bg-[#C8A960]/30 rounded-full" style={{ width: "90%" }} />
+                    <div className="h-[2px] bg-[#C5A44E]/30 rounded-full" style={{ width: "90%" }} />
                     <div className="h-[2px] bg-[#E5E0D5] rounded-full" style={{ width: "75%" }} />
                     <div className="h-[2px] bg-[#E5E0D5] rounded-full" style={{ width: "88%" }} />
                   </>
@@ -511,10 +528,10 @@ export default function DataFlow() {
                 {doc.icon === "drawing" && (
                   <>
                     <div className="flex gap-2">
-                      <div className="w-1/2 h-8 border border-[#D4C5A9] rounded bg-[#FAF8F5]" />
-                      <div className="w-1/2 h-8 border border-[#D4C5A9] rounded bg-[#FAF8F5]" />
+                      <div className="w-1/2 h-8 border border-[#E8E4DD] rounded bg-[#F3F1EC]" />
+                      <div className="w-1/2 h-8 border border-[#E8E4DD] rounded bg-[#F3F1EC]" />
                     </div>
-                    <div className="h-8 border border-[#D4C5A9] rounded bg-[#FAF8F5]" />
+                    <div className="h-8 border border-[#E8E4DD] rounded bg-[#F3F1EC]" />
                   </>
                 )}
                 {doc.icon === "strategy" && (
@@ -528,8 +545,8 @@ export default function DataFlow() {
                       <div className="h-[2px] bg-[#E5E0D5] rounded-full flex-1" />
                     </div>
                     <div className="flex items-center gap-1.5">
-                      <div className="w-2 h-2 rounded-full bg-[#C8A960]" />
-                      <div className="h-[2px] bg-[#C8A960]/30 rounded-full flex-1" />
+                      <div className="w-2 h-2 rounded-full bg-[#C5A44E]" />
+                      <div className="h-[2px] bg-[#C5A44E]/30 rounded-full flex-1" />
                     </div>
                   </>
                 )}
@@ -544,15 +561,15 @@ export default function DataFlow() {
           className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4"
           style={{ opacity: 0 }}
         >
-          <div className="w-full max-w-[720px] bg-[#1A1A1A] rounded-xl border border-[#333] shadow-2xl overflow-hidden">
+          <div className="w-full max-w-[720px] bg-[#1A1A1A] rounded-sm border border-[#C5A44E]/25 shadow-[0_8px_50px_rgba(26,26,26,0.25)] overflow-hidden">
             {/* Title bar */}
-            <div className="flex items-center justify-between px-5 py-3 border-b border-[#333]">
+            <div className="flex items-center justify-between px-5 py-3 border-b border-white/10">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
-                <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
-                <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#5A5A5A]" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#5A5A5A]" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#C5A44E]" />
               </div>
-              <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8A960] font-sans">
+              <span className="text-[10px] tracking-[0.35em] uppercase text-[#C5A44E] font-mono">
                 Cosmos Platform
               </span>
               <div className="w-12" />
@@ -561,11 +578,11 @@ export default function DataFlow() {
             {/* Dashboard body */}
             <div className="p-6 space-y-4 font-mono text-sm">
               <div className="flex items-center gap-3">
-                <span className="text-[#6B6B6B] text-xs">DOCKET</span>
+                <span className="text-[#5A5A5A] text-xs">DOCKET</span>
                 <span className="text-white">JT-25-0847</span>
               </div>
               <div>
-                <span className="text-[#6B6B6B] text-xs block mb-1">APPLICATION</span>
+                <span className="text-[#5A5A5A] text-xs block mb-1">APPLICATION</span>
                 <span className="text-white text-sm">
                   Federated Learning System with Differential Privacy
                 </span>
@@ -579,10 +596,10 @@ export default function DataFlow() {
                   { label: "Jurisdiction", value: "USPTO + EPO + IPO" },
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col gap-1">
-                    <span className="text-[10px] text-[#6B6B6B] uppercase">
+                    <span className="text-[10px] text-[#5A5A5A] uppercase">
                       {item.label}
                     </span>
-                    <span className="text-[#C8A960] text-xs flex items-center gap-1">
+                    <span className="text-[#C5A44E] text-xs flex items-center gap-1">
                       {item.value}
                       {item.check && (
                         <svg
@@ -593,7 +610,7 @@ export default function DataFlow() {
                         >
                           <path
                             d="M2 6l3 3 5-5"
-                            stroke="#27C93F"
+                            stroke="#C5A44E"
                             strokeWidth="1.5"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -606,19 +623,19 @@ export default function DataFlow() {
               </div>
 
               <div className="flex flex-col gap-1 pt-2">
-                <span className="text-[10px] text-[#6B6B6B] uppercase">
+                <span className="text-[10px] text-[#5A5A5A] uppercase">
                   Grant Probability
                 </span>
                 <div className="flex items-center gap-3">
                   <div className="flex-1 h-2 bg-[#333] rounded-full overflow-hidden">
                     <motion.div
-                      className="h-full bg-[#C8A960] rounded-full"
+                      className="h-full bg-[#C5A44E] rounded-full"
                       initial={{ width: 0 }}
                       whileInView={{ width: "87%" }}
                       transition={{ duration: 1.5, ease: "easeOut" }}
                     />
                   </div>
-                  <span className="text-[#C8A960] text-sm font-semibold">
+                  <span className="text-[#C5A44E] text-sm font-semibold">
                     87%
                   </span>
                 </div>
@@ -636,10 +653,10 @@ export default function DataFlow() {
                 ].map((btn) => (
                   <button
                     key={btn}
-                    className={`px-3 py-1.5 rounded text-[11px] font-sans tracking-wide transition-colors ${
+                    className={`px-3 py-1.5 rounded-sm text-[11px] font-sans tracking-wide transition-colors ${
                       btn === "File Now"
-                        ? "bg-[#C8A960] text-[#1A1A1A] font-semibold hover:bg-[#D4B96E]"
-                        : "border border-[#444] text-[#999] hover:text-white hover:border-[#666]"
+                        ? "bg-[#C5A44E] text-[#1A1A1A] font-semibold hover:bg-[#d4b766]"
+                        : "border border-white/15 text-[#999] hover:text-white hover:border-[#C5A44E]/50"
                     }`}
                   >
                     {btn}
@@ -655,7 +672,7 @@ export default function DataFlow() {
             className="max-w-[640px] mt-10 text-center"
             style={{ opacity: 0 }}
           >
-            <p className="text-sm md:text-base text-[#6B6B6B] leading-relaxed font-sans">
+            <p className="text-sm md:text-base text-[#5A5A5A] leading-relaxed font-sans">
               From invention disclosure to filing-ready patent application
               &mdash; across all major jurisdictions &mdash; in under 12
               minutes. Every claim pre-validated against historical prosecution
