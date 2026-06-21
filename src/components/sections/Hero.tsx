@@ -19,59 +19,6 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-/* ── Stat counter component ── */
-function AnimatedStat({
-  value,
-  suffix,
-  prefix,
-  label,
-}: {
-  value: number;
-  suffix?: string;
-  prefix?: string;
-  label: string;
-}) {
-  const numRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const el = numRef.current;
-    if (!el) return;
-    const obj = { val: 0 };
-    gsap.to(obj, {
-      val: value,
-      duration: 2,
-      delay: 2.0,
-      ease: "power2.out",
-      onUpdate: () => {
-        const display =
-          value % 1 !== 0 ? obj.val.toFixed(1) : Math.round(obj.val).toString();
-        el.textContent = `${prefix || ""}${display}${suffix || ""}`;
-      },
-    });
-  }, [value, suffix, prefix]);
-
-  return (
-    <div className="flex flex-col items-start gap-1">
-      <span
-        ref={numRef}
-        className="font-serif font-bold text-[28px] text-[#1A1A1A]"
-      >
-        {prefix || ""}0{suffix || ""}
-      </span>
-      <span className="font-mono text-[11px] tracking-[0.05em] text-[#8B7355]">
-        {label}
-      </span>
-    </div>
-  );
-}
-
-/* ── Gold separator ── */
-function GoldSeparator() {
-  return (
-    <div className="mx-6 w-[1px] h-[30px] bg-[#C5A44E] opacity-40" />
-  );
-}
-
 /* ── Hero ── */
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -80,7 +27,6 @@ export default function Hero() {
   const headLine1Ref = useRef<HTMLDivElement>(null);
   const headLine2Ref = useRef<HTMLDivElement>(null);
   const subHeadRef = useRef<HTMLParagraphElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const scrollCueRef = useRef<HTMLDivElement>(null);
 
@@ -130,15 +76,7 @@ export default function Hero() {
         "-=0.3"
       );
 
-      /* 6 ── Stats fade up */
-      tl.fromTo(
-        statsRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.5 },
-        "-=0.2"
-      );
-
-      /* 7 ── CTA buttons fade up */
+      /* 6 ── CTA buttons fade up */
       tl.fromTo(
         ctaRef.current,
         { opacity: 0, y: 20 },
@@ -244,25 +182,6 @@ export default function Hero() {
             Patents pre-built to withstand rejections — 35 U.S.C. §101, §102, §103, §112
             and European Articles 52, 54, 56, 83 addressed from the first draft.
           </p>
-
-          {/* Stat Trio */}
-          <div
-            ref={statsRef}
-            className="flex items-center flex-wrap gap-y-4 mb-12 opacity-0"
-          >
-            <AnimatedStat value={8} suffix="" label="statutory grounds pre-addressed" />
-            <GoldSeparator />
-            <AnimatedStat value={100} suffix="%" label="on-device · zero data leaks" />
-            <GoldSeparator />
-            <div className="flex flex-col items-start gap-1">
-              <span className="font-serif font-bold text-[28px] text-[#1A1A1A]">
-                8 GB RAM
-              </span>
-              <span className="font-mono text-[11px] tracking-[0.05em] text-[#8B7355]">
-                runs on a standard laptop, no GPU
-              </span>
-            </div>
-          </div>
 
           {/* CTA Buttons */}
           <div ref={ctaRef} className="flex items-center gap-8 opacity-0">

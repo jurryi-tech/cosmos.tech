@@ -212,9 +212,14 @@ export default function DataFlow() {
     return spacing * (nodeInLayer + 1);
   }
 
-  /* Build connection lines */
-  const connections: { x1: number; y1: number; x2: number; y2: number }[] = [];
-  let srcIdx = 0;
+  /* Build connection lines (with source layer index for staggered signal flow) */
+  const connections: {
+    x1: number;
+    y1: number;
+    x2: number;
+    y2: number;
+    layer: number;
+  }[] = [];
   for (let li = 0; li < layers.length - 1; li++) {
     const srcLayer = layers[li];
     const dstLayer = layers[li + 1];
@@ -225,6 +230,7 @@ export default function DataFlow() {
           y1: layerYPositions[li] + 12,
           x2: getNodeX(dstLayer.length, di),
           y2: layerYPositions[li + 1] - 12,
+          layer: li,
         });
       }
     }
@@ -248,6 +254,88 @@ export default function DataFlow() {
         background: "linear-gradient(to bottom, #FDFBF7, #F3EFE8)",
       }}
     >
+      {/* ── Scoped motion-design keyframes ── */}
+      <style>{`
+        /* Pipeline signal "current" flowing toward the assembler */
+        @keyframes df-signal-flow {
+          0%   { stroke-dashoffset: 30; opacity: 0; }
+          12%  { opacity: 1; }
+          88%  { opacity: 1; }
+          100% { stroke-dashoffset: -120; opacity: 0; }
+        }
+        .df-signal {
+          stroke-dashoffset: 30;
+          opacity: 0;
+          animation: df-signal-flow 2.4s linear infinite;
+        }
+
+        /* Node activation pulse ring */
+        @keyframes df-node-ring {
+          0%   { transform: scale(0.6); opacity: 0; }
+          25%  { opacity: 0.7; }
+          100% { transform: scale(2.6); opacity: 0; }
+        }
+        .df-node-pulse {
+          width: 10px;
+          height: 10px;
+          animation: df-node-ring 2.4s ease-out infinite;
+        }
+
+        /* Assembler border draw-in + intensify as signals land */
+        @keyframes df-assembler-draw {
+          0%   { stroke-dashoffset: 100; stroke-opacity: 0.25; }
+          55%  { stroke-dashoffset: 0;   stroke-opacity: 0.55; }
+          72%  { stroke-opacity: 1; }
+          100% { stroke-dashoffset: 0;   stroke-opacity: 0.45; }
+        }
+        .df-assembler-border {
+          stroke-dasharray: 100;
+          stroke-dashoffset: 100;
+          animation: df-assembler-draw 2.4s ease-in-out infinite;
+        }
+        @keyframes df-assembler-settle {
+          0%, 60%  { box-shadow: 0 2px 30px rgba(197,164,78,0.18); }
+          74%      { box-shadow: 0 2px 40px rgba(197,164,78,0.40); }
+          100%     { box-shadow: 0 2px 30px rgba(197,164,78,0.18); }
+        }
+        .df-assembler { animation: df-assembler-settle 2.4s ease-in-out infinite; }
+
+        /* Ingestion scanner: radar sweep */
+        @keyframes df-scan-rotate {
+          from { transform: rotate(0deg); }
+          to   { transform: rotate(360deg); }
+        }
+        .df-scan-sweep { animation: df-scan-rotate 4.5s linear infinite; }
+
+        /* Ingestion scanner: emanating pulse rings */
+        @keyframes df-pulse-emanate {
+          0%   { transform: scale(0.35); opacity: 0; }
+          15%  { opacity: 0.5; }
+          100% { transform: scale(1); opacity: 0; }
+        }
+        .df-pulse-ring {
+          position: absolute;
+          width: 11.5rem;
+          height: 11.5rem;
+          border-radius: 9999px;
+          border: 1px solid rgba(197,164,78,0.5);
+          animation: df-pulse-emanate 3.2s ease-out infinite;
+        }
+        .df-pulse-ring--2 { animation-delay: 1.06s; }
+        .df-pulse-ring--3 { animation-delay: 2.13s; }
+
+        /* Ingestion scanner: center core breathing */
+        @keyframes df-core { 0%,100% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.55); opacity: 1; } }
+        .df-core-pulse { animation: df-core 2.2s ease-in-out infinite; }
+
+        @media (prefers-reduced-motion: reduce) {
+          .df-signal, .df-node-pulse, .df-assembler-border, .df-assembler,
+          .df-scan-sweep, .df-pulse-ring, .df-core-pulse { animation: none; }
+          .df-signal { opacity: 0.5; stroke-dashoffset: 0; }
+          .df-assembler-border { stroke-dashoffset: 0; stroke-opacity: 0.6; }
+        }
+      `}</style>
+
       {/* Section heading */}
       <div className="absolute top-0 left-0 w-full z-10 pt-14 pointer-events-none">
         <motion.div
@@ -293,15 +381,49 @@ export default function DataFlow() {
           </div>
         </div>
 
-        {/* ── Portal Ring ── */}
+        {/* ── Portal Ring (Secure Ingestion Scanner) ── */}
         <div
           ref={portalRef}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
           style={{ opacity: 0 }}
         >
           <div className="w-48 h-48 rounded-full border border-[#C5A44E] flex items-center justify-center relative">
+            {/* Inner static ring */}
             <div className="w-40 h-40 rounded-full border border-[#C5A44E]/30" />
-            <div className="w-2 h-2 rounded-full bg-[#C5A44E] absolute" />
+
+            {/* Periodic emanating pulse rings */}
+            <span className="df-pulse-ring" />
+            <span className="df-pulse-ring df-pulse-ring--2" />
+            <span className="df-pulse-ring df-pulse-ring--3" />
+
+            {/* SVG scanner overlay: sweeping radar line + tick marks */}
+            <svg
+              viewBox="0 0 200 200"
+              className="absolute inset-0 w-full h-full"
+              fill="none"
+            >
+              {/* faint tick graticule */}
+              <circle cx="100" cy="100" r="58" stroke="#C5A44E" strokeOpacity="0.18" strokeWidth="0.5" strokeDasharray="1.5 5" />
+              <line x1="100" y1="22" x2="100" y2="32" stroke="#C5A44E" strokeOpacity="0.35" strokeWidth="0.6" />
+              <line x1="100" y1="168" x2="100" y2="178" stroke="#C5A44E" strokeOpacity="0.35" strokeWidth="0.6" />
+              <line x1="22" y1="100" x2="32" y2="100" stroke="#C5A44E" strokeOpacity="0.35" strokeWidth="0.6" />
+              <line x1="168" y1="100" x2="178" y2="100" stroke="#C5A44E" strokeOpacity="0.35" strokeWidth="0.6" />
+
+              {/* sweeping radar wedge */}
+              <g className="df-scan-sweep" style={{ transformOrigin: "100px 100px" }}>
+                <defs>
+                  <linearGradient id="df-scan-grad" x1="100" y1="100" x2="100" y2="24" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stopColor="#C5A44E" stopOpacity="0.35" />
+                    <stop offset="1" stopColor="#C5A44E" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+                <path d="M100 100 L100 24 A76 76 0 0 1 124 28 Z" fill="url(#df-scan-grad)" />
+                <line x1="100" y1="100" x2="100" y2="24" stroke="#C5A44E" strokeOpacity="0.6" strokeWidth="0.8" />
+              </g>
+            </svg>
+
+            {/* center node */}
+            <div className="w-2 h-2 rounded-full bg-[#C5A44E] absolute df-core-pulse" />
             <div className="absolute -bottom-12 text-center">
               <p className="text-[9px] tracking-[0.3em] uppercase text-[#8B7355] font-mono whitespace-nowrap">
                 Secure Ingestion Layer &nbsp;&middot;&nbsp; AES-256 &nbsp;&middot;&nbsp; Zero Retention
@@ -356,9 +478,10 @@ export default function DataFlow() {
               viewBox="0 0 100 420"
               preserveAspectRatio="none"
             >
+              {/* Base hairline connectors */}
               {connections.map((c, i) => (
                 <line
-                  key={i}
+                  key={`base-${i}`}
                   x1={`${c.x1}%`}
                   y1={c.y1}
                   x2={`${c.x2}%`}
@@ -367,6 +490,24 @@ export default function DataFlow() {
                   strokeWidth="0.15"
                   strokeOpacity="0.12"
                   vectorEffect="non-scaling-stroke"
+                />
+              ))}
+
+              {/* Animated signal "current" flowing toward the output, staggered per layer */}
+              {connections.map((c, i) => (
+                <line
+                  key={`sig-${i}`}
+                  className="df-signal"
+                  x1={`${c.x1}%`}
+                  y1={c.y1}
+                  x2={`${c.x2}%`}
+                  y2={c.y2}
+                  stroke="#C5A44E"
+                  strokeWidth="0.9"
+                  strokeLinecap="round"
+                  strokeDasharray="4 26"
+                  vectorEffect="non-scaling-stroke"
+                  style={{ animationDelay: `${c.layer * 0.55}s` }}
                 />
               ))}
             </svg>
@@ -391,11 +532,31 @@ export default function DataFlow() {
                         opacity: 0,
                       }}
                     >
-                      <div className="flex flex-col items-center gap-2 px-6 py-3 rounded-sm bg-[#1A1A1A] border border-[#C5A44E] shadow-[0_2px_30px_rgba(197,164,78,0.18)]">
-                        <span className="text-[9px] tracking-[0.3em] uppercase text-[#C5A44E] font-mono">
+                      <div className="df-assembler relative flex flex-col items-center gap-2 px-6 py-3 rounded-sm bg-[#1A1A1A] border border-[#C5A44E]/40 shadow-[0_2px_30px_rgba(197,164,78,0.18)]">
+                        {/* animated gold border that draws in as signals arrive */}
+                        <svg
+                          className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
+                          preserveAspectRatio="none"
+                          viewBox="0 0 100 100"
+                        >
+                          <rect
+                            className="df-assembler-border"
+                            x="0.6"
+                            y="0.6"
+                            width="98.8"
+                            height="98.8"
+                            rx="2"
+                            fill="none"
+                            stroke="#C5A44E"
+                            strokeWidth="1.2"
+                            pathLength={100}
+                            vectorEffect="non-scaling-stroke"
+                          />
+                        </svg>
+                        <span className="relative text-[9px] tracking-[0.3em] uppercase text-[#C5A44E] font-mono">
                           Output
                         </span>
-                        <span className="font-serif text-[13px] font-medium text-[#FDFBF7] text-center leading-tight whitespace-nowrap">
+                        <span className="relative font-serif text-[13px] font-medium text-[#FDFBF7] text-center leading-tight whitespace-nowrap">
                           {name}
                         </span>
                       </div>
@@ -416,8 +577,15 @@ export default function DataFlow() {
                       opacity: 0,
                     }}
                   >
-                    <div className="w-2.5 h-2.5 rounded-full border border-[#1A1A1A] bg-[#FDFBF7] flex items-center justify-center">
-                      <div className="w-1 h-1 rounded-full bg-[#C5A44E]" />
+                    <div className="relative flex items-center justify-center">
+                      {/* activation pulse ring */}
+                      <span
+                        className="df-node-pulse absolute rounded-full border border-[#C5A44E]"
+                        style={{ animationDelay: `${li * 0.55}s` }}
+                      />
+                      <div className="relative w-2.5 h-2.5 rounded-full border border-[#1A1A1A] bg-[#FDFBF7] flex items-center justify-center">
+                        <div className="w-1 h-1 rounded-full bg-[#C5A44E]" />
+                      </div>
                     </div>
                     <span className="text-[10px] text-center font-sans max-w-[110px] leading-tight text-[#2C2C2C] font-medium tracking-tight">
                       {name}
